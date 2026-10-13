@@ -1,0 +1,1434 @@
+
+game.png
+size: 2048, 1024
+format: RGBA8888
+filter: MipMapLinearLinear, MipMapLinearLinear
+repeat: none
+BuildingIcons/Army Headquarters
+  rotate: false
+  xy: 1492, 920
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+BuildingIcons/Confederate Arrivals: Chambersburg Pike
+  rotate: false
+  xy: 484, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+BuildingIcons/Confederate Arrivals: Harrisburg Road
+  rotate: false
+  xy: 484, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+BuildingIcons/Confederate Arrivals: Middletown Road
+  rotate: false
+  xy: 484, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+BuildingIcons/Union Arrivals: Baltimore Pike
+  rotate: false
+  xy: 484, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+BuildingIcons/Union Arrivals: Emmitsburg Road
+  rotate: false
+  xy: 484, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+BuildingIcons/Union Arrivals: Hanover Road
+  rotate: false
+  xy: 484, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+BuildingIcons/Union Arrivals: Taneytown Road
+  rotate: false
+  xy: 484, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+BuildingIcons/Supply Depot
+  rotate: false
+  xy: 1572, 488
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+ImprovementIcons/Breastworks
+  rotate: false
+  xy: 1356, 676
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+LeaderIcons/George G. Meade
+  rotate: false
+  xy: 4, 764
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LeaderIcons/Robert E. Lee
+  rotate: false
+  xy: 4, 500
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NationIcons/Confederacy
+  rotate: false
+  xy: 140, 176
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+NationIcons/Union
+  rotate: false
+  xy: 248, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Ambulance Corps
+  rotate: false
+  xy: 248, 4
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Cavalry Brigade
+  rotate: false
+  xy: 356, 212
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Confederate Cavalry
+  rotate: false
+  xy: 752, 448
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Confederate General
+  rotate: false
+  xy: 824, 448
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Confederate Infantry
+  rotate: false
+  xy: 896, 448
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Confederate Napoleon Battery
+  rotate: false
+  xy: 968, 448
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Confederate Parrott Rifles
+  rotate: false
+  xy: 1040, 448
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Confederate Sharpshooters
+  rotate: false
+  xy: 1112, 448
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Field Hospital
+  rotate: false
+  xy: 464, 384
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/General
+  rotate: false
+  xy: 536, 384
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Horse Artillery
+  rotate: false
+  xy: 680, 384
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Infantry Brigade
+  rotate: false
+  xy: 752, 384
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Iron Brigade
+  rotate: false
+  xy: 824, 384
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Michigan Cavalry Brigade
+  rotate: false
+  xy: 1112, 384
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Napoleon Battery
+  rotate: false
+  xy: 1184, 384
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Pioneers
+  rotate: false
+  xy: 1472, 396
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Rifled Battery
+  rotate: false
+  xy: 500, 320
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Sharpshooters
+  rotate: false
+  xy: 428, 192
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Stonewall Brigade
+  rotate: false
+  xy: 572, 320
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Stuart Horse Artillery
+  rotate: false
+  xy: 428, 128
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Supply Train
+  rotate: false
+  xy: 500, 192
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Texas Brigade
+  rotate: false
+  xy: 572, 256
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/US Horse Artillery
+  rotate: false
+  xy: 644, 256
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/US Sharpshooters
+  rotate: false
+  xy: 716, 320
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Union Cavalry
+  rotate: false
+  xy: 572, 128
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Union General
+  rotate: false
+  xy: 644, 192
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Union Infantry
+  rotate: false
+  xy: 716, 256
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Union Napoleon Battery
+  rotate: false
+  xy: 788, 320
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Union Ordnance Rifles
+  rotate: false
+  xy: 644, 128
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/CivilWar/Units/Whitworth Battery
+  rotate: false
+  xy: 716, 192
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Barlow's Knoll
+  rotate: false
+  xy: 428, 92
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Benner's Hill
+  rotate: false
+  xy: 788, 284
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Big Round Top
+  rotate: false
+  xy: 860, 348
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Boulders
+  rotate: false
+  xy: 716, 156
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Breastworks
+  rotate: false
+  xy: 468, 92
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Cemetery Hill
+  rotate: false
+  xy: 788, 248
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/City center-Civil War era
+  rotate: false
+  xy: 900, 348
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/City center-Confederacy-Civil War era
+  rotate: false
+  xy: 508, 92
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/City center-Union-Civil War era
+  rotate: false
+  xy: 788, 212
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Culp's Hill
+  rotate: false
+  xy: 940, 348
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Devil's Den
+  rotate: false
+  xy: 548, 92
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/East Cemetery Hill
+  rotate: false
+  xy: 980, 348
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Farmstead
+  rotate: false
+  xy: 588, 92
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Gettysburg
+  rotate: false
+  xy: 1020, 348
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Little Round Top
+  rotate: false
+  xy: 628, 92
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Lutheran Seminary
+  rotate: false
+  xy: 1060, 348
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/McPherson's Ridge
+  rotate: false
+  xy: 668, 92
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Oak Hill
+  rotate: false
+  xy: 1100, 348
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Orchard
+  rotate: false
+  xy: 1140, 348
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Peach Orchard
+  rotate: false
+  xy: 1180, 348
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Railroad Cut
+  rotate: false
+  xy: 1220, 348
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Ridge
+  rotate: false
+  xy: 1260, 348
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Stone Wall
+  rotate: false
+  xy: 828, 284
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/The Angle
+  rotate: false
+  xy: 828, 248
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/The Wheatfield
+  rotate: false
+  xy: 828, 212
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/FantasyHex/Tiles/Town
+  rotate: false
+  xy: 716, 120
+  size: 32, 28
+  orig: 32, 28
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Barlow's Knoll
+  rotate: false
+  xy: 4, 28
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Benner's Hill
+  rotate: false
+  xy: 356, 340
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Big Round Top
+  rotate: false
+  xy: 464, 448
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Boulders
+  rotate: false
+  xy: 356, 276
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Breastworks
+  rotate: false
+  xy: 536, 448
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Cemetery Hill
+  rotate: false
+  xy: 608, 448
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/City center-Civil War era
+  rotate: false
+  xy: 356, 148
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/City center-Confederacy-Civil War era
+  rotate: false
+  xy: 680, 448
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/City center-Union-Civil War era
+  rotate: false
+  xy: 356, 84
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Culp's Hill
+  rotate: false
+  xy: 1184, 448
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Devil's Den
+  rotate: false
+  xy: 1256, 448
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/East Cemetery Hill
+  rotate: false
+  xy: 76, 4
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Farmstead
+  rotate: false
+  xy: 148, 4
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Gettysburg
+  rotate: false
+  xy: 608, 384
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Little Round Top
+  rotate: false
+  xy: 896, 384
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Lutheran Seminary
+  rotate: false
+  xy: 968, 384
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/McPherson's Ridge
+  rotate: false
+  xy: 1040, 384
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Oak Hill
+  rotate: false
+  xy: 1256, 384
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Orchard
+  rotate: false
+  xy: 1328, 396
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Peach Orchard
+  rotate: false
+  xy: 1400, 396
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Railroad Cut
+  rotate: false
+  xy: 428, 320
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Ridge
+  rotate: false
+  xy: 428, 256
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Stone Wall
+  rotate: false
+  xy: 500, 256
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/The Angle
+  rotate: false
+  xy: 644, 320
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/The Wheatfield
+  rotate: false
+  xy: 500, 128
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+TileSets/HexaRealm/Tiles/Town
+  rotate: false
+  xy: 572, 192
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+UnitIcons/Ambulance Corps
+  rotate: false
+  xy: 1356, 784
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Field Hospital
+  rotate: false
+  xy: 1356, 784
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Cavalry Brigade
+  rotate: false
+  xy: 1600, 920
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Confederate Cavalry
+  rotate: false
+  xy: 1708, 920
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Confederate General
+  rotate: false
+  xy: 592, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Confederate Infantry
+  rotate: false
+  xy: 1816, 920
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Infantry Brigade
+  rotate: false
+  xy: 1816, 920
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Confederate Napoleon Battery
+  rotate: false
+  xy: 700, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Napoleon Battery
+  rotate: false
+  xy: 700, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Union Napoleon Battery
+  rotate: false
+  xy: 700, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Confederate Parrott Rifles
+  rotate: false
+  xy: 1924, 920
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Confederate Sharpshooters
+  rotate: false
+  xy: 808, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/General
+  rotate: false
+  xy: 1356, 568
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Horse Artillery
+  rotate: false
+  xy: 1464, 568
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Stuart Horse Artillery
+  rotate: false
+  xy: 1464, 568
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/US Horse Artillery
+  rotate: false
+  xy: 1464, 568
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Iron Brigade
+  rotate: false
+  xy: 1456, 460
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Michigan Cavalry Brigade
+  rotate: false
+  xy: 1572, 704
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Pioneers
+  rotate: false
+  xy: 1680, 812
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Rifled Battery
+  rotate: false
+  xy: 1788, 812
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Union Ordnance Rifles
+  rotate: false
+  xy: 1788, 812
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Sharpshooters
+  rotate: false
+  xy: 1896, 812
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Stonewall Brigade
+  rotate: false
+  xy: 1896, 596
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Supply Train
+  rotate: false
+  xy: 1680, 488
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Texas Brigade
+  rotate: false
+  xy: 1788, 488
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/US Sharpshooters
+  rotate: false
+  xy: 1896, 488
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Union Cavalry
+  rotate: false
+  xy: 248, 284
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Union General
+  rotate: false
+  xy: 248, 176
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Union Infantry
+  rotate: false
+  xy: 248, 68
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Whitworth Battery
+  rotate: false
+  xy: 356, 404
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPortraits/Ambulance Corps
+  rotate: false
+  xy: 268, 892
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Background
+  rotate: false
+  xy: 4, 364
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Cavalry Brigade
+  rotate: false
+  xy: 268, 756
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Confederate Cavalry
+  rotate: false
+  xy: 404, 892
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Confederate General
+  rotate: false
+  xy: 4, 228
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Confederate Infantry
+  rotate: false
+  xy: 268, 620
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Confederate Napoleon Battery
+  rotate: false
+  xy: 404, 756
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Confederate Parrott Rifles
+  rotate: false
+  xy: 540, 892
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Confederate Sharpshooters
+  rotate: false
+  xy: 4, 92
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Field Hospital
+  rotate: false
+  xy: 404, 620
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/General
+  rotate: false
+  xy: 540, 756
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Horse Artillery
+  rotate: false
+  xy: 676, 892
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/US Horse Artillery
+  rotate: false
+  xy: 676, 892
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Infantry Brigade
+  rotate: false
+  xy: 540, 620
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Iron Brigade
+  rotate: false
+  xy: 676, 756
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Michigan Cavalry Brigade
+  rotate: false
+  xy: 812, 892
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Napoleon Battery
+  rotate: false
+  xy: 676, 620
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Union Napoleon Battery
+  rotate: false
+  xy: 676, 620
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Pioneers
+  rotate: false
+  xy: 812, 756
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Rifled Battery
+  rotate: false
+  xy: 948, 892
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Union Ordnance Rifles
+  rotate: false
+  xy: 948, 892
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Sharpshooters
+  rotate: false
+  xy: 812, 620
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Stonewall Brigade
+  rotate: false
+  xy: 948, 756
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Stuart Horse Artillery
+  rotate: false
+  xy: 1084, 892
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Supply Train
+  rotate: false
+  xy: 948, 620
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Texas Brigade
+  rotate: false
+  xy: 1084, 756
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/US Sharpshooters
+  rotate: false
+  xy: 1220, 892
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Union Cavalry
+  rotate: false
+  xy: 1084, 620
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Union General
+  rotate: false
+  xy: 1220, 756
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Union Infantry
+  rotate: false
+  xy: 1356, 892
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPortraits/Whitworth Battery
+  rotate: false
+  xy: 1220, 620
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/A. P. Hill
+  rotate: false
+  xy: 140, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/E. Porter Alexander
+  rotate: false
+  xy: 140, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Edward Johnson
+  rotate: false
+  xy: 140, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/George E. Pickett
+  rotate: false
+  xy: 140, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Henry Heth
+  rotate: false
+  xy: 140, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/J. E. B. Stuart
+  rotate: false
+  xy: 140, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/James Longstreet
+  rotate: false
+  xy: 140, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/John B. Hood
+  rotate: false
+  xy: 140, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Jubal A. Early
+  rotate: false
+  xy: 140, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Lafayette McLaws
+  rotate: false
+  xy: 140, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Richard H. Anderson
+  rotate: false
+  xy: 140, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Richard S. Ewell
+  rotate: false
+  xy: 140, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Robert E. Lee
+  rotate: false
+  xy: 140, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Robert E. Rodes
+  rotate: false
+  xy: 140, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/William D. Pender
+  rotate: false
+  xy: 140, 392
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Abner Doubleday
+  rotate: false
+  xy: 268, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Daniel E. Sickles
+  rotate: false
+  xy: 268, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/David M. Gregg
+  rotate: false
+  xy: 268, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/George G. Meade
+  rotate: false
+  xy: 268, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/George Sykes
+  rotate: false
+  xy: 268, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Gouverneur K. Warren
+  rotate: false
+  xy: 268, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Henry J. Hunt
+  rotate: false
+  xy: 268, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Henry W. Slocum
+  rotate: false
+  xy: 268, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/John Buford
+  rotate: false
+  xy: 268, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/John F. Reynolds
+  rotate: false
+  xy: 268, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/John Gibbon
+  rotate: false
+  xy: 268, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/John Sedgwick
+  rotate: false
+  xy: 268, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Judson Kilpatrick
+  rotate: false
+  xy: 268, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Oliver O. Howard
+  rotate: false
+  xy: 268, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Winfield S. Hancock
+  rotate: false
+  xy: 268, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Assault
+  rotate: false
+  xy: 140, 284
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Bayonet Charge
+  rotate: false
+  xy: 376, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Counter-Battery
+  rotate: false
+  xy: 916, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Dismounted Tactics
+  rotate: false
+  xy: 1024, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Double Canister
+  rotate: false
+  xy: 1132, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Field Medicine
+  rotate: false
+  xy: 1240, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Forced March
+  rotate: false
+  xy: 140, 68
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Gunnery
+  rotate: false
+  xy: 1348, 460
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Hardened Veterans
+  rotate: false
+  xy: 1464, 784
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Holding Key Terrain
+  rotate: false
+  xy: 1464, 676
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Long Range
+  rotate: false
+  xy: 1572, 812
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Prolonge
+  rotate: false
+  xy: 1572, 596
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Rally
+  rotate: false
+  xy: 1680, 704
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Saber Charge
+  rotate: false
+  xy: 1680, 596
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Screening
+  rotate: false
+  xy: 1788, 704
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Skirmish Drill
+  rotate: false
+  xy: 1788, 596
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitPromotionIcons/Steady
+  rotate: false
+  xy: 1896, 704
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,225 @@
+[
+    {
+        "name": "Army Headquarters",
+        "isNationalWonder": true,
+        "cost": 0,
+        "production": 3,
+        "gold": 3,
+        "cityStrength": 8,
+        "cityHealth": 50,
+        "uniques": [
+            "Indicates the capital city",
+            "[+25]% Production when constructing [Military] units [in this city]"
+        ],
+        "civilopediaText": [
+            {
+                "text": "The army commander's headquarters, with its staff, couriers and signal officers. Losing it means losing the army: capturing the enemy headquarters wins a Decisive Victory."
+            }
+        ]
+    },
+    {
+        "name": "Supply Depot",
+        "cost": 50,
+        "production": 2,
+        "food": 1,
+        "gold": 2,
+        "cityStrength": 5,
+        "cityHealth": 25,
+        "uniques": [
+            "[+15]% Production when constructing [Military] units [in this city]"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Wagon parks, ammunition trains and commissary stores at the end of a road or railroad."
+            }
+        ]
+    },
+    {
+        "name": "Union Arrivals: Emmitsburg Road",
+        "cost": 1,
+        "uniqueTo": "Union",
+        "uniques": [
+            "Gettysburg Arrivals",
+            "Unbuildable",
+            "Unsellable",
+            "Destroyed when the city is captured",
+            "Free [Union General] appears <upon turn start> <after turn number [1]> <before turn number [2]> <for [Union] Civilizations>",
+            "Free [Union Infantry] appears <upon turn start> <after turn number [1]> <before turn number [2]> <for [Union] Civilizations>",
+            "Free [Iron Brigade] appears <upon turn start> <after turn number [1]> <before turn number [2]> <for [Union] Civilizations>",
+            "Free [Union Ordnance Rifles] appears <upon turn start> <after turn number [1]> <before turn number [2]> <for [Union] Civilizations>",
+            "Free [Union General] appears <upon turn start> <after turn number [2]> <before turn number [3]> <for [Union] Civilizations>",
+            "[2] free [Union Infantry] units appear <upon turn start> <after turn number [2]> <before turn number [3]> <for [Union] Civilizations>",
+            "Free [Union Napoleon Battery] appears <upon turn start> <after turn number [2]> <before turn number [3]> <for [Union] Civilizations>",
+            "[2] free [Union Infantry] units appear <upon turn start> <after turn number [3]> <before turn number [4]> <for [Union] Civilizations>",
+            "Free [Union General] appears <upon turn start> <after turn number [10]> <before turn number [11]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [11]> <before turn number [12]> <for [Union] Civilizations>",
+            "Free [US Sharpshooters] appears <upon turn start> <after turn number [11]> <before turn number [12]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [13]> <before turn number [14]> <for [Union] Civilizations>",
+            "Free [Union Napoleon Battery] appears <upon turn start> <after turn number [13]> <before turn number [14]> <for [Union] Civilizations>",
+            "Free [Union Infantry] appears <upon turn start> <after turn number [19]> <before turn number [20]> <for [Union] Civilizations>",
+            "Free [Union Cavalry] appears <upon turn start> <after turn number [38]> <before turn number [39]> <for [Union] Civilizations>",
+            "Free [US Horse Artillery] appears <upon turn start> <after turn number [38]> <before turn number [39]> <for [Union] Civilizations>"
+        ],
+        "replacementTextForUniques": "Order of march for the Emmitsburg Road.\nThe road from Emmitsburg, Maryland. The I Corps and III Corps marched up it on July 1.\n\nTurn 1 (8:00 AM, July 1): John F. Reynolds; Cutler's Brigade (I Corps); Iron Brigade; Hall's 2nd Maine Battery\nTurn 2 (9:00 AM, July 1): Abner Doubleday; Biddle's Brigade (I Corps); Stone's Bucktail Brigade (I Corps); I Corps Artillery (Wainwright)\nTurn 3 (10:00 AM, July 1): Paul's Brigade (I Corps); Baxter's Brigade (I Corps)\nTurn 10 (5:00 PM, July 1): Daniel E. Sickles\nTurn 11 (6:00 PM, July 1): Graham's Brigade (III Corps); Ward's Brigade (III Corps); de Trobriand's Brigade (III Corps); Berdan's Sharpshooters (1st & 2nd USSS)\nTurn 13 (Night of July 1-2): Carr's Brigade (III Corps); Brewster's Excelsior Brigade (III Corps); Stannard's Vermont Brigade (I Corps); III Corps Artillery (Randolph)\nTurn 19 (9:00 AM, July 2): Burling's Brigade (III Corps)\nTurn 38 (10:00 AM, July 3): Merritt's Reserve Brigade (Buford); Graham's Battery (K, 1st US)\n\nReinforcements appear in or next to this city at the start of the listed turn. If the enemy captures the city, the remaining reinforcements on this road are lost."
+    },
+    {
+        "name": "Union Arrivals: Taneytown Road",
+        "cost": 1,
+        "uniqueTo": "Union",
+        "uniques": [
+            "Gettysburg Arrivals",
+            "Unbuildable",
+            "Unsellable",
+            "Destroyed when the city is captured",
+            "Free [Union General] appears <upon turn start> <after turn number [3]> <before turn number [4]> <for [Union] Civilizations>",
+            "[2] free [Union Infantry] units appear <upon turn start> <after turn number [4]> <before turn number [5]> <for [Union] Civilizations>",
+            "[2] free [Union Infantry] units appear <upon turn start> <after turn number [5]> <before turn number [6]> <for [Union] Civilizations>",
+            "Free [Union Napoleon Battery] appears <upon turn start> <after turn number [5]> <before turn number [6]> <for [Union] Civilizations>",
+            "[2] free [Union Infantry] units appear <upon turn start> <after turn number [6]> <before turn number [7]> <for [Union] Civilizations>",
+            "Free [Union General] appears <upon turn start> <after turn number [8]> <before turn number [9]> <for [Union] Civilizations>",
+            "Free [Union General] appears <upon turn start> <after turn number [13]> <before turn number [14]> <for [Union] Civilizations>",
+            "[4] free [Union Infantry] units appear <upon turn start> <after turn number [14]> <before turn number [15]> <for [Union] Civilizations>",
+            "Free [Union Napoleon Battery] appears <upon turn start> <after turn number [14]> <before turn number [15]> <for [Union] Civilizations>",
+            "Free [Ambulance Corps] appears <upon turn start> <after turn number [14]> <before turn number [15]> <for [Union] Civilizations>",
+            "[2] free [Union General] units appear <upon turn start> <after turn number [15]> <before turn number [16]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [15]> <before turn number [16]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [16]> <before turn number [17]> <for [Union] Civilizations>",
+            "Free [Union General] appears <upon turn start> <after turn number [20]> <before turn number [21]> <for [Union] Civilizations>",
+            "Free [Union Napoleon Battery] appears <upon turn start> <after turn number [20]> <before turn number [21]> <for [Union] Civilizations>",
+            "[2] free [Union Ordnance Rifles] units appear <upon turn start> <after turn number [20]> <before turn number [21]> <for [Union] Civilizations>",
+            "Free [Union Napoleon Battery] appears <upon turn start> <after turn number [21]> <before turn number [22]> <for [Union] Civilizations>",
+            "Free [Union Ordnance Rifles] appears <upon turn start> <after turn number [21]> <before turn number [22]> <for [Union] Civilizations>",
+            "Free [Union General] appears <upon turn start> <after turn number [36]> <before turn number [37]> <for [Union] Civilizations>",
+            "Free [Union Cavalry] appears <upon turn start> <after turn number [36]> <before turn number [37]> <for [Union] Civilizations>"
+        ],
+        "replacementTextForUniques": "Order of march for the Taneytown Road.\nMeade's headquarters and the road from Taneytown, Maryland. The II Corps, XI Corps and the Artillery Reserve came up this road.\n\nTurn 3 (10:00 AM, July 1): Oliver O. Howard\nTurn 4 (11:00 AM, July 1): von Gilsa's Brigade (XI Corps); Ames's Brigade (XI Corps)\nTurn 5 (12:00 PM, July 1): Schimmelfennig's Brigade (XI Corps); Krzyzanowski's Brigade (XI Corps); XI Corps Artillery (Osborn)\nTurn 6 (1:00 PM, July 1): Coster's Brigade (XI Corps); Orland Smith's Brigade (XI Corps)\nTurn 8 (3:00 PM, July 1): Winfield S. Hancock\nTurn 13 (Night of July 1-2): George G. Meade\nTurn 14 (Night of July 1-2): Cross's Brigade (II Corps); Kelly's Irish Brigade (II Corps); Zook's Brigade (II Corps); Brooke's Brigade (II Corps); II Corps Artillery (Hazard); Ambulance Corps\nTurn 15 (5:00 AM, July 2): John Gibbon; Gouverneur K. Warren; Harrow's Brigade (II Corps); Webb's Philadelphia Brigade (II Corps); Hall's Brigade (II Corps)\nTurn 16 (6:00 AM, July 2): Carroll's Brigade (II Corps); Smyth's Brigade (II Corps); Willard's Brigade (II Corps)\nTurn 20 (10:00 AM, July 2): Henry J. Hunt; 1st Volunteer Brigade, Artillery Reserve (McGilvery); 1st Regular Brigade, Artillery Reserve (Ransom); 2nd Volunteer Brigade, Artillery Reserve (Taft)\nTurn 21 (11:00 AM, July 2): 3rd Volunteer Brigade, Artillery Reserve (Huntington); 4th Volunteer Brigade, Artillery Reserve (Fitzhugh)\nTurn 36 (8:00 AM, July 3): Judson Kilpatrick; Farnsworth's Brigade (Kilpatrick)\n\nReinforcements appear in or next to this city at the start of the listed turn. If the enemy captures the city, the remaining reinforcements on this road are lost."
+    },
+    {
+        "name": "Union Arrivals: Baltimore Pike",
+        "cost": 1,
+        "uniqueTo": "Union",
+        "uniques": [
+            "Gettysburg Arrivals",
+            "Unbuildable",
+            "Unsellable",
+            "Destroyed when the city is captured",
+            "Free [Union General] appears <upon turn start> <after turn number [9]> <before turn number [10]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [9]> <before turn number [10]> <for [Union] Civilizations>",
+            "Free [Union Ordnance Rifles] appears <upon turn start> <after turn number [9]> <before turn number [10]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [10]> <before turn number [11]> <for [Union] Civilizations>",
+            "Free [Union General] appears <upon turn start> <after turn number [24]> <before turn number [25]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [24]> <before turn number [25]> <for [Union] Civilizations>",
+            "Free [Ambulance Corps] appears <upon turn start> <after turn number [24]> <before turn number [25]> <for [Union] Civilizations>",
+            "[2] free [Union Infantry] units appear <upon turn start> <after turn number [25]> <before turn number [26]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [26]> <before turn number [27]> <for [Union] Civilizations>",
+            "Free [Union Napoleon Battery] appears <upon turn start> <after turn number [26]> <before turn number [27]> <for [Union] Civilizations>"
+        ],
+        "replacementTextForUniques": "Order of march for the Baltimore Pike.\nThe turnpike from Baltimore and the army's supply line. The XII Corps and the VI Corps arrived by it.\n\nTurn 9 (4:00 PM, July 1): Henry W. Slocum; McDougall's Brigade (XII Corps); Lockwood's Brigade (XII Corps); Ruger's Brigade (XII Corps); XII Corps Artillery (Muhlenberg)\nTurn 10 (5:00 PM, July 1): Candy's Brigade (XII Corps); Kane's Brigade (XII Corps); Greene's Brigade (XII Corps)\nTurn 24 (2:00 PM, July 2): John Sedgwick; Torbert's New Jersey Brigade (VI Corps); Bartlett's Brigade (VI Corps); Russell's Brigade (VI Corps); Ambulance Corps\nTurn 25 (3:00 PM, July 2): Grant's Vermont Brigade (VI Corps); Neill's Brigade (VI Corps)\nTurn 26 (4:00 PM, July 2): Shaler's Brigade (VI Corps); Eustis's Brigade (VI Corps); Wheaton's Brigade (VI Corps); VI Corps Artillery (Tompkins)\n\nReinforcements appear in or next to this city at the start of the listed turn. If the enemy captures the city, the remaining reinforcements on this road are lost."
+    },
+    {
+        "name": "Union Arrivals: Hanover Road",
+        "cost": 1,
+        "uniqueTo": "Union",
+        "uniques": [
+            "Gettysburg Arrivals",
+            "Unbuildable",
+            "Unsellable",
+            "Destroyed when the city is captured",
+            "Free [Union General] appears <upon turn start> <after turn number [17]> <before turn number [18]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [17]> <before turn number [18]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [18]> <before turn number [19]> <for [Union] Civilizations>",
+            "Free [Union Ordnance Rifles] appears <upon turn start> <after turn number [18]> <before turn number [19]> <for [Union] Civilizations>",
+            "Free [Union General] appears <upon turn start> <after turn number [22]> <before turn number [23]> <for [Union] Civilizations>",
+            "[2] free [Union Infantry] units appear <upon turn start> <after turn number [22]> <before turn number [23]> <for [Union] Civilizations>",
+            "[2] free [Union Cavalry] units appear <upon turn start> <after turn number [22]> <before turn number [23]> <for [Union] Civilizations>",
+            "Free [US Horse Artillery] appears <upon turn start> <after turn number [22]> <before turn number [23]> <for [Union] Civilizations>",
+            "Free [Michigan Cavalry Brigade] appears <upon turn start> <after turn number [33]> <before turn number [34]> <for [Union] Civilizations>",
+            "Free [US Horse Artillery] appears <upon turn start> <after turn number [33]> <before turn number [34]> <for [Union] Civilizations>"
+        ],
+        "replacementTextForUniques": "Order of march for the Hanover Road.\nThe road from Hanover. The V Corps and Gregg's cavalry division came in from the east.\n\nTurn 17 (7:00 AM, July 2): George Sykes; Tilton's Brigade (V Corps); Sweitzer's Brigade (V Corps); Vincent's Brigade (V Corps)\nTurn 18 (8:00 AM, July 2): Day's U.S. Regulars (V Corps); Burbank's U.S. Regulars (V Corps); Weed's Brigade (V Corps); V Corps Artillery (Martin)\nTurn 22 (12:00 PM, July 2): David M. Gregg; McCandless's Pennsylvania Reserves (V Corps); Fisher's Pennsylvania Reserves (V Corps); McIntosh's Brigade (Gregg); Irvin Gregg's Brigade (Gregg); Randol's Battery (E & G, 1st US)\nTurn 33 (5:00 AM, July 3): Michigan Cavalry Brigade; Pennington's Battery (M, 2nd US)\n\nReinforcements appear in or next to this city at the start of the listed turn. If the enemy captures the city, the remaining reinforcements on this road are lost."
+    },
+    {
+        "name": "Confederate Arrivals: Chambersburg Pike",
+        "cost": 1,
+        "uniqueTo": "Confederacy",
+        "uniques": [
+            "Gettysburg Arrivals",
+            "Unbuildable",
+            "Unsellable",
+            "Destroyed when the city is captured",
+            "Free [Confederate General] appears <upon turn start> <after turn number [1]> <before turn number [2]> <for [Confederacy] Civilizations>",
+            "Free [Confederate General] appears <upon turn start> <after turn number [2]> <before turn number [3]> <for [Confederacy] Civilizations>",
+            "[4] free [Confederate Infantry] units appear <upon turn start> <after turn number [2]> <before turn number [3]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Napoleon Battery] appears <upon turn start> <after turn number [2]> <before turn number [3]> <for [Confederacy] Civilizations>",
+            "Free [Whitworth Battery] appears <upon turn start> <after turn number [2]> <before turn number [3]> <for [Confederacy] Civilizations>",
+            "Free [Confederate General] appears <upon turn start> <after turn number [5]> <before turn number [6]> <for [Confederacy] Civilizations>",
+            "Free [Confederate General] appears <upon turn start> <after turn number [9]> <before turn number [10]> <for [Confederacy] Civilizations>",
+            "[3] free [Confederate Infantry] units appear <upon turn start> <after turn number [9]> <before turn number [10]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Napoleon Battery] appears <upon turn start> <after turn number [9]> <before turn number [10]> <for [Confederacy] Civilizations>",
+            "Free [Field Hospital] appears <upon turn start> <after turn number [9]> <before turn number [10]> <for [Confederacy] Civilizations>",
+            "[2] free [Confederate Infantry] units appear <upon turn start> <after turn number [10]> <before turn number [11]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Napoleon Battery] appears <upon turn start> <after turn number [10]> <before turn number [11]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Parrott Rifles] appears <upon turn start> <after turn number [10]> <before turn number [11]> <for [Confederacy] Civilizations>",
+            "[2] free [Confederate General] units appear <upon turn start> <after turn number [15]> <before turn number [16]> <for [Confederacy] Civilizations>",
+            "[4] free [Confederate Infantry] units appear <upon turn start> <after turn number [15]> <before turn number [16]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Parrott Rifles] appears <upon turn start> <after turn number [15]> <before turn number [16]> <for [Confederacy] Civilizations>",
+            "Free [Field Hospital] appears <upon turn start> <after turn number [15]> <before turn number [16]> <for [Confederacy] Civilizations>",
+            "Free [Confederate General] appears <upon turn start> <after turn number [16]> <before turn number [17]> <for [Confederacy] Civilizations>",
+            "Free [Texas Brigade] appears <upon turn start> <after turn number [16]> <before turn number [17]> <for [Confederacy] Civilizations>",
+            "[2] free [Confederate Infantry] units appear <upon turn start> <after turn number [16]> <before turn number [17]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Napoleon Battery] appears <upon turn start> <after turn number [16]> <before turn number [17]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Sharpshooters] appears <upon turn start> <after turn number [16]> <before turn number [17]> <for [Confederacy] Civilizations>",
+            "Free [Confederate General] appears <upon turn start> <after turn number [17]> <before turn number [18]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Parrott Rifles] appears <upon turn start> <after turn number [17]> <before turn number [18]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Napoleon Battery] appears <upon turn start> <after turn number [17]> <before turn number [18]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Infantry] appears <upon turn start> <after turn number [21]> <before turn number [22]> <for [Confederacy] Civilizations>",
+            "Free [Confederate General] appears <upon turn start> <after turn number [30]> <before turn number [31]> <for [Confederacy] Civilizations>",
+            "[3] free [Confederate Infantry] units appear <upon turn start> <after turn number [30]> <before turn number [31]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Parrott Rifles] appears <upon turn start> <after turn number [30]> <before turn number [31]> <for [Confederacy] Civilizations>"
+        ],
+        "replacementTextForUniques": "Order of march for the Chambersburg Pike.\nLee's line of advance from Cashtown and the Cumberland Valley. Hill's and Longstreet's corps came down this pike.\n\nTurn 1 (8:00 AM, July 1): A. P. Hill\nTurn 2 (9:00 AM, July 1): William D. Pender; Perrin's Brigade (Pender); Lane's Brigade (Pender); Thomas's Brigade (Pender); Scales's Brigade (Pender); McIntosh's Battalion; Whitworth Battery\nTurn 5 (12:00 PM, July 1): Robert E. Lee\nTurn 9 (4:00 PM, July 1): Richard H. Anderson; Wilcox's Brigade (Anderson); Wright's Brigade (Anderson); Mahone's Brigade (Anderson); Lane's Battalion (Sumter Artillery); Field Hospital\nTurn 10 (5:00 PM, July 1): Perry's Florida Brigade (Anderson); Posey's Brigade (Anderson); Poague's Battalion; Garnett's Battalion\nTurn 15 (5:00 AM, July 2): James Longstreet; Lafayette McLaws; Kershaw's Brigade (McLaws); Barksdale's Brigade (McLaws); Semmes's Brigade (McLaws); Wofford's Brigade (McLaws); Cabell's Battalion; Field Hospital\nTurn 16 (6:00 AM, July 2): John B. Hood; Texas Brigade; G. T. Anderson's Brigade (Hood); Benning's Brigade (Hood); Henry's Battalion; Hood's Division Sharpshooters\nTurn 17 (7:00 AM, July 2): E. Porter Alexander; Alexander's Battalion; Washington Artillery of New Orleans (Eshleman)\nTurn 21 (11:00 AM, July 2): Law's Alabama Brigade (Hood)\nTurn 30 (8:00 PM, July 2): George E. Pickett; Garnett's Brigade (Pickett); Kemper's Brigade (Pickett); Armistead's Brigade (Pickett); Dearing's Battalion\n\nReinforcements appear in or next to this city at the start of the listed turn. If the enemy captures the city, the remaining reinforcements on this road are lost."
+    },
+    {
+        "name": "Confederate Arrivals: Middletown Road",
+        "cost": 1,
+        "uniqueTo": "Confederacy",
+        "uniques": [
+            "Gettysburg Arrivals",
+            "Unbuildable",
+            "Unsellable",
+            "Destroyed when the city is captured",
+            "[2] free [Confederate General] units appear <upon turn start> <after turn number [4]> <before turn number [5]> <for [Confederacy] Civilizations>",
+            "[3] free [Confederate Infantry] units appear <upon turn start> <after turn number [4]> <before turn number [5]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Parrott Rifles] appears <upon turn start> <after turn number [4]> <before turn number [5]> <for [Confederacy] Civilizations>",
+            "[2] free [Confederate Infantry] units appear <upon turn start> <after turn number [5]> <before turn number [6]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Sharpshooters] appears <upon turn start> <after turn number [5]> <before turn number [6]> <for [Confederacy] Civilizations>"
+        ],
+        "replacementTextForUniques": "Order of march for the Middletown Road.\nThe road from Middletown (Biglerville). Rodes's division arrived by it at Oak Hill around noon on July 1.\n\nTurn 4 (11:00 AM, July 1): Robert E. Rodes; Richard S. Ewell; Daniel's Brigade (Rodes); Iverson's Brigade (Rodes); O'Neal's Brigade (Rodes); Carter's Battalion\nTurn 5 (12:00 PM, July 1): Doles's Brigade (Rodes); Ramseur's Brigade (Rodes); Blackford's Sharpshooters (Rodes)\n\nReinforcements appear in or next to this city at the start of the listed turn. If the enemy captures the city, the remaining reinforcements on this road are lost."
+    },
+    {
+        "name": "Confederate Arrivals: Harrisburg Road",
+        "cost": 1,
+        "uniqueTo": "Confederacy",
+        "uniques": [
+            "Gettysburg Arrivals",
+            "Unbuildable",
+            "Unsellable",
+            "Destroyed when the city is captured",
+            "Free [Confederate General] appears <upon turn start> <after turn number [6]> <before turn number [7]> <for [Confederacy] Civilizations>",
+            "[2] free [Confederate Infantry] units appear <upon turn start> <after turn number [6]> <before turn number [7]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Napoleon Battery] appears <upon turn start> <after turn number [6]> <before turn number [7]> <for [Confederacy] Civilizations>",
+            "[2] free [Confederate Infantry] units appear <upon turn start> <after turn number [7]> <before turn number [8]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Cavalry] appears <upon turn start> <after turn number [7]> <before turn number [8]> <for [Confederacy] Civilizations>",
+            "Free [Confederate General] appears <upon turn start> <after turn number [12]> <before turn number [13]> <for [Confederacy] Civilizations>",
+            "[3] free [Confederate Infantry] units appear <upon turn start> <after turn number [12]> <before turn number [13]> <for [Confederacy] Civilizations>",
+            "Free [Stonewall Brigade] appears <upon turn start> <after turn number [12]> <before turn number [13]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Parrott Rifles] appears <upon turn start> <after turn number [12]> <before turn number [13]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Parrott Rifles] appears <upon turn start> <after turn number [13]> <before turn number [14]> <for [Confederacy] Civilizations>",
+            "Free [Confederate Napoleon Battery] appears <upon turn start> <after turn number [13]> <before turn number [14]> <for [Confederacy] Civilizations>",
+            "Free [Confederate General] appears <upon turn start> <after turn number [27]> <before turn number [28]> <for [Confederacy] Civilizations>",
+            "[3] free [Confederate Cavalry] units appear <upon turn start> <after turn number [27]> <before turn number [28]> <for [Confederacy] Civilizations>",
+            "Free [Stuart Horse Artillery] appears <upon turn start> <after turn number [27]> <before turn number [28]> <for [Confederacy] Civilizations>"
+        ],
+        "replacementTextForUniques": "Order of march for the Harrisburg Road.\nThe road from Heidlersburg and Harrisburg. Early's and Johnson's divisions and Stuart's cavalry came in from the north-east.\n\nTurn 6 (1:00 PM, July 1): Jubal A. Early; Gordon's Brigade (Early); Hays's Louisiana Tigers (Early); Jones's Battalion\nTurn 7 (2:00 PM, July 1): Avery's Brigade (Early); Extra Billy Smith's Brigade (Early); Jenkins's Brigade\nTurn 12 (7:00 PM, July 1): Edward Johnson; Steuart's Brigade (Johnson); Nicholls's Louisiana Brigade (Johnson); J. M. Jones's Brigade (Johnson); Stonewall Brigade; Latimer's Battalion\nTurn 13 (Night of July 1-2): Dance's Battalion; Nelson's Battalion\nTurn 27 (5:00 PM, July 2): J. E. B. Stuart; Hampton's Brigade (Stuart); Fitz Lee's Brigade (Stuart); Chambliss's Brigade (Stuart); Beckham's Stuart Horse Artillery\n\nReinforcements appear in or next to this city at the start of the listed turn. If the enemy captures the city, the remaining reinforcements on this road are lost."
+    }
+]

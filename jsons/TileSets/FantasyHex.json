@@ -1,0 +1,348 @@
+{
+    "ruleVariants": {
+        "Grassland+Forest": [
+            "Grassland",
+            "GrasslandForest"
+        ],
+        "Grassland+Forest+Orchard": [
+            "Grassland",
+            "Orchard",
+            "GrasslandForest"
+        ],
+        "Grassland+Forest+Boulders": [
+            "Grassland",
+            "Boulders",
+            "GrasslandForest"
+        ],
+        "Grassland+Forest+Town": [
+            "Grassland",
+            "Town",
+            "GrasslandForest"
+        ],
+        "Grassland+Forest+Stone Wall": [
+            "Grassland",
+            "Stone Wall",
+            "GrasslandForest"
+        ],
+        "Grassland+Forest+Farmstead": [
+            "Grassland",
+            "Farmstead",
+            "GrasslandForest"
+        ],
+        "Grassland+Forest+Railroad Cut": [
+            "Grassland",
+            "Railroad Cut",
+            "GrasslandForest"
+        ],
+        "Grassland+Forest+Marsh": [
+            "Grassland",
+            "Marsh",
+            "GrasslandForest"
+        ],
+        "Grassland+Hill": [
+            "Grassland",
+            "Hill"
+        ],
+        "Grassland+Hill+Orchard": [
+            "Grassland",
+            "Hill",
+            "Orchard"
+        ],
+        "Grassland+Hill+Boulders": [
+            "Grassland",
+            "Hill",
+            "Boulders"
+        ],
+        "Grassland+Hill+Town": [
+            "Grassland",
+            "Hill",
+            "Town"
+        ],
+        "Grassland+Hill+Stone Wall": [
+            "Grassland",
+            "Hill",
+            "Stone Wall"
+        ],
+        "Grassland+Hill+Farmstead": [
+            "Grassland",
+            "Hill",
+            "Farmstead"
+        ],
+        "Grassland+Hill+Railroad Cut": [
+            "Grassland",
+            "Hill",
+            "Railroad Cut"
+        ],
+        "Grassland+Hill+Marsh": [
+            "Grassland",
+            "Hill",
+            "Marsh"
+        ],
+        "Grassland+Hill+Forest": [
+            "Grassland",
+            "Hill",
+            "Forest"
+        ],
+        "Grassland+Hill+Forest+Orchard": [
+            "Grassland",
+            "Hill",
+            "Orchard",
+            "Forest"
+        ],
+        "Grassland+Hill+Forest+Boulders": [
+            "Grassland",
+            "Hill",
+            "Boulders",
+            "Forest"
+        ],
+        "Grassland+Hill+Forest+Town": [
+            "Grassland",
+            "Hill",
+            "Town",
+            "Forest"
+        ],
+        "Grassland+Hill+Forest+Stone Wall": [
+            "Grassland",
+            "Hill",
+            "Stone Wall",
+            "Forest"
+        ],
+        "Grassland+Hill+Forest+Farmstead": [
+            "Grassland",
+            "Hill",
+            "Farmstead",
+            "Forest"
+        ],
+        "Grassland+Hill+Forest+Railroad Cut": [
+            "Grassland",
+            "Hill",
+            "Railroad Cut",
+            "Forest"
+        ],
+        "Grassland+Hill+Forest+Marsh": [
+            "Grassland",
+            "Hill",
+            "Marsh",
+            "Forest"
+        ],
+        "Grassland+Ridge+Forest": [
+            "Grassland",
+            "Ridge",
+            "GrasslandForest"
+        ],
+        "Grassland+Ridge+Forest+Orchard": [
+            "Grassland",
+            "Ridge",
+            "Orchard",
+            "GrasslandForest"
+        ],
+        "Grassland+Ridge+Forest+Boulders": [
+            "Grassland",
+            "Ridge",
+            "Boulders",
+            "GrasslandForest"
+        ],
+        "Grassland+Ridge+Forest+Town": [
+            "Grassland",
+            "Ridge",
+            "Town",
+            "GrasslandForest"
+        ],
+        "Grassland+Ridge+Forest+Stone Wall": [
+            "Grassland",
+            "Ridge",
+            "Stone Wall",
+            "GrasslandForest"
+        ],
+        "Grassland+Ridge+Forest+Farmstead": [
+            "Grassland",
+            "Ridge",
+            "Farmstead",
+            "GrasslandForest"
+        ],
+        "Grassland+Ridge+Forest+Railroad Cut": [
+            "Grassland",
+            "Ridge",
+            "Railroad Cut",
+            "GrasslandForest"
+        ],
+        "Grassland+Ridge+Forest+Marsh": [
+            "Grassland",
+            "Ridge",
+            "Marsh",
+            "GrasslandForest"
+        ],
+        "Plains+Forest": [
+            "Plains",
+            "PlainsForest"
+        ],
+        "Plains+Forest+Orchard": [
+            "Plains",
+            "Orchard",
+            "PlainsForest"
+        ],
+        "Plains+Forest+Boulders": [
+            "Plains",
+            "Boulders",
+            "PlainsForest"
+        ],
+        "Plains+Forest+Town": [
+            "Plains",
+            "Town",
+            "PlainsForest"
+        ],
+        "Plains+Forest+Stone Wall": [
+            "Plains",
+            "Stone Wall",
+            "PlainsForest"
+        ],
+        "Plains+Forest+Farmstead": [
+            "Plains",
+            "Farmstead",
+            "PlainsForest"
+        ],
+        "Plains+Forest+Railroad Cut": [
+            "Plains",
+            "Railroad Cut",
+            "PlainsForest"
+        ],
+        "Plains+Forest+Marsh": [
+            "Plains",
+            "Marsh",
+            "PlainsForest"
+        ],
+        "Plains+Hill": [
+            "Plains",
+            "Hill"
+        ],
+        "Plains+Hill+Orchard": [
+            "Plains",
+            "Hill",
+            "Orchard"
+        ],
+        "Plains+Hill+Boulders": [
+            "Plains",
+            "Hill",
+            "Boulders"
+        ],
+        "Plains+Hill+Town": [
+            "Plains",
+            "Hill",
+            "Town"
+        ],
+        "Plains+Hill+Stone Wall": [
+            "Plains",
+            "Hill",
+            "Stone Wall"
+        ],
+        "Plains+Hill+Farmstead": [
+            "Plains",
+            "Hill",
+            "Farmstead"
+        ],
+        "Plains+Hill+Railroad Cut": [
+            "Plains",
+            "Hill",
+            "Railroad Cut"
+        ],
+        "Plains+Hill+Marsh": [
+            "Plains",
+            "Hill",
+            "Marsh"
+        ],
+        "Plains+Hill+Forest": [
+            "Plains",
+            "Hill",
+            "Forest"
+        ],
+        "Plains+Hill+Forest+Orchard": [
+            "Plains",
+            "Hill",
+            "Orchard",
+            "Forest"
+        ],
+        "Plains+Hill+Forest+Boulders": [
+            "Plains",
+            "Hill",
+            "Boulders",
+            "Forest"
+        ],
+        "Plains+Hill+Forest+Town": [
+            "Plains",
+            "Hill",
+            "Town",
+            "Forest"
+        ],
+        "Plains+Hill+Forest+Stone Wall": [
+            "Plains",
+            "Hill",
+            "Stone Wall",
+            "Forest"
+        ],
+        "Plains+Hill+Forest+Farmstead": [
+            "Plains",
+            "Hill",
+            "Farmstead",
+            "Forest"
+        ],
+        "Plains+Hill+Forest+Railroad Cut": [
+            "Plains",
+            "Hill",
+            "Railroad Cut",
+            "Forest"
+        ],
+        "Plains+Hill+Forest+Marsh": [
+            "Plains",
+            "Hill",
+            "Marsh",
+            "Forest"
+        ],
+        "Plains+Ridge+Forest": [
+            "Plains",
+            "Ridge",
+            "PlainsForest"
+        ],
+        "Plains+Ridge+Forest+Orchard": [
+            "Plains",
+            "Ridge",
+            "Orchard",
+            "PlainsForest"
+        ],
+        "Plains+Ridge+Forest+Boulders": [
+            "Plains",
+            "Ridge",
+            "Boulders",
+            "PlainsForest"
+        ],
+        "Plains+Ridge+Forest+Town": [
+            "Plains",
+            "Ridge",
+            "Town",
+            "PlainsForest"
+        ],
+        "Plains+Ridge+Forest+Stone Wall": [
+            "Plains",
+            "Ridge",
+            "Stone Wall",
+            "PlainsForest"
+        ],
+        "Plains+Ridge+Forest+Farmstead": [
+            "Plains",
+            "Ridge",
+            "Farmstead",
+            "PlainsForest"
+        ],
+        "Plains+Ridge+Forest+Railroad Cut": [
+            "Plains",
+            "Ridge",
+            "Railroad Cut",
+            "PlainsForest"
+        ],
+        "Plains+Ridge+Forest+Marsh": [
+            "Plains",
+            "Ridge",
+            "Marsh",
+            "PlainsForest"
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Hold the Field",
+        "victoryScreenHeader": "At nightfall on July 3 (the end of turn 47), the army occupying more of the KEY TERRAIN holds the field: Cemetery Hill, East Cemetery Hill, Culp's Hill, Little Round Top and the Angle.",
+        "milestones": ["Have more [[Holding Key Terrain] Units] than each player's [[Holding Key Terrain] Units]"],
+        "uniques": ["Only available <after turn number [47]>"],
+        "victoryString": "The enemy has fallen back. Your army holds the field at Gettysburg - and the history books will call it a turning point of the war.",
+        "defeatString": "The enemy holds the heights. Your army must retreat in the rain, its wounded strung out for miles in the wagon trains.",
+        "civilopediaText": [
+            {"text": "Historically the Union held Cemetery Hill, Culp's Hill, Cemetery Ridge and Little Round Top on the evening of July 3, and Lee retreated to Virginia the next day."},
+            {"text": "A military unit occupies key terrain when it ends its turn on one of the five key landmarks. The check is made from turn 47 onward, at the end of each army's turn."}
+        ]
+    },
+    {
+        "name": "Decisive Victory",
+        "victoryScreenHeader": "Capture the enemy army's headquarters (its capital) to break the army entirely.",
+        "milestones": ["Capture all capitals"],
+        "victoryString": "The enemy headquarters is in your hands. Their army is broken and scattered - a decisive victory.",
+        "defeatString": "Your headquarters has been overrun. The army is broken.",
+        "civilopediaText": [
+            {"text": "Meade's headquarters lies on the Taneytown Road and Lee's on the Chambersburg Pike, near the edges of the Gettysburg map. Capturing the enemy headquarters wins at once."}
+        ]
+    }
+]

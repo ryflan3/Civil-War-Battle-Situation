@@ -1,0 +1,233 @@
+[
+    {
+        "name": "Militia",
+        "baseHappiness": 25,
+        "extraHappinessPerLuxury": 1,
+        "researchCostModifier": 1.0,
+        "unitCostModifier": 0.67,
+        "unitSupplyBase": 40,
+        "unitSupplyPerCity": 10,
+        "buildingCostModifier": 1.0,
+        "policyCostModifier": 1.0,
+        "unhappinessModifier": 0.5,
+        "barbarianBonus": 0.0,
+        "barbarianSpawnDelay": 1000,
+        "playerBonusStartingUnits": [
+            "Cavalry Brigade",
+            "Napoleon Battery",
+            "Sharpshooters",
+            "General"
+        ],
+        "aiDifficultyLevel": "Militia",
+        "aiCityGrowthModifier": 1.0,
+        "aiUnitCostModifier": 1.4,
+        "aiBuildingCostModifier": 1.4,
+        "aiWonderCostModifier": 1.4,
+        "aiBuildingMaintenanceModifier": 1.0,
+        "aiUnitMaintenanceModifier": 1.0,
+        "aiUnitSupplyModifier": 0.0,
+        "aiFreeTechs": [],
+        "aiMajorCivBonusStartingUnits": [
+            "Cavalry Brigade",
+            "Napoleon Battery",
+            "Sharpshooters",
+            "General"
+        ],
+        "aiCityStateBonusStartingUnits": [],
+        "aiUnhappinessModifier": 1.0,
+        "aisExchangeTechs": false,
+        "turnBarbariansCanEnterPlayerTiles": 10000,
+        "clearBarbarianCampReward": 0,
+        "civilopediaText": [
+            {
+                "text": "Easiest. Your green troops get extra help; the enemy army is short of supplies."
+            }
+        ]
+    },
+    {
+        "name": "Volunteers",
+        "baseHappiness": 20,
+        "extraHappinessPerLuxury": 1,
+        "researchCostModifier": 1.0,
+        "unitCostModifier": 0.85,
+        "unitSupplyBase": 40,
+        "unitSupplyPerCity": 10,
+        "buildingCostModifier": 1.0,
+        "policyCostModifier": 1.0,
+        "unhappinessModifier": 0.5,
+        "barbarianBonus": 0.0,
+        "barbarianSpawnDelay": 1000,
+        "playerBonusStartingUnits": [
+            "Cavalry Brigade",
+            "Napoleon Battery",
+            "Sharpshooters",
+            "General"
+        ],
+        "aiDifficultyLevel": "Volunteers",
+        "aiCityGrowthModifier": 1.0,
+        "aiUnitCostModifier": 1.15,
+        "aiBuildingCostModifier": 1.15,
+        "aiWonderCostModifier": 1.15,
+        "aiBuildingMaintenanceModifier": 1.0,
+        "aiUnitMaintenanceModifier": 1.0,
+        "aiUnitSupplyModifier": 0.0,
+        "aiFreeTechs": [],
+        "aiMajorCivBonusStartingUnits": [
+            "Cavalry Brigade",
+            "Napoleon Battery",
+            "Sharpshooters",
+            "General"
+        ],
+        "aiCityStateBonusStartingUnits": [],
+        "aiUnhappinessModifier": 1.0,
+        "aisExchangeTechs": false,
+        "turnBarbariansCanEnterPlayerTiles": 10000,
+        "clearBarbarianCampReward": 0,
+        "civilopediaText": [
+            {
+                "text": "Easy. A forgiving introduction to Civil War tactics."
+            }
+        ]
+    },
+    {
+        "name": "Veterans",
+        "baseHappiness": 15,
+        "extraHappinessPerLuxury": 1,
+        "researchCostModifier": 1.0,
+        "unitCostModifier": 1.0,
+        "unitSupplyBase": 40,
+        "unitSupplyPerCity": 10,
+        "buildingCostModifier": 1.0,
+        "policyCostModifier": 1.0,
+        "unhappinessModifier": 0.5,
+        "barbarianBonus": 0.0,
+        "barbarianSpawnDelay": 1000,
+        "playerBonusStartingUnits": [
+            "Cavalry Brigade",
+            "Napoleon Battery",
+            "Sharpshooters",
+            "General"
+        ],
+        "aiDifficultyLevel": "Veterans",
+        "aiCityGrowthModifier": 1.0,
+        "aiUnitCostModifier": 1.0,
+        "aiBuildingCostModifier": 1.0,
+        "aiWonderCostModifier": 1.0,
+        "aiBuildingMaintenanceModifier": 1.0,
+        "aiUnitMaintenanceModifier": 1.0,
+        "aiUnitSupplyModifier": 0.0,
+        "aiFreeTechs": [],
+        "aiMajorCivBonusStartingUnits": [
+            "Cavalry Brigade",
+            "Napoleon Battery",
+            "Sharpshooters",
+            "General"
+        ],
+        "aiCityStateBonusStartingUnits": [],
+        "aiUnhappinessModifier": 1.0,
+        "aisExchangeTechs": false,
+        "turnBarbariansCanEnterPlayerTiles": 10000,
+        "clearBarbarianCampReward": 0,
+        "civilopediaText": [
+            {
+                "text": "Standard. Both armies are evenly matched - as at Gettysburg."
+            }
+        ]
+    },
+    {
+        "name": "Regulars",
+        "baseHappiness": 12,
+        "extraHappinessPerLuxury": 1,
+        "researchCostModifier": 1.0,
+        "unitCostModifier": 1.0,
+        "unitSupplyBase": 40,
+        "unitSupplyPerCity": 10,
+        "buildingCostModifier": 1.0,
+        "policyCostModifier": 1.0,
+        "unhappinessModifier": 0.5,
+        "barbarianBonus": 0.0,
+        "barbarianSpawnDelay": 1000,
+        "playerBonusStartingUnits": [
+            "Cavalry Brigade",
+            "Napoleon Battery",
+            "Sharpshooters",
+            "General"
+        ],
+        "aiDifficultyLevel": "Regulars",
+        "aiCityGrowthModifier": 1.0,
+        "aiUnitCostModifier": 0.85,
+        "aiBuildingCostModifier": 0.85,
+        "aiWonderCostModifier": 0.85,
+        "aiBuildingMaintenanceModifier": 1.0,
+        "aiUnitMaintenanceModifier": 1.0,
+        "aiUnitSupplyModifier": 0.0,
+        "aiFreeTechs": [],
+        "aiMajorCivBonusStartingUnits": [
+            "Cavalry Brigade",
+            "Napoleon Battery",
+            "Sharpshooters",
+            "General",
+            "Infantry Brigade",
+            "Rifled Battery"
+        ],
+        "aiCityStateBonusStartingUnits": [],
+        "aiUnhappinessModifier": 1.0,
+        "aisExchangeTechs": false,
+        "turnBarbariansCanEnterPlayerTiles": 10000,
+        "clearBarbarianCampReward": 0,
+        "civilopediaText": [
+            {
+                "text": "Hard. The enemy fields extra brigades and builds faster."
+            }
+        ]
+    },
+    {
+        "name": "Iron Brigade",
+        "baseHappiness": 10,
+        "extraHappinessPerLuxury": 1,
+        "researchCostModifier": 1.0,
+        "unitCostModifier": 1.0,
+        "unitSupplyBase": 40,
+        "unitSupplyPerCity": 10,
+        "buildingCostModifier": 1.0,
+        "policyCostModifier": 1.0,
+        "unhappinessModifier": 0.5,
+        "barbarianBonus": 0.0,
+        "barbarianSpawnDelay": 1000,
+        "playerBonusStartingUnits": [
+            "Cavalry Brigade",
+            "Napoleon Battery",
+            "Sharpshooters",
+            "General"
+        ],
+        "aiDifficultyLevel": "Iron Brigade",
+        "aiCityGrowthModifier": 1.0,
+        "aiUnitCostModifier": 0.7,
+        "aiBuildingCostModifier": 0.7,
+        "aiWonderCostModifier": 0.7,
+        "aiBuildingMaintenanceModifier": 1.0,
+        "aiUnitMaintenanceModifier": 1.0,
+        "aiUnitSupplyModifier": 0.0,
+        "aiFreeTechs": [],
+        "aiMajorCivBonusStartingUnits": [
+            "Cavalry Brigade",
+            "Napoleon Battery",
+            "Sharpshooters",
+            "General",
+            "Infantry Brigade",
+            "Infantry Brigade",
+            "Rifled Battery",
+            "Cavalry Brigade"
+        ],
+        "aiCityStateBonusStartingUnits": [],
+        "aiUnhappinessModifier": 1.0,
+        "aisExchangeTechs": false,
+        "turnBarbariansCanEnterPlayerTiles": 10000,
+        "clearBarbarianCampReward": 0,
+        "civilopediaText": [
+            {
+                "text": "Hardest. Hold the line against a stronger, better-supplied enemy."
+            }
+        ]
+    }
+]

@@ -1,0 +1,60 @@
+[
+    {
+        "name": "Breastworks",
+        "terrainsCanBeBuiltOn": ["Grassland", "Plains", "Hill", "Ridge", "Forest", "Orchard", "Boulders", "Town", "Stone Wall", "Farmstead"],
+        "turnsToBuild": 2,
+        "uniques": [
+            "Can be built outside your borders",
+            "Gives a defensive bonus of [50]%",
+            "Does not need removal of [Forest]",
+            "Does not need removal of [Orchard]"
+        ],
+        "shortcutKey": "B",
+        "civilopediaText": [
+            {"text": "Log-and-earth breastworks thrown up by infantry with axes and shovels. On the night of July 2, five New York regiments behind breastworks on Culp's Hill held off an entire Confederate division."},
+            {"text": "Infantry and Pioneers can build them anywhere in two turns."}
+        ]
+    },
+    {
+        "name": "Road",
+        "terrainsCanBeBuiltOn": ["Land"],
+        "turnsToBuild": 3,
+        "uniques": ["Can be built outside your borders"],
+        "shortcutKey": "R",
+        "civilopediaText": [
+            {"text": "The turnpikes and country roads that made Gettysburg a crossroads. Marching columns move three times as fast along a road, and roads bridge the creeks."}
+        ]
+    },
+    {
+        "name": "Remove Forest",
+        "terrainsCanBeBuiltOn": ["Forest"],
+        "turnsToBuild": 3,
+        "uniques": ["Can be built outside your borders"],
+        "civilopediaText": [{"text": "Felling trees to open fields of fire and to build breastworks."}]
+    },
+    {
+        "name": "Cancel improvement order",
+        "uniques": ["Can be built outside your borders", "Excluded from map editor"],
+        "shortcutKey": "."
+    },
+    {
+        "name": "Repair",
+        "terrainsCanBeBuiltOn": ["Land"],
+        "turnsToBuild": 2,
+        "shortcutKey": "E",
+        "uniques": ["Unbuildable", "Excluded from map editor"],
+        "civilopediaText": [{"text": "Repairs a pillaged improvement or road."}]
+    },
+    {
+        "name": "City ruins",
+        "terrainsCanBeBuiltOn": ["Land"],
+        "uniques": ["Unpillagable", "Unbuildable"],
+        "civilopediaText": [{"text": "The burned remains of a supply depot."}]
+    },
+    {
+        "name": "City center",
+        "terrainsCanBeBuiltOn": ["Land"],
+        "uniques": ["Ensures a minimum tile yield of [+2 Food, +1 Production]", "Unpillagable", "Irremovable", "Unbuildable", "Excluded from map editor"],
+        "civilopediaText": [{"text": "An army headquarters or supply depot: tents, wagon parks and ammunition trains."}]
+    }
+]

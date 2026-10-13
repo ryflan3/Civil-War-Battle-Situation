@@ -1,0 +1,83 @@
+[
+    {
+        "name": "Spectator",
+        "outerColor": [255, 255, 255]
+    },
+    {
+        "name": "Union",
+        "leaderName": "George G. Meade",
+        "adjective": ["Union", "Federal"],
+        "preferredVictoryType": "Hold the Field",
+        "startBias": ["Hill"],
+
+        "startIntroPart1": "General Meade, you took command of the Army of the Potomac only three days ago. Lee's Army of Northern Virginia has invaded Pennsylvania, and its corps are converging on Gettysburg, the crossroads town where ten roads meet. At dawn on July 1, 1863, John Buford's cavalry division holds the ridges west of town and waits for the infantry to come up.",
+        "startIntroPart2": "Your corps are strung out on the roads to the south - Reynolds' I Corps is closest. Hold the high ground south of town: Cemetery Hill, Culp's Hill, Cemetery Ridge and Little Round Top. If they hold at nightfall on July 3, the road to Baltimore, Philadelphia and Washington stays closed.",
+
+        "declaringWar": "The rebel army has invaded Pennsylvania. We will meet it here, and we will drive it back across the Potomac.",
+        "attacked": "You have attacked the Army of the Potomac. Every corps on the road is marching to the sound of the guns.",
+        "defeated": "The Army of the Potomac has been beaten - but the Union will raise another.",
+        "introduction": "Major General George Gordon Meade, commanding the Army of the Potomac.",
+        "neutralHello": "We hold the high ground. What do you want?",
+        "hateHello": "Your army is a long way from Virginia.",
+        "tradeRequest": "Under a flag of truce, we have a proposal.",
+
+        "outerColor": [28, 42, 92],
+        "innerColor": [236, 236, 236],
+
+        "uniqueName": "Arsenal of the Union",
+        "uniqueText": "Union artillery fires better ammunition with reliable fuses under Henry Hunt's well-organized artillery command: +15% Strength for Artillery when attacking. Jonathan Letterman's ambulance and field-hospital system returns the wounded to the ranks faster: +5 HP when healing for all land units.",
+        "uniques": [
+            "[+15]% Strength <for [Artillery] units> <when attacking>",
+            "[+5] HP when healing <for [Land] units>"
+        ],
+        "cities": ["Taneytown Road", "Emmitsburg Road", "Baltimore Pike", "Hanover Road", "Westminster", "Littlestown", "Two Taverns", "Emmitsburg",
+            "Taneytown", "Hanover", "Frederick", "Union Mills", "Manchester", "Uniontown", "New Windsor", "Middleburg"],
+        "civilopediaText": [
+            {"text": "The Army of the Potomac at Gettysburg numbered about 94,000 men in seven infantry corps, a cavalry corps and the Artillery Reserve, with 372 guns."},
+            {"text": "It fought most of the battle on the defensive, holding a 'fishhook' line from Culp's Hill around Cemetery Hill and down Cemetery Ridge to Little Round Top. Interior lines let Meade shift brigades quickly to threatened points."}
+        ]
+    },
+    {
+        "name": "Confederacy",
+        "leaderName": "Robert E. Lee",
+        "adjective": ["Confederate"],
+        "preferredVictoryType": "Hold the Field",
+        "startBias": ["Hill"],
+
+        "startIntroPart1": "General Lee, after your victory at Chancellorsville the Army of Northern Virginia has marched north into Pennsylvania. Jeb Stuart's cavalry is away raiding, and you are blind to the enemy's movements. This morning, July 1, 1863, Heth's division is marching down the Chambersburg Pike toward Gettysburg - and has run into Union cavalry on the ridges west of town.",
+        "startIntroPart2": "Your corps are converging from the west and the north. Drive the enemy off the heights south of the town before the whole Union army arrives. A victory on Northern soil could break the North's will to fight.",
+
+        "declaringWar": "If the enemy is there tomorrow, we must attack him.",
+        "attacked": "The Army of Northern Virginia does not give ground easily.",
+        "defeated": "It is all my fault.",
+        "introduction": "General Robert Edward Lee, commanding the Army of Northern Virginia.",
+        "neutralHello": "General.",
+        "hateHello": "You are standing on ground we intend to take.",
+        "tradeRequest": "Under a flag of truce, we have a proposal.",
+
+        "outerColor": [147, 150, 155],
+        "innerColor": [145, 22, 33],
+
+        "uniqueName": "Lee's Invincibles",
+        "uniqueText": "Southern troopers were superb horsemen who still trusted the mounted charge: +15% Strength for Cavalry when attacking. Foraging in Pennsylvania's rich farmland kept the army fed: +5 HP when healing for land units in foreign territory. (The army's famous offensive spirit is carried by its infantry and its generals.)",
+        "uniques": [
+            "[+15]% Strength <for [Cavalry] units> <when attacking>",
+            "[+5] HP when healing <for [Land] units> <in [Foreign Land] tiles>"
+        ],
+        "cities": ["Chambersburg Pike", "Middletown Road", "Harrisburg Road", "Cashtown", "Fairfield", "Heidlersburg", "Hunterstown", "Mummasburg",
+            "Chambersburg", "Greenwood", "Hagerstown", "Carlisle", "Shippensburg", "Mercersburg", "Arendtsville", "Biglerville"],
+        "civilopediaText": [
+            {"text": "The Army of Northern Virginia at Gettysburg numbered about 71,000 to 75,000 men in three infantry corps under Longstreet, Ewell and A. P. Hill, with Stuart's cavalry and about 283 guns."},
+            {"text": "It reached the field from the west and the north and fought mostly on the offensive, from Seminary Ridge and the town toward the Union heights."}
+        ]
+    },
+    {
+        "name": "Barbarians",
+        "outerColor": [0, 0, 0],
+        "innerColor": [185, 12, 12],
+        "uniques": ["Can only heal by pillaging", "Excluded from map editor"],
+        "civilopediaText": [
+            {"text": "Deserters, bushwhackers and guerrilla bands. They only appear in free-play games with barbarians enabled."}
+        ]
+    }
+]

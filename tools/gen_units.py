@@ -1,0 +1,224 @@
+"""Generates jsons/Units.json - the unit roster of the Civil War Battle Situation mod.
+
+Stats are on Unciv's relative scale: a standard infantry brigade has Strength 20.
+Only the ratios between strengths matter in Unciv combat.
+Run from the repository root:  python3 tools/gen_units.py
+"""
+import json, os
+
+def pedia(*lines):
+    return [{"text": l} for l in lines]
+
+INF_NAME = lambda u: "[This Unit] gets a name from the [%s] group" % u
+
+UNITS = [
+    # ------------------------------------------------------------------ generic base units
+    {"name": "Infantry Brigade", "unitType": "Infantry", "movement": 3, "strength": 20, "cost": 45, "attackSound": "shot",
+     "civilopediaText": pedia(
+        "A brigade of four or five regiments - 1,000 to 2,000 men - armed with muzzle-loading rifle-muskets.",
+        "Weapon: .58 caliber rifle-musket firing the Minie ball. Effective to about 300 yards, sighted to 500, two or three aimed shots a minute.",
+        "Infantry fought in a two-rank line, trading volleys at 100 to 300 yards. Attacks across open ground against a steady line rarely succeeded without heavy losses, so cover and flanking matter more than raw numbers.",
+        "Infantry can build Breastworks.")},
+    {"name": "Sharpshooters", "unitType": "Skirmisher", "movement": 3, "strength": 10, "rangedStrength": 14, "range": 2, "cost": 40,
+     "attackSound": "shot",
+     "uniques": ["[+50]% Strength <vs [Artillery] units>", "[+25]% Strength <when fighting in [Rough terrain] tiles>",
+                 "Withdraws before melee combat <with [75]% chance>", "[+1] Sight"],
+     "civilopediaText": pedia(
+        "Picked marksmen fighting in open order, ahead of and between the battle lines.",
+        "They shot at officers, color bearers and artillery crews from long range, then slipped away before an enemy line could close with them.")},
+    {"name": "Cavalry Brigade", "unitType": "Cavalry", "movement": 5, "strength": 16, "cost": 55, "attackSound": "horse",
+     "uniques": ["[+1] Sight", "[-33]% Strength <vs [Infantry] units> <when attacking>",
+                 "Withdraws before melee combat <with [50]% chance>"],
+     "civilopediaText": pedia(
+        "Two to four regiments of horsemen with sabers, revolvers and carbines.",
+        "Cavalry was the army's eyes: fast, far-seeing and able to fall back before a heavier enemy. Mounted charges against infantry armed with rifle-muskets were almost always bloody failures.")},
+    {"name": "Napoleon Battery", "unitType": "Artillery", "movement": 3, "strength": 12, "rangedStrength": 22, "range": 2, "cost": 55,
+     "attackSound": "cannon",
+     "uniques": ["[+50]% Strength <when defending> <vs [Infantry] units>", "[+50]% Strength <when defending> <vs [Cavalry] units>"],
+     "civilopediaText": pedia(
+        "Smoothbore guns: the bronze 12-pounder Napoleon, Model 1857, the most common field gun of the war.",
+        "Range about 1,600 yards. At close range it fired canister - tin cans full of iron balls that turned a cannon into a giant shotgun. Infantry assaulting a Napoleon battery head-on was torn apart.")},
+    {"name": "Rifled Battery", "unitType": "Artillery", "movement": 3, "strength": 10, "rangedStrength": 20, "range": 3, "cost": 60,
+     "attackSound": "artillery",
+     "uniques": ["[+33]% Strength <vs [Artillery] units>", "[+15]% Strength <when defending> <vs [Infantry] units>"],
+     "civilopediaText": pedia(
+        "Rifled guns: the 3-inch Ordnance Rifle and the 10-pounder Parrott.",
+        "Accurate out to about 1,800 yards and deadly at counter-battery fire, but their small-bore canister was weaker than a Napoleon's at close range.")},
+    {"name": "Horse Artillery", "unitType": "Artillery", "movement": 4, "strength": 10, "rangedStrength": 18, "range": 2, "cost": 65,
+     "attackSound": "artillery",
+     "civilopediaText": pedia(
+        "Light rifled guns whose crews all rode horses, so they could keep up with the cavalry.")},
+    {"name": "General", "unitType": "Commander", "movement": 5,
+     "uniques": ["[+15]% Strength bonus for [{Military} {Land}] units within [2] tiles", "[+1] Sight",
+                 "Can be earned through combat <for [Land] units>", "Is part of Great Person group [General]",
+                 "Great Person - [War]", "Unbuildable", "Uncapturable"],
+     "civilopediaText": pedia(
+        "A corps or division commander with his staff and couriers.",
+        "Generals inspire nearby troops (the best bonus in range applies; bonuses do not stack). Many led from the front: at Gettysburg Reynolds, Armistead and Barksdale were killed, and Hancock, Sickles, Hood, Pender and Heth were wounded.",
+        "Generals cannot be captured - if the enemy reaches them, they fall.")},
+    {"name": "Supply Train", "unitType": "Support", "movement": 3, "cost": 70, "attackSound": "wagon",
+     "uniques": ["Founds a new city"],
+     "civilopediaText": pedia(
+        "Wagons, teamsters, ammunition and rations. Establishes a supply depot (a new city) where the army can raise and refit units.")},
+    {"name": "Pioneers", "unitType": "Support", "movement": 3, "cost": 30,
+     "uniques": ["Can build [Breastworks] improvements on tiles", "Can build [Road] improvements on tiles",
+                 "Can build [Remove Forest] improvements on tiles"],
+     "civilopediaText": pedia(
+        "Pioneer and engineer detachments with axes, shovels and pontoons. They build breastworks and roads and clear woods to open fields of fire.")},
+    {"name": "Field Hospital", "unitType": "Support", "movement": 3, "cost": 40,
+     "uniques": ["All adjacent units heal [+10] HP when healing"],
+     "civilopediaText": pedia(
+        "Surgeons, stretcher bearers and ambulances. Gettysburg's 51,000 casualties filled every barn, church and farmhouse for miles.")},
+
+    # ------------------------------------------------------------------ Union
+    {"name": "Union Infantry", "unitType": "Infantry", "uniqueTo": "Union", "replaces": "Infantry Brigade",
+     "movement": 3, "strength": 20, "cost": 45, "attackSound": "shot",
+     "uniques": ["[+10]% Strength", INF_NAME("Union Infantry")],
+     "civilopediaText": pedia(
+        "A Union infantry brigade in dark blue frock coats and kepis, armed with the Springfield Model 1861 rifle-musket.",
+        "Ample ammunition (60 rounds per man) and standardized weapons kept Union lines firing longer: +10% Strength. At Gettysburg the Army of the Potomac fought mostly from good ground, and its volleys broke one Confederate assault after another.")},
+    {"name": "Iron Brigade", "unitType": "Infantry", "uniqueTo": "Union", "movement": 3, "strength": 23, "cost": 60, "attackSound": "shot",
+     "uniques": ["Unbuildable", "[+15]% Strength <when defending>", "No damage penalty for wounded units",
+                 "[-10]% Strength for enemy [Infantry] units in adjacent [Land] tiles"],
+     "civilopediaText": pedia(
+        "The 2nd, 6th and 7th Wisconsin, 19th Indiana and 24th Michigan - Westerners who wore the regular army's tall black Hardee hat instead of the kepi.",
+        "On the morning of July 1 they charged into Herbst Woods, broke Archer's brigade and captured General Archer himself. Confederates who saw the black hats knew they were facing veterans, not militia.",
+        "The brigade held McPherson's Ridge all afternoon and lost 1,153 of its 1,885 men - 61 percent - but bought the time for the Union army to seize the high ground.",
+        "Fights at full strength even when badly wounded; adjacent enemy infantry fight at -10%.")},
+    {"name": "US Sharpshooters", "unitType": "Skirmisher", "uniqueTo": "Union", "replaces": "Sharpshooters",
+     "movement": 3, "strength": 10, "rangedStrength": 16, "range": 2, "cost": 45, "attackSound": "shot",
+     "uniques": ["[+50]% Strength <vs [Artillery] units>", "[+25]% Strength <when fighting in [Rough terrain] tiles>",
+                 "Withdraws before melee combat <with [75]% chance>", "[+1] Sight", INF_NAME("US Sharpshooters")],
+     "civilopediaText": pedia(
+        "Hiram Berdan's 1st and 2nd United States Sharpshooters in rifle-green uniforms, armed with the breech-loading .52 caliber Sharps rifle - fast to reload and accurate at long range.",
+        "On July 2 a hundred of them probed Pitzer's Woods and discovered Longstreet's flank march, then fought a stubborn delaying action in front of Little Round Top.")},
+    {"name": "Union Cavalry", "unitType": "Cavalry", "uniqueTo": "Union", "replaces": "Cavalry Brigade",
+     "movement": 5, "strength": 17, "cost": 55, "attackSound": "horse",
+     "uniques": ["[+1] Sight", "[-33]% Strength <vs [Infantry] units> <when attacking>",
+                 "Withdraws before melee combat <with [50]% chance>", "[+25]% Strength <when defending>",
+                 INF_NAME("Union Cavalry")],
+     "civilopediaText": pedia(
+        "Union troopers armed with breech-loading carbines - Sharps, Burnside, Merrill - that could be loaded lying down and fired several times a minute.",
+        "On July 1 John Buford's two brigades fought dismounted behind fences on McPherson's and Herr Ridges and held up Heth's infantry for hours: +25% Strength when defending.")},
+    {"name": "Michigan Cavalry Brigade", "unitType": "Cavalry", "uniqueTo": "Union", "movement": 5, "strength": 20, "cost": 70,
+     "attackSound": "horse",
+     "uniques": ["Unbuildable", "[+1] Sight", "Withdraws before melee combat <with [50]% chance>",
+                 "Before engaging in combat performs an extra ranged attack with [30]% of melee combat strength",
+                 "[+25]% Strength <vs [Cavalry] units>"],
+     "civilopediaText": pedia(
+        "The 1st, 5th, 6th and 7th Michigan Cavalry - the 'Wolverines' - under 23-year-old George Armstrong Custer, promoted brigadier general only four days before the battle.",
+        "The 5th and 6th Michigan carried seven-shot Spencer repeating rifles, so the brigade opens every fight with a burst of fire.",
+        "On July 3 at East Cavalry Field, Custer led charge after charge ('Come on, you Wolverines!') to stop Stuart's cavalry from reaching the Union rear.")},
+    {"name": "Union Napoleon Battery", "unitType": "Artillery", "uniqueTo": "Union", "replaces": "Napoleon Battery",
+     "movement": 3, "strength": 12, "rangedStrength": 22, "range": 2, "cost": 55, "attackSound": "cannon",
+     "uniques": ["[+50]% Strength <when defending> <vs [Infantry] units>", "[+50]% Strength <when defending> <vs [Cavalry] units>",
+                 INF_NAME("Union Napoleon Battery")],
+     "civilopediaText": pedia(
+        "Union batteries of bronze 12-pounder Napoleons.",
+        "On July 3 Union Napoleons on Cemetery Ridge held their canister until Pickett's lines were a few hundred yards away, then fired double canister into them.")},
+    {"name": "Union Ordnance Rifles", "unitType": "Artillery", "uniqueTo": "Union", "replaces": "Rifled Battery",
+     "movement": 3, "strength": 10, "rangedStrength": 21, "range": 3, "cost": 60, "attackSound": "artillery",
+     "uniques": ["[+33]% Strength <vs [Artillery] units>", "[+15]% Strength <when defending> <vs [Infantry] units>",
+                 INF_NAME("Union Ordnance Rifles")],
+     "civilopediaText": pedia(
+        "The 3-inch Ordnance Rifle: a light gun made of tough wrought iron, famously accurate and almost never burst.",
+        "Union artillery chief Henry Hunt's rifled batteries out-dueled the Confederate guns on Benner's Hill on July 2.")},
+    {"name": "US Horse Artillery", "unitType": "Artillery", "uniqueTo": "Union", "replaces": "Horse Artillery",
+     "movement": 4, "strength": 10, "rangedStrength": 19, "range": 2, "cost": 65, "attackSound": "artillery",
+     "uniques": [INF_NAME("US Horse Artillery")],
+     "civilopediaText": pedia(
+        "Regular army horse batteries with 3-inch rifles, every gunner mounted.",
+        "Lieutenant John Calef's Battery A, 2nd U.S. Artillery fired the first Union artillery shots of the battle from McPherson's Ridge on the morning of July 1.")},
+    {"name": "Union General", "unitType": "Commander", "uniqueTo": "Union", "replaces": "General", "movement": 5,
+     "uniques": ["[+15]% Strength bonus for [{Military} {Land}] units within [2] tiles", "[+1] Sight",
+                 "Can be earned through combat <for [Land] units>", "Is part of Great Person group [General]",
+                 "Great Person - [War]", "Unbuildable", "Uncapturable", INF_NAME("Union General")],
+     "civilopediaText": pedia(
+        "A Union corps or division commander. Named generals carry their own personal ability - see the 'Promotions' of each general (for example Hancock, Buford, Hunt or Warren).")},
+    {"name": "Ambulance Corps", "unitType": "Support", "uniqueTo": "Union", "replaces": "Field Hospital", "movement": 4, "cost": 40,
+     "uniques": ["All adjacent units heal [+15] HP when healing"],
+     "civilopediaText": pedia(
+        "Dr. Jonathan Letterman's Ambulance Corps, organized in 1862: trained stretcher bearers, dedicated ambulance wagons and a chain of field hospitals.",
+        "It removed the Union wounded from the field at Gettysburg far faster than in earlier battles, and became the model for modern military medicine.")},
+
+    # ------------------------------------------------------------------ Confederacy
+    {"name": "Confederate Infantry", "unitType": "Infantry", "uniqueTo": "Confederacy", "replaces": "Infantry Brigade",
+     "movement": 3, "strength": 20, "cost": 45, "attackSound": "shot",
+     "uniques": ["[+10]% Strength <when attacking>", INF_NAME("Confederate Infantry")],
+     "civilopediaText": pedia(
+        "A Confederate infantry brigade in gray and butternut, slouch hats and kepis, carrying the British Enfield Pattern 1853 rifle-musket or captured Springfields.",
+        "Lean, fast-marching veterans who charged with the high-pitched 'Rebel Yell'. On July 1 they routed two Union corps; on July 2 and 3 they hurled themselves at the Union heights.")},
+    {"name": "Texas Brigade", "unitType": "Infantry", "uniqueTo": "Confederacy", "movement": 3, "strength": 23, "cost": 60,
+     "attackSound": "shot",
+     "uniques": ["Unbuildable", "[+20]% Strength <when attacking>", "[+20]% Strength <when fighting in [Rough terrain] tiles>"],
+     "civilopediaText": pedia(
+        "Hood's Texas Brigade - the 1st, 4th and 5th Texas and 3rd Arkansas, led at Gettysburg by Jerome Robertson - Lee's favorite shock troops.",
+        "On July 2 they clawed their way through the boulders of Devil's Den and up the slopes of Little Round Top. Excels when attacking and in rough terrain.")},
+    {"name": "Stonewall Brigade", "unitType": "Infantry", "uniqueTo": "Confederacy", "movement": 4, "strength": 22, "cost": 60,
+     "attackSound": "shot",
+     "uniques": ["Unbuildable", "[+15]% Strength <when attacking>"],
+     "civilopediaText": pedia(
+        "The 2nd, 4th, 5th, 27th and 33rd Virginia - Stonewall Jackson's own brigade, 'foot cavalry' of the 1862 Shenandoah Valley campaign. Jackson had died two months earlier; James A. Walker led them at Gettysburg.",
+        "They fought at Brinkerhoff's Ridge on July 2 and attacked Culp's Hill on the morning of July 3. Moves 4 instead of 3.")},
+    {"name": "Confederate Sharpshooters", "unitType": "Skirmisher", "uniqueTo": "Confederacy", "replaces": "Sharpshooters",
+     "movement": 3, "strength": 10, "rangedStrength": 15, "range": 2, "cost": 40, "attackSound": "shot",
+     "uniques": ["[+50]% Strength <vs [Artillery] units>", "[+25]% Strength <when fighting in [Rough terrain] tiles>",
+                 "Withdraws before melee combat <with [75]% chance>", "[+1] Sight", INF_NAME("Confederate Sharpshooters")],
+     "civilopediaText": pedia(
+        "Brigade sharpshooter detachments, some with scoped English Whitworth rifles accurate beyond 800 yards.",
+        "From the rocks of Devil's Den they shot down officers and gunners on Little Round Top - including Lieutenant Charles Hazlett and General Stephen Weed.")},
+    {"name": "Confederate Cavalry", "unitType": "Cavalry", "uniqueTo": "Confederacy", "replaces": "Cavalry Brigade",
+     "movement": 6, "strength": 16, "cost": 55, "attackSound": "horse",
+     "uniques": ["[+1] Sight", "[-33]% Strength <vs [Infantry] units> <when attacking>",
+                 "Withdraws before melee combat <with [50]% chance>", "[+20]% Strength <vs [Cavalry] units> <when attacking>",
+                 INF_NAME("Confederate Cavalry")],
+     "civilopediaText": pedia(
+        "Jeb Stuart's cavaliers: superb horsemen who preferred the mounted charge with saber and revolver, but carried fewer carbines than the Union troopers.",
+        "Stuart's raid around the Union army kept most of his cavalry away until the evening of July 2 - leaving Lee blind during the first two days.")},
+    {"name": "Confederate Napoleon Battery", "unitType": "Artillery", "uniqueTo": "Confederacy", "replaces": "Napoleon Battery",
+     "movement": 3, "strength": 12, "rangedStrength": 20, "range": 2, "cost": 55, "attackSound": "cannon",
+     "uniques": ["[+50]% Strength <when defending> <vs [Infantry] units>", "[+50]% Strength <when defending> <vs [Cavalry] units>",
+                 INF_NAME("Confederate Napoleon Battery")],
+     "civilopediaText": pedia(
+        "Confederate 12-pounder Napoleons, many of them captured from the Union or cast in Southern foundries.",
+        "Confederate shells and fuses were less reliable than Union ones - one reason the great bombardment before Pickett's Charge overshot its targets.")},
+    {"name": "Confederate Parrott Rifles", "unitType": "Artillery", "uniqueTo": "Confederacy", "replaces": "Rifled Battery",
+     "movement": 3, "strength": 10, "rangedStrength": 19, "range": 3, "cost": 60, "attackSound": "artillery",
+     "uniques": ["[+25]% Strength <vs [Artillery] units>", "[+15]% Strength <when defending> <vs [Infantry] units>",
+                 INF_NAME("Confederate Parrott Rifles")],
+     "civilopediaText": pedia(
+        "10-pounder Parrott rifles and 3-inch rifles: accurate cast-iron guns with a wrought-iron band around the breech. Parrotts had a dangerous reputation for bursting.")},
+    {"name": "Whitworth Battery", "unitType": "Artillery", "uniqueTo": "Confederacy", "movement": 3, "strength": 8,
+     "rangedStrength": 16, "range": 4, "cost": 70, "attackSound": "artillery",
+     "uniques": ["Unbuildable", "[+33]% Strength <vs [Artillery] units>"],
+     "civilopediaText": pedia(
+        "Two English-made Whitworth breech-loading rifles in Captain William Hurt's Alabama battery. Their hexagonal bolts flew with a distinctive shriek and could reach targets miles away.",
+        "From Oak Hill and Seminary Ridge they could hit the Union lines beyond the range of any other gun on the field. Range 4.")},
+    {"name": "Stuart Horse Artillery", "unitType": "Artillery", "uniqueTo": "Confederacy", "replaces": "Horse Artillery",
+     "movement": 5, "strength": 10, "rangedStrength": 18, "range": 2, "cost": 65, "attackSound": "artillery",
+     "uniques": [INF_NAME("Stuart Horse Artillery")],
+     "civilopediaText": pedia(
+        "Major Robert Beckham's Stuart Horse Artillery, heir to John Pelham's famous flying batteries. Fast enough to gallop into position alongside Stuart's troopers: Movement 5.")},
+    {"name": "Confederate General", "unitType": "Commander", "uniqueTo": "Confederacy", "replaces": "General", "movement": 5,
+     "uniques": ["[+15]% Strength bonus for [{Military} {Land}] units within [2] tiles", "[+1] Sight",
+                 "Can be earned through combat <for [Land] units>", "Is part of Great Person group [General]",
+                 "Great Person - [War]", "Unbuildable", "Uncapturable", INF_NAME("Confederate General")],
+     "civilopediaText": pedia(
+        "A Confederate corps or division commander. Named generals carry their own personal ability - see the 'Promotions' of each general (for example Lee, Longstreet, Stuart or Hood).")},
+]
+
+# In the Gettysburg scenario the armies follow the historical order of battle: cities cannot raise
+# new combat units or supply trains (support units are still allowed). In free play everything is buildable.
+SCENARIO_LOCK = "Unavailable <if [Gettysburg Arrivals] is constructed>"
+for _u in UNITS:
+    _uniques = _u.setdefault("uniques", [])
+    if "Unbuildable" in _uniques:
+        continue
+    if _u["unitType"] in ("Infantry", "Skirmisher", "Cavalry", "Artillery") or _u["name"] == "Supply Train":
+        _uniques.append(SCENARIO_LOCK)
+
+if __name__ == "__main__":
+    root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+    with open(os.path.join(root, "jsons", "Units.json"), "w") as f:
+        json.dump(UNITS, f, indent=4)
+    print("Wrote %d units" % len(UNITS))

@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Civil War era",
+        "researchAgreementCost": 300,
+        "iconRGB": [70, 92, 150],
+        "startingSettlerCount": 1,
+        "startingSettlerUnit": "Supply Train",
+        "startingWorkerCount": 1,
+        "startingWorkerUnit": "Pioneers",
+        "startingMilitaryUnitCount": 3,
+        "startingMilitaryUnit": "Infantry Brigade",
+        "startingGold": 150,
+        "settlerPopulation": 3,
+        "settlerBuildings": ["Supply Depot"],
+        "baseUnitBuyCost": 200,
+        "embarkDefense": 5,
+        "citySound": "cityIndustrial"
+    }
+]

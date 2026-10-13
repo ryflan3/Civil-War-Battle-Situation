@@ -1,0 +1,25 @@
+[
+    {
+        "name": "Battle Pace",
+        "modifier": 1.0,
+        "productionCostModifier": 1.0,
+        "goldCostModifier": 1.0,
+        "scienceCostModifier": 1.0,
+        "cultureCostModifier": 1.0,
+        "faithCostModifier": 1.0,
+        "improvementBuildLengthModifier": 1.0,
+        "barbarianModifier": 1.0,
+        "goldGiftModifier": 1.0,
+        "goldenAgeLengthModifier": 1.0,
+        "peaceDealDuration": 10,
+        "dealDuration": 30,
+        "startYear": 1863,
+        "turns": [
+            {"yearsPerTurn": 0.001, "untilTurn": 1000}
+        ],
+        "civilopediaText": [
+            {"text": "One turn represents roughly one hour of daylight. Nights are compressed into two turns, during which armies marched and dug in."},
+            {"text": "The calendar stays on 1863 for the whole battle - watch the turn counter instead: Turn 0 is 7:00 AM on July 1."}
+        ]
+    }
+]

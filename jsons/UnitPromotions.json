@@ -1,0 +1,1043 @@
+[
+    {
+        "name": "Rally",
+        "uniques": [
+            "[This Unit] heals [50] HP",
+            "Doing so will consume this opportunity to choose a Promotion"
+        ],
+        "unitTypes": [
+            "Infantry",
+            "Skirmisher",
+            "Cavalry",
+            "Artillery"
+        ],
+        "column": 0,
+        "row": 0,
+        "civilopediaText": [
+            {
+                "text": "Officers re-form the shattered ranks; stragglers return to the colors."
+            }
+        ]
+    },
+    {
+        "name": "Steady I",
+        "uniques": [
+            "[+15]% Strength <when defending>"
+        ],
+        "unitTypes": [
+            "Infantry",
+            "Skirmisher",
+            "Cavalry"
+        ],
+        "column": 1,
+        "row": 1,
+        "civilopediaText": [
+            {
+                "text": "Discipline under fire: the line holds and keeps loading."
+            }
+        ]
+    },
+    {
+        "name": "Steady II",
+        "uniques": [
+            "[+15]% Strength <when defending>"
+        ],
+        "unitTypes": [
+            "Infantry",
+            "Skirmisher",
+            "Cavalry"
+        ],
+        "column": 1,
+        "row": 2,
+        "prerequisites": [
+            "Steady I"
+        ]
+    },
+    {
+        "name": "Steady III",
+        "uniques": [
+            "[+15]% Strength <when defending>"
+        ],
+        "unitTypes": [
+            "Infantry",
+            "Skirmisher",
+            "Cavalry"
+        ],
+        "column": 1,
+        "row": 3,
+        "prerequisites": [
+            "Steady II"
+        ]
+    },
+    {
+        "name": "Assault I",
+        "uniques": [
+            "[+15]% Strength <when attacking>"
+        ],
+        "unitTypes": [
+            "Infantry",
+            "Skirmisher",
+            "Cavalry"
+        ],
+        "column": 2,
+        "row": 1,
+        "civilopediaText": [
+            {
+                "text": "Experience in closing with the enemy at the run."
+            }
+        ]
+    },
+    {
+        "name": "Assault II",
+        "uniques": [
+            "[+15]% Strength <when attacking>"
+        ],
+        "unitTypes": [
+            "Infantry",
+            "Skirmisher",
+            "Cavalry"
+        ],
+        "column": 2,
+        "row": 2,
+        "prerequisites": [
+            "Assault I"
+        ]
+    },
+    {
+        "name": "Assault III",
+        "uniques": [
+            "[+15]% Strength <when attacking>"
+        ],
+        "unitTypes": [
+            "Infantry",
+            "Skirmisher",
+            "Cavalry"
+        ],
+        "column": 2,
+        "row": 3,
+        "prerequisites": [
+            "Assault II"
+        ]
+    },
+    {
+        "name": "Skirmish Drill",
+        "uniques": [
+            "[+20]% Strength <when fighting in [Rough terrain] tiles>"
+        ],
+        "unitTypes": [
+            "Infantry",
+            "Skirmisher"
+        ],
+        "column": 3,
+        "row": 1,
+        "civilopediaText": [
+            {
+                "text": "Fighting in open order from tree to rock, using every scrap of cover."
+            }
+        ]
+    },
+    {
+        "name": "Forced March",
+        "uniques": [
+            "[+1] Movement"
+        ],
+        "unitTypes": [
+            "Infantry",
+            "Skirmisher"
+        ],
+        "column": 3,
+        "row": 2,
+        "prerequisites": [
+            "Steady I",
+            "Assault I"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Veterans who can march twenty miles and fight at the end of it - like Sedgwick's VI Corps, which covered 34 miles to reach the field on July 2."
+            }
+        ]
+    },
+    {
+        "name": "Hardened Veterans",
+        "uniques": [
+            "No damage penalty for wounded units"
+        ],
+        "unitTypes": [
+            "Infantry",
+            "Skirmisher",
+            "Cavalry"
+        ],
+        "column": 4,
+        "row": 3,
+        "prerequisites": [
+            "Steady II",
+            "Assault II"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Regiments that fight on at half strength without breaking."
+            }
+        ]
+    },
+    {
+        "name": "Bayonet Charge",
+        "uniques": [
+            "[+25]% Strength <vs [Wounded] units> <when attacking>"
+        ],
+        "unitTypes": [
+            "Infantry"
+        ],
+        "column": 4,
+        "row": 2,
+        "prerequisites": [
+            "Assault II"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Out of ammunition and facing a tired enemy, Colonel Chamberlain ordered the 20th Maine to fix bayonets and charge down Little Round Top."
+            }
+        ]
+    },
+    {
+        "name": "Field Medicine",
+        "uniques": [
+            "All adjacent units heal [+5] HP when healing"
+        ],
+        "unitTypes": [
+            "Infantry",
+            "Skirmisher",
+            "Cavalry"
+        ],
+        "column": 5,
+        "row": 1,
+        "prerequisites": [
+            "Steady I",
+            "Assault I"
+        ]
+    },
+    {
+        "name": "Dismounted Tactics",
+        "uniques": [
+            "[+20]% Strength <when defending>"
+        ],
+        "unitTypes": [
+            "Cavalry"
+        ],
+        "column": 6,
+        "row": 1,
+        "civilopediaText": [
+            {
+                "text": "Every fourth man holds the horses while the rest fight on foot with carbines from behind fences."
+            }
+        ]
+    },
+    {
+        "name": "Saber Charge",
+        "uniques": [
+            "[+33]% Strength <vs [Wounded] units>",
+            "[+33]% Strength <vs [Artillery] units>"
+        ],
+        "unitTypes": [
+            "Cavalry"
+        ],
+        "column": 6,
+        "row": 2,
+        "prerequisites": [
+            "Dismounted Tactics"
+        ],
+        "civilopediaText": [
+            {
+                "text": "A mounted charge against shaken troops or unsupported guns."
+            }
+        ]
+    },
+    {
+        "name": "Screening",
+        "uniques": [
+            "[+1] Sight",
+            "[+1] Movement"
+        ],
+        "unitTypes": [
+            "Cavalry"
+        ],
+        "column": 7,
+        "row": 1,
+        "civilopediaText": [
+            {
+                "text": "Pickets and vedettes far ahead of the army."
+            }
+        ]
+    },
+    {
+        "name": "Gunnery I",
+        "uniques": [
+            "[+15]% Strength <when attacking>"
+        ],
+        "unitTypes": [
+            "Artillery"
+        ],
+        "column": 8,
+        "row": 1,
+        "civilopediaText": [
+            {
+                "text": "Well-drilled crews, accurate range estimation and good fuse cutting."
+            }
+        ]
+    },
+    {
+        "name": "Gunnery II",
+        "uniques": [
+            "[+15]% Strength <when attacking>"
+        ],
+        "unitTypes": [
+            "Artillery"
+        ],
+        "column": 8,
+        "row": 2,
+        "prerequisites": [
+            "Gunnery I"
+        ]
+    },
+    {
+        "name": "Gunnery III",
+        "uniques": [
+            "[+15]% Strength <when attacking>"
+        ],
+        "unitTypes": [
+            "Artillery"
+        ],
+        "column": 8,
+        "row": 3,
+        "prerequisites": [
+            "Gunnery II"
+        ]
+    },
+    {
+        "name": "Double Canister",
+        "uniques": [
+            "[+33]% Strength <when defending>"
+        ],
+        "unitTypes": [
+            "Artillery"
+        ],
+        "column": 9,
+        "row": 1,
+        "civilopediaText": [
+            {
+                "text": "At the last moment, two loads of canister at once."
+            }
+        ]
+    },
+    {
+        "name": "Counter-Battery",
+        "uniques": [
+            "[+33]% Strength <vs [Artillery] units>"
+        ],
+        "unitTypes": [
+            "Artillery"
+        ],
+        "column": 9,
+        "row": 2,
+        "prerequisites": [
+            "Gunnery I"
+        ]
+    },
+    {
+        "name": "Long Range",
+        "uniques": [
+            "[+1] Range"
+        ],
+        "unitTypes": [
+            "Artillery"
+        ],
+        "column": 9,
+        "row": 3,
+        "prerequisites": [
+            "Gunnery III"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Experienced officers who can hit targets at extreme range."
+            }
+        ]
+    },
+    {
+        "name": "Prolonge",
+        "uniques": [
+            "Can move after attacking"
+        ],
+        "unitTypes": [
+            "Artillery"
+        ],
+        "column": 10,
+        "row": 2,
+        "prerequisites": [
+            "Gunnery II"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Firing while being dragged back by ropes - the 9th Massachusetts Battery retired 'by prolonge' from the Peach Orchard on July 2."
+            }
+        ]
+    },
+    {
+        "name": "Holding Key Terrain",
+        "uniques": [
+            "Comment [This unit occupies key terrain and counts toward the Hold the Field victory]"
+        ],
+        "innerColor": [
+            255,
+            217,
+            102
+        ],
+        "outerColor": [
+            60,
+            50,
+            20
+        ],
+        "civilopediaText": [
+            {
+                "text": "Given for one turn to a military unit that ends its turn on Cemetery Hill, East Cemetery Hill, Culp's Hill, Little Round Top or the Angle."
+            }
+        ]
+    },
+    {
+        "name": "George G. Meade",
+        "uniques": [
+            "[+20]% Strength bonus for [{Military} {Land}] units within [3] tiles <when defending>"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "Commanding the Army of the Potomac since June 28. Fought a skillful defensive battle on interior lines, shifting brigades to each threatened point. Inspires all troops within 3 tiles when defending."
+            }
+        ]
+    },
+    {
+        "name": "John F. Reynolds",
+        "uniques": [
+            "[+25]% Strength bonus for [{Military} {Land}] units within [1] tiles",
+            "[+1] Movement"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "Commander of the I Corps and the army's left wing; widely thought the best general in the army. He rushed his men into Herbst Woods on the morning of July 1 and was shot dead at its edge."
+            }
+        ]
+    },
+    {
+        "name": "Winfield S. Hancock",
+        "uniques": [
+            "[+25]% Strength bonus for [{Military} {Land}] units within [2] tiles"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "'Hancock the Superb', II Corps. Sent ahead by Meade on July 1, he rallied the broken corps on Cemetery Hill; on July 2 he plugged every gap in the line; on July 3 he was wounded repelling Pickett's Charge."
+            }
+        ]
+    },
+    {
+        "name": "Oliver O. Howard",
+        "uniques": [
+            "[+20]% Strength bonus for [{Military} {Land}] units within [2] tiles <when defending>"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "XI Corps. Posted his reserve on Cemetery Hill at midday on July 1 - the decision that gave the army its anchor. Congress later thanked him for selecting the position."
+            }
+        ]
+    },
+    {
+        "name": "Abner Doubleday",
+        "uniques": [
+            "[+15]% Strength bonus for [{Military} {Land}] units within [2] tiles",
+            "[+10]% Strength <when defending>"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "Commanded the I Corps after Reynolds fell and held McPherson's and Seminary Ridges for most of July 1."
+            }
+        ]
+    },
+    {
+        "name": "Daniel E. Sickles",
+        "uniques": [
+            "[+20]% Strength bonus for [{Military} {Land}] units within [2] tiles <when attacking>"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "III Corps. A political general who, without orders, advanced his corps to the Peach Orchard salient on July 2. His leg was shattered by a cannonball at the Trostle farm."
+            }
+        ]
+    },
+    {
+        "name": "Henry W. Slocum",
+        "uniques": [
+            "[+20]% Strength bonus for [{Military} {Land}] units within [2] tiles <when defending>"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "XII Corps, which fought for Culp's Hill on the nights of July 2 and the morning of July 3."
+            }
+        ]
+    },
+    {
+        "name": "George Sykes",
+        "uniques": [
+            "[+15]% Strength bonus for [{Military} {Land}] units within [2] tiles"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "V Corps, the army's reserve, including the U.S. Regulars, which saved Little Round Top and fought in the Wheatfield."
+            }
+        ]
+    },
+    {
+        "name": "John Sedgwick",
+        "uniques": [
+            "[+15]% Strength bonus for [{Military} {Land}] units within [2] tiles",
+            "[+1] Movement"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "VI Corps, the largest in the army, which marched about 34 miles to reach the field on July 2."
+            }
+        ]
+    },
+    {
+        "name": "John Gibbon",
+        "uniques": [
+            "[+20]% Strength bonus for [{Military} {Land}] units within [2] tiles <when defending>"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "Commanded the II Corps division at the Angle that met Pickett's Charge."
+            }
+        ]
+    },
+    {
+        "name": "John Buford",
+        "uniques": [
+            "[+25]% Strength bonus for [Cavalry] units within [2] tiles",
+            "[+2] Sight"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "Cavalry division commander with an eye for ground. He recognized the importance of the heights at Gettysburg and held off Heth's infantry on July 1 until the I Corps arrived."
+            }
+        ]
+    },
+    {
+        "name": "Gouverneur K. Warren",
+        "uniques": [
+            "[+2] Sight",
+            "Can see over obstacles",
+            "[+15]% Strength bonus for [{Military} {Land}] units within [2] tiles"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "Meade's chief engineer. From the signal station on Little Round Top he saw Hood's division about to sweep the undefended hill and diverted troops to it just in time."
+            }
+        ]
+    },
+    {
+        "name": "Henry J. Hunt",
+        "uniques": [
+            "[+25]% Strength bonus for [Artillery] units within [3] tiles"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "Chief of artillery of the Army of the Potomac and the best artillerist of the war. He husbanded his ammunition during the July 3 cannonade so the guns could smash Pickett's Charge."
+            }
+        ]
+    },
+    {
+        "name": "David M. Gregg",
+        "uniques": [
+            "[+20]% Strength bonus for [Cavalry] units within [2] tiles <when defending>"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "2nd Cavalry Division, which with Custer's brigade stopped Stuart at East Cavalry Field on July 3."
+            }
+        ]
+    },
+    {
+        "name": "Judson Kilpatrick",
+        "uniques": [
+            "[+20]% Strength bonus for [Cavalry] units within [2] tiles <when attacking>"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "'Kill-Cavalry'. On July 3 he ordered Farnsworth's hopeless mounted charge against Confederate infantry south of Big Round Top."
+            }
+        ]
+    },
+    {
+        "name": "Robert E. Lee",
+        "uniques": [
+            "[+15]% Strength bonus for [{Military} {Land}] units within [3] tiles <when attacking>"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "Commanding the Army of Northern Virginia. Confident after Chancellorsville, he attacked on all three days. Inspires all troops within 3 tiles when attacking."
+            }
+        ]
+    },
+    {
+        "name": "James Longstreet",
+        "uniques": [
+            "[+25]% Strength bonus for [{Military} {Land}] units within [2] tiles <when defending>"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "'Old Pete', I Corps. Lee's 'old war horse' urged a move around the Union left onto defensive ground, and opposed the July 3 assault. His July 2 attack nevertheless came close to rolling up the Union line."
+            }
+        ]
+    },
+    {
+        "name": "Richard S. Ewell",
+        "uniques": [
+            "[+15]% Strength bonus for [{Military} {Land}] units within [2] tiles"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "II Corps, Stonewall Jackson's successor. Told to take Cemetery Hill on July 1 'if practicable', he decided it was not."
+            }
+        ]
+    },
+    {
+        "name": "A. P. Hill",
+        "uniques": [
+            "[+15]% Strength bonus for [{Military} {Land}] units within [2] tiles"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "III Corps, which opened the battle on July 1. Hill was ill during much of the battle."
+            }
+        ]
+    },
+    {
+        "name": "Henry Heth",
+        "uniques": [
+            "[+15]% Strength bonus for [{Military} {Land}] units within [2] tiles"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "His division marched toward Gettysburg on July 1, reportedly in search of shoes, and ran into Buford's cavalry. Wounded in the head that afternoon - a wad of paper in his hat saved his life."
+            }
+        ]
+    },
+    {
+        "name": "William D. Pender",
+        "uniques": [
+            "[+15]% Strength bonus for [Infantry] units within [2] tiles <when attacking>"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "Division commander whose brigades broke the last Union line on Seminary Ridge on July 1. Mortally wounded on July 2."
+            }
+        ]
+    },
+    {
+        "name": "Robert E. Rodes",
+        "uniques": [
+            "[+15]% Strength bonus for [{Military} {Land}] units within [2] tiles",
+            "[+1] Sight"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "Division commander who arrived on Oak Hill on July 1 and attacked the flank of the Union I Corps."
+            }
+        ]
+    },
+    {
+        "name": "Jubal A. Early",
+        "uniques": [
+            "[+15]% Strength bonus for [{Military} {Land}] units within [2] tiles <when attacking>"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "His division arrived from the north-east on July 1 and crushed the Union XI Corps at Barlow's Knoll."
+            }
+        ]
+    },
+    {
+        "name": "Edward Johnson",
+        "uniques": [
+            "[+15]% Strength bonus for [{Military} {Land}] units within [2] tiles"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "'Allegheny' Johnson, whose division assaulted Culp's Hill on the night of July 2 and again on July 3."
+            }
+        ]
+    },
+    {
+        "name": "Richard H. Anderson",
+        "uniques": [
+            "[+15]% Strength bonus for [{Military} {Land}] units within [2] tiles"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "Division commander whose brigades struck the Union center on July 2 and briefly reached Cemetery Ridge."
+            }
+        ]
+    },
+    {
+        "name": "Lafayette McLaws",
+        "uniques": [
+            "[+15]% Strength bonus for [{Military} {Land}] units within [2] tiles"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "Division commander whose brigades - Kershaw, Barksdale, Semmes, Wofford - overran the Peach Orchard and the Wheatfield on July 2."
+            }
+        ]
+    },
+    {
+        "name": "John B. Hood",
+        "uniques": [
+            "[+20]% Strength bonus for [Infantry] units within [2] tiles <when attacking>"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "Commander of the division that attacked Devil's Den and Little Round Top on July 2. A shell fragment crippled his arm early in the assault."
+            }
+        ]
+    },
+    {
+        "name": "George E. Pickett",
+        "uniques": [
+            "[+15]% Strength bonus for [Infantry] units within [2] tiles <when attacking>"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "His fresh Virginia division led the grand assault on the Union center on July 3. 'General Lee, I have no division,' he is said to have answered afterward."
+            }
+        ]
+    },
+    {
+        "name": "J. E. B. Stuart",
+        "uniques": [
+            "[+25]% Strength bonus for [Cavalry] units within [2] tiles",
+            "[+1] Movement",
+            "[+1] Sight"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "Lee's flamboyant cavalry chief. His long raid around the Union army meant he reached Gettysburg only on the evening of July 2."
+            }
+        ]
+    },
+    {
+        "name": "E. Porter Alexander",
+        "uniques": [
+            "[+25]% Strength bonus for [Artillery] units within [3] tiles"
+        ],
+        "innerColor": [
+            255,
+            255,
+            255
+        ],
+        "outerColor": [
+            90,
+            70,
+            30
+        ],
+        "civilopediaText": [
+            {
+                "text": "Colonel commanding Longstreet's artillery; he directed the great bombardment of July 3, the largest of the war."
+            }
+        ]
+    }
+]

@@ -1,0 +1,137 @@
+package cwtool
+
+import com.badlogic.gdx.files.FileHandle
+import com.unciv.Constants
+import com.unciv.UncivGame
+import com.unciv.logic.GameInfo
+import com.unciv.logic.GameStarter
+import com.unciv.logic.city.managers.CityFounder
+import com.unciv.logic.civilization.PlayerType
+import com.unciv.logic.files.UncivFiles
+import com.unciv.logic.map.HexCoord
+import com.unciv.models.metadata.GameParameters
+import com.unciv.models.metadata.GameSetupInfo
+import com.unciv.models.metadata.Player
+import com.unciv.models.ruleset.RulesetCache
+import java.io.File
+
+val VICTORIES = arrayListOf("Hold the Field", "Decisive Victory")
+
+fun buildScenario(tilesJson: File, mapFile: File, outFile: File) {
+    initUnciv()
+    val ruleset = RulesetCache[MOD]!!
+    val data = com.badlogic.gdx.utils.JsonReader().parse(tilesJson.readText())
+
+    val params = GameParameters().apply {
+        baseRuleset = MOD
+        mods = LinkedHashSet()
+        difficulty = "Veterans"
+        speed = "Battle Pace"
+        startingEra = "Civil War era"
+        numberOfCityStates = 0
+        minNumberOfCityStates = 0
+        maxNumberOfCityStates = 0
+        noBarbarians = true
+        espionageEnabled = false
+        nuclearWeaponsEnabled = false
+        noStartBias = false
+        victoryTypes = ArrayList(VICTORIES)
+        maxTurns = 60
+        // The Spectator is the scenario builder's seat: NewGameScreen removes it and hands the first turn to the right side
+        players = arrayListOf(Player("Union", PlayerType.Human), Player("Confederacy", PlayerType.Human), Player(Constants.spectator, PlayerType.Human))
+    }
+    val setup = GameSetupInfo(params)
+    setup.mapParameters.name = "Gettysburg"
+    setup.mapFile = FileHandle(mapFile)
+    val game: GameInfo = GameStarter.startNewGame(setup)
+    UncivGame.Current.gameInfo = game
+
+    val union = game.getCivilization("Union")
+    val confed = game.getCivilization("Confederacy")
+    val sides = listOf(confed, union)
+
+    // 1. remove the default starting armies GameStarter placed on the starting locations
+    for (civ in sides) for (u in civ.units.getCivUnits().toList()) u.destroy()
+
+    // 2. found the entry cities (capital = army headquarters first) and give each its timetable building
+    for (c in data.get("cities")) {
+        val civ = game.getCivilization(c.getString("civ"))
+        val city = CityFounder().foundCity(civ, HexCoord.of(c.getInt("x"), c.getInt("y")))
+        city.name = c.getString("name")
+        val arrivals = (if (civ.civID == "Union") "Union" else "Confederate") + " Arrivals: " + city.name
+        if (ruleset.buildings.containsKey(arrivals)) city.cityConstructions.addBuilding(arrivals)
+        if (!city.cityConstructions.isBuilt("Supply Depot")) city.cityConstructions.addBuilding("Supply Depot")
+        println("City ${city.name} (${civ.civID}) capital=${city.isCapital()} buildings=${city.cityConstructions.getBuiltBuildings().map { it.name }.toList()}")
+    }
+
+    // 3. the armies on the field at 7:00 AM, July 1
+    for (u in data.get("startUnits")) {
+        val civ = game.getCivilization(u.getString("civ"))
+        val unit = civ.units.placeUnitNearTile(HexCoord.of(u.getInt("x"), u.getInt("y")), u.getString("unit"))
+            ?: error("could not place ${u.getString("name")}")
+        val name = u.getString("name", null)
+        if (name != null) {
+            unit.instanceName = name
+            game.unitNamesTaken.add(name)
+            if (ruleset.unitPromotions.containsKey(name)) unit.promotions.addPromotion(name, true)
+        }
+        unit.currentMovement = unit.getMaxMovement().toFloat()
+        println("Placed ${unit.name} '${unit.instanceName}' at ${unit.currentTile.position} for ${civ.civID}")
+    }
+
+    // 4. both commanders have maps of the country: reveal the terrain (units stay hidden by fog of war)
+    for (tile in game.tileMap.values) for (civ in sides) tile.setExplored(civ, true)
+
+    // 5. at war from the first shot, and a war that cannot end in peace (minimumWarDuration in ModOptions)
+    union.diplomacyFunctions.makeCivilizationsMeet(confed)
+    union.getDiplomacyManager(confed)!!.declareWar()
+
+    game.gameParameters.victoryTypes = ArrayList(VICTORIES)
+    game.currentPlayer = Constants.spectator
+    for (civ in sides) {
+        civ.popupAlerts.clear()
+        civ.notifications.clear()
+        civ.cache.updateSightAndResources()
+    }
+    outFile.parentFile.mkdirs()
+    outFile.writeText(UncivFiles.gameInfoToString(game, forceZip = true))
+    println("Scenario written: ${outFile.path} (${outFile.length()} bytes). Civs: ${game.civilizations.map { it.civID }}, current=${game.currentPlayer}, turn=${game.turns}")
+}
+
+/** Loads the scenario exactly like NewGameScreen does, then plays [turns] turns. The human side's moves are made by the AI too. */
+fun simulateScenario(scenarioFile: File, turns: Int, humanSide: String = "Union") {
+    initUnciv()
+    val game = UncivFiles.gameInfoFromString(scenarioFile.readText())
+    UncivGame.Current.gameInfo = game
+    // --- same steps as NewGameScreen.startNewGame for scenarios
+    game.civilizations.removeIf { it.civID == Constants.spectator }
+    for (civ in game.civilizations) { civ.playerType = PlayerType.AI; civ.diplomacy.remove(Constants.spectator) }
+    game.getCivilization(humanSide).playerType = PlayerType.Human
+    if (game.currentPlayer == Constants.spectator) { game.currentPlayer = ""; game.nextTurn(); game.turns-- }
+    println("Start: current=${game.currentPlayer} turn=${game.turns} human=$humanSide")
+    val human = game.getCivilization(humanSide)
+    var lastNames = game.civilizations.associate { it.civID to it.units.getCivUnits().map { u -> u.instanceName ?: u.name }.toList() }
+    val totalLost = HashMap<String, Int>()
+    for (t in 1..turns) {
+        com.unciv.logic.civilization.managers.TurnManager(human).automateTurn()
+        game.nextTurn()
+        val line = StringBuilder("Turn ${game.turns}:")
+        for (civ in game.civilizations.filter { it.isMajorCiv() }) {
+            val names = civ.units.getCivUnits().map { u -> u.instanceName ?: u.name }.toList()
+            val new = names.toMutableList().apply { lastNames[civ.civID].orEmpty().forEach { remove(it) } }
+            val lost = lastNames[civ.civID].orEmpty().toMutableList().apply { names.forEach { remove(it) } }
+            totalLost[civ.civID] = (totalLost[civ.civID] ?: 0) + lost.size
+            val holding = civ.units.getCivUnits().filter { it.hasStatus("Holding Key Terrain") }.map { it.currentTile.naturalWonder }.toList()
+            val mil = civ.units.getCivUnits().count { it.isMilitary() }
+            line.append(" | ${civ.civID}: units=${names.size} mil=$mil lost=${lost.size} (total ${totalLost[civ.civID]}) cities=${civ.cities.size} key=$holding")
+            if (new.isNotEmpty()) line.append(" NEW=${new.size}")
+        }
+        println(line)
+        for (civ in game.civilizations.filter { it.isMajorCiv() })
+            for (n in civ.notifications.map { it.text }.filter { listOf("destroyed", "disband", "killed", "captured", "lost", "defeated").any { k -> it.contains(k, true) } }.distinct().take(12))
+                println("    [${civ.civID}] $n")
+        lastNames = game.civilizations.associate { it.civID to it.units.getCivUnits().map { u -> u.instanceName ?: u.name }.toList() }
+        val victory = game.victoryData
+        if (victory != null) { println("VICTORY: ${victory.winningCiv} by ${victory.victoryType} on turn ${victory.victoryTurn}"); break }
+    }
+}

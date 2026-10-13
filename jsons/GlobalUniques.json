@@ -1,0 +1,18 @@
+{
+    "name": "Global Uniques",
+    "uniques": [
+        "Roads connect tiles across rivers",
+        "Improves movement speed on roads",
+        "[+100] Unit Supply",
+        "[-100]% maintenance costs",
+        "[-15]% Strength <for [AI player] Civilizations> <on [Militia] difficulty>",
+        "[-5]% Strength <for [AI player] Civilizations> <on [Volunteers] difficulty>",
+        "[+10]% Strength <for [AI player] Civilizations> <on [Regulars] difficulty>",
+        "[+20]% Strength <for [AI player] Civilizations> <on [Iron Brigade] difficulty>"
+    ],
+    "civilopediaText": [
+        {"text": "Roads have bridges over the creeks, and marching columns move three times as fast on them."},
+        {"text": "Armies are supplied by their trains: units cost no gold upkeep."},
+        {"text": "Difficulty changes the fighting strength of computer-controlled armies: -15% on Militia, -5% on Volunteers, normal on Veterans, +10% on Regulars and +20% on Iron Brigade."}
+    ]
+}

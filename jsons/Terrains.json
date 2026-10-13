@@ -1,0 +1,773 @@
+[
+    {
+        "name": "Ocean",
+        "type": "Water",
+        "food": 1,
+        "gold": 1,
+        "movementCost": 1,
+        "RGB": [
+            43,
+            87,
+            151
+        ],
+        "civilopediaText": [
+            {
+                "text": "Deep water. Only used on randomly generated maps - there is none at Gettysburg."
+            }
+        ]
+    },
+    {
+        "name": "Coast",
+        "type": "Water",
+        "food": 1,
+        "gold": 1,
+        "movementCost": 1,
+        "RGB": [
+            70,
+            138,
+            216
+        ],
+        "uniques": [
+            "Coastal Water"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Shallow water. Only used on randomly generated maps."
+            }
+        ]
+    },
+    {
+        "name": "Lakes",
+        "type": "Water",
+        "food": 2,
+        "gold": 1,
+        "movementCost": 1,
+        "RGB": [
+            0,
+            171,
+            169
+        ],
+        "uniques": [
+            "Fresh water"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Mill ponds and small lakes."
+            }
+        ]
+    },
+    {
+        "name": "Grassland",
+        "type": "Land",
+        "food": 2,
+        "movementCost": 1,
+        "RGB": [
+            76,
+            140,
+            56
+        ],
+        "uniques": [
+            "Occurs at temperature between [-0.4] and [0.1] and humidity between [0.2] and [0.4]",
+            "Occurs at temperature between [0.1] and [0.2] and humidity between [0.3] and [0.4]",
+            "Occurs at temperature between [-0.5] and [0.5] and humidity between [0.6] and [0.8]",
+            "Occurs at temperature between [-0.5] and [1] and humidity between [0.9] and [1]",
+            "Occurs at temperature between [0.9] and [1] and humidity between [0.2] and [1]",
+            "Occurs at temperature between [0.8] and [0.9] and humidity between [0.6] and [1]",
+            "Occurs at temperature between [0.7] and [0.8] and humidity between [0.7] and [1]",
+            "Occurs at temperature between [0.6] and [0.8] and humidity between [0.4] and [0.6]",
+            "Occurs at temperature between [-1] and [-0.4] and humidity between [0] and [1]",
+            "[+3] to Fertility for Map Generation",
+            "Considered [Desirable] when determining start locations"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Meadows, pastures and hay fields - open ground broken only by worm fences and the occasional fieldstone wall."
+            },
+            {
+                "text": "Open ground gives no cover. Lines crossing it under rifle and canister fire suffered terribly."
+            }
+        ]
+    },
+    {
+        "name": "Plains",
+        "type": "Land",
+        "food": 1,
+        "production": 1,
+        "movementCost": 1,
+        "RGB": [
+            196,
+            180,
+            82
+        ],
+        "uniques": [
+            "Occurs at temperature between [-0.4] and [-0.1] and humidity between [0] and [0.2]",
+            "Occurs at temperature between [-0.4] and [0.4] and humidity between [0.4] and [0.6]",
+            "Occurs at temperature between [0.4] and [0.5] and humidity between [0.5] and [0.6]",
+            "Occurs at temperature between [-0.6] and [0.7] and humidity between [0.8] and [0.9]",
+            "Occurs at temperature between [-0.6] and [-0.5] and humidity between [0.9] and [1]",
+            "Occurs at temperature between [0.9] and [1] and humidity between [0] and [0.2]",
+            "Occurs at temperature between [0.8] and [0.9] and humidity between [0.2] and [0.6]",
+            "Occurs at temperature between [0.7] and [0.8] and humidity between [0.3] and [0.4]",
+            "Occurs at temperature between [0.6] and [0.8] and humidity between [0.6] and [0.7]",
+            "Occurs at temperature between [0.5] and [0.7] and humidity between [0.7] and [0.8]",
+            "Occurs at temperature between [-0.1] and [0.9] and humidity between [0] and [0.2]",
+            "Occurs at temperature between [0.1] and [0.8] and humidity between [0.2] and [0.3]",
+            "Occurs at temperature between [0.2] and [0.7] and humidity between [0.3] and [0.4]",
+            "Occurs at temperature between [0.4] and [0.6] and humidity between [0.4] and [0.5]",
+            "Occurs at temperature between [0.5] and [0.6] and humidity between [0.5] and [0.7]",
+            "[+4] to Fertility for Map Generation",
+            "Considered [Desirable] when determining start locations"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Wheat, oat and corn fields. In early July 1863 the winter wheat around Gettysburg stood ripe and waist-high."
+            },
+            {
+                "text": "Like meadows, crop fields are open ground that gives no protection."
+            }
+        ]
+    },
+    {
+        "name": "Hill",
+        "type": "TerrainFeature",
+        "production": 2,
+        "movementCost": 2,
+        "overrideStats": true,
+        "defenceBonus": 0.25,
+        "RGB": [
+            105,
+            125,
+            72
+        ],
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "uniques": [
+            "Rough terrain",
+            "[+5] Strength for cities built on this terrain",
+            "Has an elevation of [1] for visibility calculations",
+            "Occurs in groups around high elevations",
+            "Considered [Desirable] when determining start locations"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Steep, often rocky hills such as Culp's Hill, Benner's Hill or Wolf Hill. Defenders on high ground see farther and fire down on attackers toiling up the slope."
+            }
+        ]
+    },
+    {
+        "name": "Ridge",
+        "type": "TerrainFeature",
+        "production": 1,
+        "movementCost": 1,
+        "defenceBonus": 0.15,
+        "RGB": [
+            128,
+            150,
+            84
+        ],
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "uniques": [
+            "Has an elevation of [1] for visibility calculations",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Long, gentle ridgelines - Seminary Ridge, Cemetery Ridge, McPherson's Ridge, Herr Ridge, Oak Ridge. Easy to cross, but the crest gives a view over the surrounding country and a little cover behind it."
+            }
+        ]
+    },
+    {
+        "name": "Forest",
+        "type": "TerrainFeature",
+        "production": 1,
+        "food": 1,
+        "movementCost": 2,
+        "overrideStats": true,
+        "defenceBonus": 0.25,
+        "RGB": [
+            44,
+            96,
+            40
+        ],
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "uniques": [
+            "Rough terrain",
+            "Vegetation",
+            "Blocks line-of-sight from tiles at same elevation",
+            "Considered [Production] when determining start locations"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Woodlots and groves of oak and chestnut - McPherson's (Herbst) Woods, Rose Woods, Spangler's Woods and the heavily wooded slopes of Culp's Hill and Big Round Top."
+            },
+            {
+                "text": "Woods slow movement, break up formations and hide troops from view and from artillery fire."
+            }
+        ]
+    },
+    {
+        "name": "Orchard",
+        "type": "TerrainFeature",
+        "food": 2,
+        "movementCost": 1,
+        "defenceBonus": 0.1,
+        "RGB": [
+            120,
+            170,
+            70
+        ],
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "uniques": [
+            "Vegetation",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Rows of fruit trees, like Joseph Sherfy's famous Peach Orchard on the Emmitsburg Road. Some cover from view, little protection from bullets."
+            }
+        ]
+    },
+    {
+        "name": "Boulders",
+        "type": "TerrainFeature",
+        "production": 1,
+        "movementCost": 3,
+        "defenceBonus": 0.5,
+        "RGB": [
+            128,
+            128,
+            120
+        ],
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "uniques": [
+            "Rough terrain",
+            "Blocks line-of-sight from tiles at same elevation",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Fields of huge granite (diabase) boulders, like those at Devil's Den and on the slopes of the Round Tops. Nearly impossible to attack through - and a sharpshooter's paradise."
+            }
+        ]
+    },
+    {
+        "name": "Town",
+        "type": "TerrainFeature",
+        "gold": 2,
+        "production": 1,
+        "movementCost": 2,
+        "defenceBonus": 0.3,
+        "RGB": [
+            150,
+            72,
+            56
+        ],
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "uniques": [
+            "Blocks line-of-sight from tiles at same elevation",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "The brick houses, streets and alleys of Gettysburg, a town of about 2,400 people. Streets channel and confuse moving troops; houses make strong points for riflemen."
+            },
+            {
+                "text": "On the afternoon of July 1, the retreating Union XI and I Corps jammed the streets and lost thousands of prisoners."
+            }
+        ]
+    },
+    {
+        "name": "Stone Wall",
+        "type": "TerrainFeature",
+        "movementCost": 2,
+        "defenceBonus": 0.4,
+        "RGB": [
+            160,
+            160,
+            150
+        ],
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "uniques": [
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Waist-high fieldstone walls. The wall along Cemetery Ridge at the Angle sheltered the Union defenders who broke Pickett's Charge on July 3."
+            }
+        ]
+    },
+    {
+        "name": "Farmstead",
+        "type": "TerrainFeature",
+        "food": 1,
+        "gold": 1,
+        "movementCost": 1,
+        "defenceBonus": 0.2,
+        "RGB": [
+            170,
+            110,
+            80
+        ],
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "uniques": [
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Stone farmhouses and bank barns - McPherson, Codori, Trostle, Rose, Bliss, Slyder. Strong points fought over again and again, and afterwards field hospitals."
+            }
+        ]
+    },
+    {
+        "name": "Railroad Cut",
+        "type": "TerrainFeature",
+        "movementCost": 2,
+        "defenceBonus": -0.25,
+        "RGB": [
+            110,
+            92,
+            70
+        ],
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "uniques": [
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "The unfinished railroad bed west of town, cut up to 15 feet deep through the ridges. On July 1 Confederates of Davis's brigade took cover in it - and found the walls too steep to fire from or climb out of. Hundreds surrendered to the 6th Wisconsin."
+            },
+            {
+                "text": "Units in the cut are trapped: they defend at a penalty."
+            }
+        ]
+    },
+    {
+        "name": "Marsh",
+        "type": "TerrainFeature",
+        "food": -1,
+        "movementCost": 3,
+        "defenceBonus": -0.15,
+        "RGB": [
+            80,
+            120,
+            100
+        ],
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "uniques": [
+            "Rare feature",
+            "Vegetation"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Wet, boggy bottomland along Plum Run and Rock Creek."
+            }
+        ]
+    },
+    {
+        "name": "River",
+        "type": "TerrainFeature",
+        "gold": 1,
+        "movementCost": 0,
+        "uniques": [
+            "Doesn't generate naturally",
+            "Excluded from map editor"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Creeks and runs - Willoughby Run, Plum Run, Rock Creek, Marsh Creek, Stevens Run. They run along tile edges."
+            },
+            {
+                "text": "Crossing a creek away from a bridge takes all remaining movement, and attacking across one gives the attacker a -20% Strength penalty. Roads have bridges."
+            }
+        ]
+    },
+    {
+        "name": "Cemetery Hill",
+        "type": "NaturalWonder",
+        "movementCost": 2,
+        "defenceBonus": 0.5,
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "turnsInto": "Grassland",
+        "weight": 0,
+        "uniques": [
+            "Has an elevation of [2] for visibility calculations",
+            "Key Terrain",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "The key to the whole field. Evergreen Cemetery's gatehouse crowns the hill where the Baltimore Pike leaves town. Howard posted a reserve here at noon on July 1, and the beaten Union I and XI Corps rallied on it that evening."
+            },
+            {
+                "text": "Lee asked Ewell to take it 'if practicable'. He did not, and massed Union guns on the hill dominated the battle for two more days."
+            },
+            {
+                "text": "KEY TERRAIN: military units ending their turn here count toward the 'Hold the Field' victory.",
+                "color": "#FFD966"
+            }
+        ]
+    },
+    {
+        "name": "East Cemetery Hill",
+        "type": "NaturalWonder",
+        "movementCost": 2,
+        "defenceBonus": 0.5,
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "turnsInto": "Grassland",
+        "weight": 0,
+        "uniques": [
+            "Has an elevation of [2] for visibility calculations",
+            "Key Terrain",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "The eastern shoulder of Cemetery Hill, crowded with Union batteries. At dusk on July 2 Hays's Louisiana Tigers and Avery's North Carolinians reached the guns before being driven off."
+            },
+            {
+                "text": "KEY TERRAIN: military units ending their turn here count toward the 'Hold the Field' victory.",
+                "color": "#FFD966"
+            }
+        ]
+    },
+    {
+        "name": "Culp's Hill",
+        "type": "NaturalWonder",
+        "movementCost": 3,
+        "defenceBonus": 0.6,
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "turnsInto": "Grassland",
+        "weight": 0,
+        "uniques": [
+            "Has an elevation of [2] for visibility calculations",
+            "Rough terrain",
+            "Blocks line-of-sight from tiles at same elevation",
+            "Key Terrain",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "A steep, boulder-strewn wooded hill anchoring the right of the Union 'fishhook'. Greene's New York brigade built log breastworks along its crest on July 2 and held it alone against Johnson's division that night."
+            },
+            {
+                "text": "The fight for the hill raged again from dawn to late morning on July 3."
+            },
+            {
+                "text": "KEY TERRAIN: military units ending their turn here count toward the 'Hold the Field' victory.",
+                "color": "#FFD966"
+            }
+        ]
+    },
+    {
+        "name": "Little Round Top",
+        "type": "NaturalWonder",
+        "movementCost": 3,
+        "defenceBonus": 0.6,
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "turnsInto": "Grassland",
+        "weight": 0,
+        "uniques": [
+            "Has an elevation of [2] for visibility calculations",
+            "Rough terrain",
+            "Key Terrain",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "A rocky hill whose west face had been logged bare. Engineer Gouverneur Warren found it unoccupied on July 2 and called up Vincent's brigade minutes before Hood's Alabamians and Texans arrived."
+            },
+            {
+                "text": "Colonel Joshua Chamberlain's 20th Maine held its extreme left with a bayonet charge."
+            },
+            {
+                "text": "KEY TERRAIN: military units ending their turn here count toward the 'Hold the Field' victory.",
+                "color": "#FFD966"
+            }
+        ]
+    },
+    {
+        "name": "Big Round Top",
+        "type": "NaturalWonder",
+        "movementCost": 4,
+        "defenceBonus": 0.5,
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "turnsInto": "Grassland",
+        "weight": 0,
+        "uniques": [
+            "Has an elevation of [3] for visibility calculations",
+            "Rough terrain",
+            "Blocks line-of-sight from tiles at same elevation",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "The highest point of the field, so steep and densely wooded that neither side could haul guns up it."
+            }
+        ]
+    },
+    {
+        "name": "Devil's Den",
+        "type": "NaturalWonder",
+        "movementCost": 3,
+        "defenceBonus": 0.6,
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "turnsInto": "Grassland",
+        "weight": 0,
+        "uniques": [
+            "Has an elevation of [1] for visibility calculations",
+            "Rough terrain",
+            "Blocks line-of-sight from tiles at same elevation",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "A jumble of enormous boulders at the south end of Houck's Ridge. Confederate sharpshooters hid among the rocks after Hood's division took it on July 2 and fired on Little Round Top."
+            }
+        ]
+    },
+    {
+        "name": "The Angle",
+        "type": "NaturalWonder",
+        "movementCost": 2,
+        "defenceBonus": 0.4,
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "turnsInto": "Grassland",
+        "weight": 0,
+        "uniques": [
+            "Has an elevation of [1] for visibility calculations",
+            "Key Terrain",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "A bend in the stone wall on Cemetery Ridge beside the Copse of Trees - the aiming point of Pickett's Charge on July 3."
+            },
+            {
+                "text": "Armistead's Virginians crossed the wall here; the spot is remembered as the High Water Mark of the Confederacy."
+            },
+            {
+                "text": "KEY TERRAIN: military units ending their turn here count toward the 'Hold the Field' victory.",
+                "color": "#FFD966"
+            }
+        ]
+    },
+    {
+        "name": "Peach Orchard",
+        "type": "NaturalWonder",
+        "movementCost": 1,
+        "defenceBonus": 0.15,
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "turnsInto": "Grassland",
+        "weight": 0,
+        "uniques": [
+            "Has an elevation of [1] for visibility calculations",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Joseph Sherfy's orchard at the crossroads of the Emmitsburg and Wheatfield roads. Sickles pushed the III Corps forward to this salient on July 2, and Barksdale's Mississippians overran it."
+            }
+        ]
+    },
+    {
+        "name": "The Wheatfield",
+        "type": "NaturalWonder",
+        "movementCost": 1,
+        "defenceBonus": 0.0,
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "turnsInto": "Plains",
+        "weight": 0,
+        "uniques": [
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "John Rose's twenty-acre wheat field, a whirlpool where control changed hands six times on the evening of July 2."
+            }
+        ]
+    },
+    {
+        "name": "Lutheran Seminary",
+        "type": "NaturalWonder",
+        "movementCost": 1,
+        "defenceBonus": 0.3,
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "turnsInto": "Grassland",
+        "weight": 0,
+        "uniques": [
+            "Has an elevation of [1] for visibility calculations",
+            "[+1] Sight",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "The Seminary on Seminary Ridge. Buford watched the Confederate approach from its cupola on the morning of July 1. Later it became Lee's lines and a field hospital."
+            }
+        ]
+    },
+    {
+        "name": "Oak Hill",
+        "type": "NaturalWonder",
+        "movementCost": 2,
+        "defenceBonus": 0.3,
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "turnsInto": "Grassland",
+        "weight": 0,
+        "uniques": [
+            "Has an elevation of [2] for visibility calculations",
+            "[+1] Sight",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "A commanding height north-west of town. Rodes's division and its guns arrived here at midday on July 1, enfilading the Union I Corps line."
+            }
+        ]
+    },
+    {
+        "name": "McPherson's Ridge",
+        "type": "NaturalWonder",
+        "movementCost": 1,
+        "defenceBonus": 0.2,
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "turnsInto": "Grassland",
+        "weight": 0,
+        "uniques": [
+            "Has an elevation of [1] for visibility calculations",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Edward McPherson's farm astride the Chambersburg Pike, where Buford's dismounted troopers and then the Iron Brigade met Heth's division on the morning of July 1. General John Reynolds was killed at the edge of the woods nearby."
+            }
+        ]
+    },
+    {
+        "name": "Barlow's Knoll",
+        "type": "NaturalWonder",
+        "movementCost": 1,
+        "defenceBonus": 0.25,
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "turnsInto": "Grassland",
+        "weight": 0,
+        "uniques": [
+            "Has an elevation of [1] for visibility calculations",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "A low rise north of town where Francis Barlow pushed his XI Corps division forward on July 1 - an exposed salient that Early's division crushed."
+            }
+        ]
+    },
+    {
+        "name": "Benner's Hill",
+        "type": "NaturalWonder",
+        "movementCost": 2,
+        "defenceBonus": 0.25,
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "turnsInto": "Grassland",
+        "weight": 0,
+        "uniques": [
+            "Has an elevation of [1] for visibility calculations",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "A cleared hill east of town where Latimer's Confederate battalion dueled the Union guns on Cemetery and Culp's Hills on July 2 - and lost."
+            }
+        ]
+    },
+    {
+        "name": "Gettysburg",
+        "type": "NaturalWonder",
+        "movementCost": 2,
+        "defenceBonus": 0.35,
+        "occursOn": [
+            "Grassland",
+            "Plains"
+        ],
+        "turnsInto": "Grassland",
+        "weight": 0,
+        "uniques": [
+            "Blocks line-of-sight from tiles at same elevation",
+            "Doesn't generate naturally"
+        ],
+        "civilopediaText": [
+            {
+                "text": "The Diamond, the town square of Gettysburg, where ten roads from across south-central Pennsylvania and Maryland met. That is why two armies collided here."
+            }
+        ]
+    }
+]

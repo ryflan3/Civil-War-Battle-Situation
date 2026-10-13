@@ -1,0 +1,63 @@
+[
+    {
+        "name": "Infantry",
+        "movementType": "Land",
+        "uniques": [
+            "Can build [Breastworks] improvements on tiles",
+            "[This Unit] gains the [Holding Key Terrain] status for [1] turn(s) <upon ending a turn in a [Key Terrain] tile>"
+        ],
+        "civilopediaText": [
+            {"text": "Infantry brigades of 1,000-2,000 men armed with rifle-muskets. They fought shoulder to shoulder in two-rank lines and decided almost every battle of the war."},
+            {"text": "The rifle-musket was deadly out to 300 yards, so defenders behind walls, fences or breastworks held a strong advantage over attackers crossing open ground."}
+        ]
+    },
+    {
+        "name": "Skirmisher",
+        "movementType": "Land",
+        "uniques": [
+            "[This Unit] gains the [Holding Key Terrain] status for [1] turn(s) <upon ending a turn in a [Key Terrain] tile>"
+        ],
+        "civilopediaText": [
+            {"text": "Sharpshooters fought in open order ahead of the main line, using cover to pick off officers and artillery crews at long range."}
+        ]
+    },
+    {
+        "name": "Cavalry",
+        "movementType": "Land",
+        "uniques": [
+            "Can move after attacking",
+            "[This Unit] gains the [Holding Key Terrain] status for [1] turn(s) <upon ending a turn in a [Key Terrain] tile>"
+        ],
+        "civilopediaText": [
+            {"text": "By 1863 cavalry scouted, screened the army, raided and often fought dismounted with carbines. Charging steady infantry armed with rifle-muskets was usually suicidal."}
+        ]
+    },
+    {
+        "name": "Artillery",
+        "movementType": "Land",
+        "uniques": [
+            "Must set up to ranged attack",
+            "Rough terrain penalty",
+            "[This Unit] gains the [Holding Key Terrain] status for [1] turn(s) <upon ending a turn in a [Key Terrain] tile>"
+        ],
+        "civilopediaText": [
+            {"text": "Batteries of four to six guns. Each unit here represents a battalion or brigade of several batteries."},
+            {"text": "Guns had to unlimber before firing, so they must Set Up before a ranged attack. Teams of horses struggled to drag guns through woods and rocks: entering rough terrain uses all movement."},
+            {"text": "Civil War artillery fired directly at what its crews could see, so woods and ridges block its fire. High ground such as Cemetery Hill or Little Round Top lets batteries see - and hit - much farther."}
+        ]
+    },
+    {
+        "name": "Commander",
+        "movementType": "Land",
+        "civilopediaText": [
+            {"text": "Corps and division commanders with their staffs. They inspire nearby troops but cannot fight, and they are killed if the enemy reaches them."}
+        ]
+    },
+    {
+        "name": "Support",
+        "movementType": "Land",
+        "civilopediaText": [
+            {"text": "Supply trains, pioneers and hospitals. Non-combatants that keep the army moving, dug in and healthy."}
+        ]
+    }
+]
