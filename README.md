@@ -105,7 +105,7 @@ The landmarks (Cemetery Hill, Culp's Hill, Little Round Top, Big Round Top, Devi
 
 ## Final steps for you
 
-1. **Make the mod branch the default branch.** Unciv downloads a mod from the repository's *default* branch. This work was pushed to `claude/unciv-civil-war-mod-j2xmgj`. Either rename that branch to `main` (GitHub → *Settings* → *Branches* → rename), or open a pull request into `main` and merge it. Then make sure `main` is the default branch.
+1. **(Optional) Rename the branch to `main`.** Unciv downloads a mod from the repository's *default* branch. This work was pushed to `claude/unciv-civil-war-mod-j2xmgj`, which is already the default (it was the first branch in the repository), so downloading works as-is. For a tidier name, rename it under GitHub → *Settings* → *General* → *Default branch* → rename to `main`. GitHub redirects the old name.
 2. **Add GitHub topics** so Unciv's mod browser lists the mod: on the repository page, click the gear next to *About* and add `unciv-mod`, `unciv-mod-rulesets` and `unciv-mod-maps`.
 3. **Install and test in Unciv** (see *Install* above), then play a few turns of the scenario as each side.
 4. **Optional:** add a `LICENSE` file if you want others to reuse the mod (MIT or CC-BY are common for Unciv mods).
