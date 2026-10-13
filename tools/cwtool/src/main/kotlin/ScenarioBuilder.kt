@@ -17,7 +17,17 @@ import java.io.File
 
 val VICTORIES = arrayListOf("Hold the Field", "Decisive Victory")
 
-fun buildScenario(tilesJson: File, mapFile: File, outFile: File) {
+/** One scenario file per difficulty. While a scenario is selected, Unciv's New Game screen locks the game options and
+ *  uses the difficulty saved in the scenario, so the difficulty (the AI armies' strength) is chosen from the scenario list. */
+val SCENARIOS = linkedMapOf(
+    "Gettysburg - July 1, 1863" to "Veterans",
+    "Gettysburg - July 1, 1863 (Easiest - Militia)" to "Militia",
+    "Gettysburg - July 1, 1863 (Easier - Volunteers)" to "Volunteers",
+    "Gettysburg - July 1, 1863 (Harder - Regulars)" to "Regulars",
+    "Gettysburg - July 1, 1863 (Hardest - Iron Brigade)" to "Iron Brigade",
+)
+
+fun buildScenario(tilesJson: File, mapFile: File, outFile: File, difficulty: String = "Veterans") {
     initUnciv()
     val ruleset = RulesetCache[MOD]!!
     val data = com.badlogic.gdx.utils.JsonReader().parse(tilesJson.readText())
@@ -25,7 +35,7 @@ fun buildScenario(tilesJson: File, mapFile: File, outFile: File) {
     val params = GameParameters().apply {
         baseRuleset = MOD
         mods = LinkedHashSet()
-        difficulty = "Veterans"
+        this.difficulty = difficulty
         speed = "Battle Pace"
         startingEra = "Civil War era"
         numberOfCityStates = 0
@@ -87,6 +97,11 @@ fun buildScenario(tilesJson: File, mapFile: File, outFile: File) {
     union.getDiplomacyManager(confed)!!.declareWar()
 
     game.gameParameters.victoryTypes = ArrayList(VICTORIES)
+    // Default seats on the New Game screen: you command the Union against an AI Lee (the Human/AI buttons swap sides).
+    // Set only now: Unciv records the explored area (the camera's scroll limits) for human players only, and either
+    // side may end up human.
+    confed.playerType = PlayerType.AI
+    game.gameParameters.players.first { it.chosenCiv == "Confederacy" }.playerType = PlayerType.AI
     game.currentPlayer = Constants.spectator
     for (civ in sides) {
         civ.popupAlerts.clear()
@@ -95,7 +110,7 @@ fun buildScenario(tilesJson: File, mapFile: File, outFile: File) {
     }
     outFile.parentFile.mkdirs()
     outFile.writeText(UncivFiles.gameInfoToString(game, forceZip = true))
-    println("Scenario written: ${outFile.path} (${outFile.length()} bytes). Civs: ${game.civilizations.map { it.civID }}, current=${game.currentPlayer}, turn=${game.turns}")
+    println("Scenario written: ${outFile.path} (${outFile.length()} bytes, $difficulty). Civs: ${game.civilizations.map { it.civID }}, current=${game.currentPlayer}, turn=${game.turns}")
 }
 
 /** Loads the scenario exactly like NewGameScreen does, then plays [turns] turns. The human side's moves are made by the AI too. */

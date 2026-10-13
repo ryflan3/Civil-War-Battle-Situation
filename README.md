@@ -20,16 +20,28 @@ You need **Unciv 4.22.9 or newer** (the scenario was built with 4.22.9, and olde
 
 1. In Unciv, open **Mods** → **Download mod from URL**.
 2. Paste `https://github.com/ryflan3/Civil-War-Battle-Situation` and press **Download**.
-3. Unciv installs it as **Civil War Battle Situation**. Keep that folder name, because the scenario refers to the ruleset by it.
+3. Check that the mod appears in the Mods list as exactly **Civil War Battle Situation**.
+
+The installed name must be exactly that, because the scenario and the map refer to the ruleset by name. Unciv builds the name from the repository name and the default branch, so the default branch must be a simple name such as `main` (see *Final steps* below). If the mod shows up with extra words, such as *Civil War Battle Situation claude unciv civil war mod …*, see *Troubleshooting*.
 
 Once the repository has the `unciv-mod` topic (see *Final steps* below), it also appears in Unciv's built-in mod list.
 
 ## Play the Battle of Gettysburg
 
-1. **New Game** → **Map Type: Scenario** → choose **Gettysburg - July 1, 1863**.
-2. In the player list, set the side you want to command to **Human** and the other to **AI** (or both Human for hotseat).
-3. Pick a **difficulty**. In this scenario difficulty changes the strength of AI-controlled armies: Militia −15%, Volunteers −5%, Veterans normal, Regulars +10%, Iron Brigade +20%.
-4. **Start game!**
+1. **New Game** → **Map Type: Scenario**, then choose a Gettysburg scenario. The scenario sets everything else: the base ruleset changes to **Civil War Battle Situation**, and the player list shows the **Union** (Human) and the **Confederacy** (AI). Each scenario is the same battle at a different difficulty. Difficulty sets how strong the AI-controlled army fights:
+
+   | Scenario | Difficulty | AI army strength |
+   |---|---|---|
+   | Gettysburg - July 1, 1863 (Easiest - Militia) | Militia | −15% |
+   | Gettysburg - July 1, 1863 (Easier - Volunteers) | Volunteers | −5% |
+   | **Gettysburg - July 1, 1863** | Veterans | normal |
+   | Gettysburg - July 1, 1863 (Harder - Regulars) | Regulars | +10% |
+   | Gettysburg - July 1, 1863 (Hardest - Iron Brigade) | Iron Brigade | +20% |
+
+2. **Choose your side.** By default you command the Union. To play the Confederacy, click **Human** next to the Union to make it **AI**, then click **AI** next to the Confederacy to make it **Human**. Set both to Human for a two-player hotseat game.
+3. **Start game!**
+
+A scenario is a battle that is already set up, so Unciv locks the other New Game options while one is selected: the base ruleset, the map, which nations take part, the difficulty and the game options. This is normal. Only the Human/AI buttons stay open. For a game with your own settings, use one of the other modes below.
 
 **Scale.** One hex is about 250 yards. One turn is about one hour of daylight, and each night is compressed into two turns.
 
@@ -57,9 +69,21 @@ Once the repository has the `unciv-mod` topic (see *Final steps* below), it also
 
 ## Other ways to play
 
-* **Custom map:** New Game → **Map Type: Custom** → map **Gettysburg** (the ruleset switches automatically). Each side starts with a Supply Train (founds an HQ), Pioneers and a small army, and builds the rest. The arrival timetable only runs in the scenario.
+* **Custom map:** New Game → base ruleset **Civil War Battle Situation** → **Map Type: Custom** → map **Gettysburg**. Pick your nation and the AI's nation in the player list as in any Unciv game. Each side starts with a Supply Train (founds an HQ), Pioneers and a small army, and builds the rest. The historical armies and the arrival timetable are only in the scenario. Unciv's AI does not start wars in a battle this small, so **declare war yourself on turn 1**: open **Diplomacy** (top left), select the enemy and choose *Declare war*.
 * **Random maps:** pick **Civil War Battle Situation** as the base ruleset on any generated map.
 * **Map editor:** the Gettysburg map can be opened and edited in Unciv's map editor.
+
+## Troubleshooting
+
+**The scenario shows "Civ V - Gods & Kings", you can't pick anything, and Start says "It looks like we can't make a map with the parameters you requested!"**
+
+The mod was installed under the wrong folder name, so Unciv can't find the *Civil War Battle Situation* ruleset that the scenario needs. This happens when the repository's default branch name contains a slash. For example, `claude/unciv-civil-war-mod-j2xmgj` makes Unciv name the mod *Civil War Battle Situation claude unciv civil war mod j2xmgj*. To fix it:
+
+1. Make sure the repository's default branch is `main` (see *Final steps*).
+2. In Unciv, open **Mods**, select the wrongly named mod and **delete** it.
+3. Download the mod again (see *Install*). It should now be listed as **Civil War Battle Situation**.
+
+On desktop you can instead rename the folder inside Unciv's `mods` folder to exactly `Civil War Battle Situation`.
 
 ## The rules in brief
 
@@ -105,7 +129,7 @@ The landmarks (Cemetery Hill, Culp's Hill, Little Round Top, Big Round Top, Devi
 
 ## Final steps for you
 
-1. **(Optional) Rename the branch to `main`.** Unciv downloads a mod from the repository's *default* branch. This work was pushed to `claude/unciv-civil-war-mod-j2xmgj`, which is already the default (it was the first branch in the repository), so downloading works as-is. For a tidier name, rename it under GitHub → *Settings* → *General* → *Default branch* → rename to `main`. GitHub redirects the old name.
+1. **Rename the default branch to `main` (required).** Unciv downloads a mod from the repository's default branch and names the mod after the repository and that branch. It only strips simple branch names cleanly: with `claude/unciv-civil-war-mod-j2xmgj`, the mod installs under the wrong name and the scenario cannot start (see *Troubleshooting*). On GitHub, open the repository → **Settings** → **General** → **Default branch**, click the pencil icon (*Rename branch*), type `main` and confirm. GitHub moves all the files and history to `main` and redirects links to the old name.
 2. **Add GitHub topics** so Unciv's mod browser lists the mod: on the repository page, click the gear next to *About* and add `unciv-mod`, `unciv-mod-rulesets` and `unciv-mod-maps`.
 3. **Install and test in Unciv** (see *Install* above), then play a few turns of the scenario as each side.
 4. **Optional:** add a `LICENSE` file if you want others to reuse the mod (MIT or CC-BY are common for Unciv mods).
@@ -130,7 +154,7 @@ tools/build_all.sh              # regenerate everything and run Unciv's validato
 tools/build_all.sh --simulate   # ...and let the AI play the whole battle as a smoke test
 ```
 
-This needs Python 3 with Pillow, Java 21 and internet access. The first run downloads the official `Unciv.jar` (4.22.9) and Gradle. The build uses the real Unciv engine to pack the texture atlas (`game.atlas`/`game.png`), write `maps/Gettysburg` and `scenarios/Gettysburg - July 1, 1863`, and run Unciv's own ruleset validator.
+This needs Python 3 with Pillow, Java 21 and internet access. The first run downloads the official `Unciv.jar` (4.22.9) and Gradle. The build uses the real Unciv engine to pack the texture atlas (`game.atlas`/`game.png`), write `maps/Gettysburg` and the scenario saves in `scenarios/`, and run Unciv's own ruleset validator.
 
 You can also simply start the desktop version of Unciv with this folder in its `mods` directory: it re-packs the atlas itself whenever images change.
 
@@ -142,7 +166,7 @@ jsons/TileSets/ how the HexaRealm and FantasyHex tilesets layer the new terrain
 Images/         source images (unit sprites, portraits, icons, terrain overlays, leaders, emblems)
 game.atlas, game.png, Atlases.json   packed textures the game loads
 maps/Gettysburg                       the map (also usable in the map editor)
-scenarios/Gettysburg - July 1, 1863   the scenario save
+scenarios/                            the Gettysburg scenario, one save per difficulty
 docs/           order of battle, unit reference, map picture
 tools/          generators and the Unciv-engine build tool (tools/cwtool)
 ```
@@ -151,7 +175,8 @@ tools/          generators and the Unciv-engine build tool (tools/cwtool)
 
 * Unciv 4.22.9's own ruleset validator (the in-game "Locate mod errors" check) reports **no problems**.
 * The map and the scenario were written and read back by the real Unciv 4.22.9 engine.
-* The scenario was loaded the same way the New Game screen loads it, and the AI played all 48 turns from both seats. Every arrival appeared on its turn with its historical name, and the battles ended in Union victories (historically correct), with heavy Confederate losses after the July 2 attacks.
+* Unciv's own *Download mod from URL* code was run on this repository's GitHub archives. It installs the mod as **Civil War Battle Situation** when the default branch is `main`, and the scenario then starts.
+* The scenario was loaded the same way the New Game screen loads it, and the computer played the whole battle from each seat. Every arrival appeared on its turn with its historical name. In these test games the army run by Unciv's AI won, whichever side that was, so expect a hard fight at the standard difficulty. If it is too hard, pick an *Easier* or *Easiest* scenario.
 
 ## Notes
 

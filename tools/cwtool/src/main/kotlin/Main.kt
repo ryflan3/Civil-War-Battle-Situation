@@ -47,7 +47,7 @@ fun main(args: Array<String>) {
         "validate" -> if (validate() > 0) System.exit(1)
         "pack" -> packAtlas(File(args[1]))
         "map" -> buildMap(File(args[1]), File(args[2]))
-        "scenario" -> buildScenario(File(args[1]), File(args[2]), File(args[3]))
+        "scenario" -> buildScenario(File(args[1]), File(args[2]), File(args[3]), args.getOrElse(4) { "Veterans" })
         "simulate" -> simulateScenario(File(args[1]), args[2].toInt(), args.getOrElse(3) { "Union" })
         "build" -> {  // build <modDir>: everything in one JVM
             val mod = File(args[1])
@@ -55,9 +55,9 @@ fun main(args: Array<String>) {
             val map = File(mod, "maps/Gettysburg")
             packAtlas(mod)
             buildMap(tiles, map)
-            buildScenario(tiles, map, File(mod, "scenarios/Gettysburg - July 1, 1863"))
+            for ((name, difficulty) in SCENARIOS) buildScenario(tiles, map, File(mod, "scenarios/$name"), difficulty)
             if (validate() > 0) System.exit(1)
         }
-        else -> println("usage: build <modDir> | validate | pack <modDir> | map <tiles.json> <out> | scenario <tiles.json> <map> <out> | simulate <scenario> <turns> [Union|Confederacy]")
+        else -> println("usage: build <modDir> | validate | pack <modDir> | map <tiles.json> <out> | scenario <tiles.json> <map> <out> [difficulty] | simulate <scenario> <turns> [Union|Confederacy]")
     }
 }
