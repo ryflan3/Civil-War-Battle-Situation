@@ -1,8 +1,7 @@
 """Generates jsons/UnitPromotions.json.
 
-Three kinds of promotions:
+Two kinds of promotions:
   * XP promotions that units earn in combat (per arm of service),
-  * the 'Holding Key Terrain' status used by the Hold the Field victory,
   * personal abilities of named generals. Unciv automatically grants a promotion whose name
     equals the name a unit receives from a UnitNameGroup, so 'Winfield S. Hancock' gets his.
 Run from the repository root:  python3 tools/gen_promotions.py
@@ -58,13 +57,6 @@ PROMOS = [
     p("Prolonge", ["Can move after attacking"], [ART], 10, 2, ["Gunnery II"],
       text="Firing while being dragged back by ropes - the 9th Massachusetts Battery retired 'by prolonge' from the Peach Orchard on July 2."),
 ]
-
-STATUS = [{
-    "name": "Holding Key Terrain",
-    "uniques": ["Comment [This unit occupies key terrain and counts toward the Hold the Field victory]"],
-    "innerColor": [255, 217, 102], "outerColor": [60, 50, 20],
-    "civilopediaText": [{"text": "Given for one turn to a military unit that ends its turn on Cemetery Hill, East Cemetery Hill, Culp's Hill, Little Round Top or the Angle."}],
-}]
 
 def g(name, uniques, text):
     return {"name": name, "uniques": uniques, "innerColor": [255, 255, 255], "outerColor": [90, 70, 30],
@@ -142,5 +134,5 @@ GENERALS = [
 if __name__ == "__main__":
     root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
     with open(os.path.join(root, "jsons", "UnitPromotions.json"), "w") as f:
-        json.dump(PROMOS + STATUS + GENERALS, f, indent=4)
-    print("Wrote %d promotions" % (len(PROMOS) + len(STATUS) + len(GENERALS)))
+        json.dump(PROMOS + GENERALS, f, indent=4)
+    print("Wrote %d promotions" % (len(PROMOS) + len(GENERALS)))

@@ -8,11 +8,13 @@
         "[-15]% Strength <for [AI player] Civilizations> <on [Militia] difficulty>",
         "[-5]% Strength <for [AI player] Civilizations> <on [Volunteers] difficulty>",
         "[+10]% Strength <for [AI player] Civilizations> <on [Regulars] difficulty>",
-        "[+20]% Strength <for [AI player] Civilizations> <on [Iron Brigade] difficulty>"
+        "[+20]% Strength <for [AI player] Civilizations> <on [Iron Brigade] difficulty>",
+        "Reveals the entire map <upon turn start> <before turn number [2]>"
     ],
     "civilopediaText": [
         {"text": "Roads have bridges over the creeks, and marching columns move three times as fast on them."},
         {"text": "Armies are supplied by their trains: units cost no gold upkeep."},
+        {"text": "Both commanders have maps of the country: the whole terrain is revealed at the start, but enemy troops are only seen when your own units can see them."},
         {"text": "Difficulty changes the fighting strength of computer-controlled armies: -15% on Militia, -5% on Volunteers, normal on Veterans, +10% on Regulars and +20% on Iron Brigade."}
     ]
 }

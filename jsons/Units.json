@@ -21,7 +21,7 @@
             }
         ],
         "uniques": [
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -38,7 +38,7 @@
             "[+25]% Strength <when fighting in [Rough terrain] tiles>",
             "Withdraws before melee combat <with [75]% chance>",
             "[+1] Sight",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -60,7 +60,7 @@
             "[+1] Sight",
             "[-33]% Strength <vs [Infantry] units> <when attacking>",
             "Withdraws before melee combat <with [50]% chance>",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -83,7 +83,7 @@
         "uniques": [
             "[+50]% Strength <when defending> <vs [Infantry] units>",
             "[+50]% Strength <when defending> <vs [Cavalry] units>",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -106,7 +106,7 @@
         "uniques": [
             "[+33]% Strength <vs [Artillery] units>",
             "[+15]% Strength <when defending> <vs [Infantry] units>",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -132,7 +132,7 @@
             }
         ],
         "uniques": [
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -168,7 +168,7 @@
         "attackSound": "wagon",
         "uniques": [
             "Founds a new city",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -184,7 +184,8 @@
         "uniques": [
             "Can build [Breastworks] improvements on tiles",
             "Can build [Road] improvements on tiles",
-            "Can build [Remove Forest] improvements on tiles"
+            "Can build [Remove Forest] improvements on tiles",
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -198,7 +199,8 @@
         "movement": 3,
         "cost": 40,
         "uniques": [
-            "All adjacent units heal [+10] HP when healing"
+            "All adjacent units heal [+10] HP when healing",
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -218,7 +220,7 @@
         "uniques": [
             "[+10]% Strength",
             "[This Unit] gets a name from the [Union Infantry] group",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -274,8 +276,7 @@
             "[+25]% Strength <when fighting in [Rough terrain] tiles>",
             "Withdraws before melee combat <with [75]% chance>",
             "[+1] Sight",
-            "[This Unit] gets a name from the [US Sharpshooters] group",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -301,7 +302,7 @@
             "Withdraws before melee combat <with [50]% chance>",
             "[+25]% Strength <when defending>",
             "[This Unit] gets a name from the [Union Cavalry] group",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -354,7 +355,7 @@
             "[+50]% Strength <when defending> <vs [Infantry] units>",
             "[+50]% Strength <when defending> <vs [Cavalry] units>",
             "[This Unit] gets a name from the [Union Napoleon Battery] group",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -380,7 +381,7 @@
             "[+33]% Strength <vs [Artillery] units>",
             "[+15]% Strength <when defending> <vs [Infantry] units>",
             "[This Unit] gets a name from the [Union Ordnance Rifles] group",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -404,7 +405,7 @@
         "attackSound": "artillery",
         "uniques": [
             "[This Unit] gets a name from the [US Horse Artillery] group",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -445,7 +446,8 @@
         "movement": 4,
         "cost": 40,
         "uniques": [
-            "All adjacent units heal [+15] HP when healing"
+            "All adjacent units heal [+15] HP when healing",
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -468,7 +470,7 @@
         "uniques": [
             "[+10]% Strength <when attacking>",
             "[This Unit] gets a name from the [Confederate Infantry] group",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -539,7 +541,7 @@
             "Withdraws before melee combat <with [75]% chance>",
             "[+1] Sight",
             "[This Unit] gets a name from the [Confederate Sharpshooters] group",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -565,7 +567,7 @@
             "Withdraws before melee combat <with [50]% chance>",
             "[+20]% Strength <vs [Cavalry] units> <when attacking>",
             "[This Unit] gets a name from the [Confederate Cavalry] group",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -591,7 +593,7 @@
             "[+50]% Strength <when defending> <vs [Infantry] units>",
             "[+50]% Strength <when defending> <vs [Cavalry] units>",
             "[This Unit] gets a name from the [Confederate Napoleon Battery] group",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -617,7 +619,7 @@
             "[+25]% Strength <vs [Artillery] units>",
             "[+15]% Strength <when defending> <vs [Infantry] units>",
             "[This Unit] gets a name from the [Confederate Parrott Rifles] group",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {
@@ -661,7 +663,7 @@
         "attackSound": "artillery",
         "uniques": [
             "[This Unit] gets a name from the [Stuart Horse Artillery] group",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ],
         "civilopediaText": [
             {

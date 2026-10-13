@@ -4,7 +4,7 @@ Stats are on Unciv's relative scale: a standard infantry brigade has Strength 20
 Only the ratios between strengths matter in Unciv combat.
 Run from the repository root:  python3 tools/gen_units.py
 """
-import json, os
+import json, os, sys
 
 def pedia(*lines):
     return [{"text": l} for l in lines]
@@ -207,15 +207,23 @@ UNITS = [
         "A Confederate corps or division commander. Named generals carry their own personal ability - see the 'Promotions' of each general (for example Lee, Longstreet, Stuart or Hood).")},
 ]
 
-# In the Gettysburg scenario the armies follow the historical order of battle: cities cannot raise
-# new combat units or supply trains (support units are still allowed). In free play everything is buildable.
-SCENARIO_LOCK = "Unavailable <if [Gettysburg Arrivals] is constructed>"
+# In the Gettysburg scenario the armies follow the historical order of battle: cities cannot raise any new
+# units (the scenario's cities all hold a building tagged "Gettysburg Scenario"). In free play everything is buildable.
+SCENARIO_LOCK = "Unavailable <if [Gettysburg Scenario] is constructed>"
 for _u in UNITS:
     _uniques = _u.setdefault("uniques", [])
-    if "Unbuildable" in _uniques:
-        continue
-    if _u["unitType"] in ("Infantry", "Skirmisher", "Cavalry", "Artillery") or _u["name"] == "Supply Train":
+    if "Unbuildable" not in _uniques:
         _uniques.append(SCENARIO_LOCK)
+
+# Only units with a name group (historical names of timetabled arrivals, or the generals' free-play pools)
+# keep their "gets a name" unique - Unciv's validator rejects a reference to a group that does not exist.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import gettysburg_oob as oob
+_NAMED = {oob.unit_name(side, key) for turn, side, entry, key, names in oob.timetable() if any(names)}
+_NAMED |= {"Union General", "Confederate General"}
+for _u in UNITS:
+    if _u["name"] not in _NAMED:
+        _u["uniques"] = [x for x in _u["uniques"] if x != INF_NAME(_u["name"])]
 
 if __name__ == "__main__":
     root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")

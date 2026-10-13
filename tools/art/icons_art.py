@@ -352,7 +352,6 @@ PROMOTION_ICONS = {
     "Hardened Veterans": pi_chevrons, "Bayonet Charge": pi_bayonet, "Field Medicine": pi_cross,
     "Dismounted Tactics": pi_carbine, "Saber Charge": pi_sabers, "Screening": pi_eye, "Gunnery": pi_crosshair,
     "Double Canister": pi_balls, "Counter-Battery": pi_cannon, "Long Range": pi_range, "Prolonge": pi_rope,
-    "Holding Key Terrain": pi_hillflag,
 }
 
 

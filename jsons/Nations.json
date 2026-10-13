@@ -11,7 +11,7 @@
         "startBias": ["Hill"],
 
         "startIntroPart1": "General Meade, you took command of the Army of the Potomac only three days ago. Lee's Army of Northern Virginia has invaded Pennsylvania, and its corps are converging on Gettysburg, the crossroads town where ten roads meet. At dawn on July 1, 1863, John Buford's cavalry division holds the ridges west of town and waits for the infantry to come up.",
-        "startIntroPart2": "Your corps are strung out on the roads to the south - Reynolds' I Corps is closest. Hold the high ground south of town: Cemetery Hill, Culp's Hill, Cemetery Ridge and Little Round Top. If they hold at nightfall on July 3, the road to Baltimore, Philadelphia and Washington stays closed.",
+        "startIntroPart2": "The I, III, XI and XII Corps are coming onto the field from the south and south-east. You hold all seven key positions: Oak Hill, the Lutheran Seminary, the town, Cemetery Hill, Culp's Hill, the Angle and Little Round Top. Hold more of them than the enemy at nightfall on July 3, and the road to Baltimore, Philadelphia and Washington stays closed.",
 
         "declaringWar": "The rebel army has invaded Pennsylvania. We will meet it here, and we will drive it back across the Potomac.",
         "attacked": "You have attacked the Army of the Potomac. Every corps on the road is marching to the sound of the guns.",
@@ -45,7 +45,7 @@
         "startBias": ["Hill"],
 
         "startIntroPart1": "General Lee, after your victory at Chancellorsville the Army of Northern Virginia has marched north into Pennsylvania. Jeb Stuart's cavalry is away raiding, and you are blind to the enemy's movements. This morning, July 1, 1863, Heth's division is marching down the Chambersburg Pike toward Gettysburg - and has run into Union cavalry on the ridges west of town.",
-        "startIntroPart2": "Your corps are converging from the west and the north. Drive the enemy off the heights south of the town before the whole Union army arrives. A victory on Northern soil could break the North's will to fight.",
+        "startIntroPart2": "Hill's corps is deploying to the west, and Ewell's is coming down from the north and north-east. The enemy holds all seven key positions: Oak Hill, the Lutheran Seminary, the town, Cemetery Hill, Culp's Hill, the Angle and Little Round Top. Take and hold more than half of them by nightfall on July 3, before the whole Union army arrives. A victory on Northern soil could break the North's will to fight.",
 
         "declaringWar": "If the enemy is there tomorrow, we must attack him.",
         "attacked": "The Army of Northern Virginia does not give ground easily.",
@@ -69,15 +69,6 @@
         "civilopediaText": [
             {"text": "The Army of Northern Virginia at Gettysburg numbered about 71,000 to 75,000 men in three infantry corps under Longstreet, Ewell and A. P. Hill, with Stuart's cavalry and about 283 guns."},
             {"text": "It reached the field from the west and the north and fought mostly on the offensive, from Seminary Ridge and the town toward the Union heights."}
-        ]
-    },
-    {
-        "name": "Barbarians",
-        "outerColor": [0, 0, 0],
-        "innerColor": [185, 12, 12],
-        "uniques": ["Can only heal by pillaging", "Excluded from map editor"],
-        "civilopediaText": [
-            {"text": "Deserters, bushwhackers and guerrilla bands. They only appear in free-play games with barbarians enabled."}
         ]
     }
 ]

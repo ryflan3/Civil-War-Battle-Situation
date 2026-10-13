@@ -381,27 +381,6 @@
         ]
     },
     {
-        "name": "Holding Key Terrain",
-        "uniques": [
-            "Comment [This unit occupies key terrain and counts toward the Hold the Field victory]"
-        ],
-        "innerColor": [
-            255,
-            217,
-            102
-        ],
-        "outerColor": [
-            60,
-            50,
-            20
-        ],
-        "civilopediaText": [
-            {
-                "text": "Given for one turn to a military unit that ends its turn on Cemetery Hill, East Cemetery Hill, Culp's Hill, Little Round Top or the Angle."
-            }
-        ]
-    },
-    {
         "name": "George G. Meade",
         "uniques": [
             "[+20]% Strength bonus for [{Military} {Land}] units within [3] tiles <when defending>"

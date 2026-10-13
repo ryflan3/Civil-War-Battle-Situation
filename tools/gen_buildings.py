@@ -1,5 +1,6 @@
 """Generates jsons/Buildings.json and jsons/UnitNameGroups.json from tools/gettysburg_oob.py.
 
+Each scenario objective city holds the 'Key Position' building, which the Hold the Field victory counts.
 Each scenario entry city holds one 'arrivals' building. Its uniques spawn the historical
 reinforcements at the start of the right turn, e.g.
   "[3] free [Union Infantry] units appear <upon turn start> <after turn number [9]> <before turn number [10]> <for [Union] Civilizations>"
@@ -12,7 +13,8 @@ from collections import OrderedDict
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gettysburg_oob as oob
 
-ARRIVALS_TAG = "Gettysburg Arrivals"
+# Every building the scenario places carries this tag; "<if [Gettysburg Scenario] is constructed>" means "in the scenario"
+SCENARIO_TAG = "Gettysburg Scenario"
 
 
 def arrival_building_name(side, entry):
@@ -48,15 +50,27 @@ def build():
                 {"text": "Wagon parks, ammunition trains and commissary stores at the end of a road or railroad."}
             ]
         },
+        {
+            "name": oob.OBJECTIVE_BUILDING,
+            "cost": 1,
+            "cityStrength": 4,
+            "cityHealth": 25,
+            "uniques": [SCENARIO_TAG, "Unbuildable", "Unsellable", "Never destroyed when the city is captured"],
+            "civilopediaText": [
+                {"text": "One of the seven key positions of the Gettysburg scenario: %s." % ", ".join(o[0] for o in oob.OBJECTIVES)},
+                {"text": "Each is a city that starts in Union hands and cannot be razed. At nightfall on July 3 (the end of turn %d) the army holding more key positions wins the Hold the Field victory." % oob.LAST_TURN},
+                {"text": "Rifle pits, gun emplacements and stone walls make the position stronger to defend than an ordinary town."},
+            ]
+        },
     ]
 
     by_entry = OrderedDict()
-    for turn, side, entry, key, names in oob.ARRIVALS:
+    for turn, side, entry, key, names in oob.timetable():
         by_entry.setdefault((side, entry), []).append((turn, key, names))
 
     for (side, entry), rows in by_entry.items():
         rows.sort(key=lambda r: r[0])
-        uniques = [ARRIVALS_TAG, "Unbuildable", "Unsellable", "Destroyed when the city is captured"]
+        uniques = [SCENARIO_TAG, "Unbuildable", "Unsellable", "Destroyed when the city is captured"]
         timetable = OrderedDict()
         for turn, key, names in rows:
             unit = oob.unit_name(side, key)
@@ -83,7 +97,7 @@ def build():
     # ---------------------------------------------------------------- name groups
     groups = []
     keyed = OrderedDict()
-    for turn, side, entry, key, names in oob.ARRIVALS:
+    for turn, side, entry, key, names in oob.timetable():
         named = [n for n in names if n]
         if not named:
             continue
@@ -94,13 +108,13 @@ def build():
             "name": "%s arriving on turn %d" % (unit, turn),
             "unitNames": names,
             "uniques": [unit,
-                        "Only available <after turn number [%d]> <before turn number [%d]> <if [%s] is constructed>" % (turn, turn + 1, ARRIVALS_TAG)],
+                        "Only available <after turn number [%d]> <before turn number [%d]> <if [%s] is constructed>" % (turn, turn + 1, SCENARIO_TAG)],
         })
     for side, gen in (("Union", "Union General"), ("Confederacy", "Confederate General")):
         groups.append({
             "name": "%s generals" % ("Union" if side == "Union" else "Confederate"),
             "unitNames": oob.FREE_PLAY_GENERALS[side],
-            "uniques": [gen, "Unavailable <if [%s] is constructed>" % ARRIVALS_TAG],
+            "uniques": [gen, "Unavailable <if [%s] is constructed>" % SCENARIO_TAG],
         })
     return buildings, groups
 

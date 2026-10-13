@@ -361,7 +361,12 @@ def build():
         h = nearest_hex(px, py)
         tiles[h]["features"] = []
         tiles[h]["wonder"] = None
-        cities.append({"name": name, "civ": side, "x": h[0], "y": h[1], "capital": capital})
+        cities.append({"name": name, "civ": side, "x": h[0], "y": h[1], "capital": capital, "objective": False})
+    # key positions: a city on the landmark itself (the landmark stays under the city)
+    for name, side, _ in oob.OBJECTIVES:
+        h = nearest_hex(*LANDMARKS[name])
+        assert tiles[h]["wonder"] == name, name
+        cities.append({"name": name, "civ": side, "x": h[0], "y": h[1], "capital": False, "objective": True})
 
     # tidy feature order: Hill/Ridge first, then vegetation, then the rest (Unciv uses the last one for movement cost)
     order = ["Hill", "Ridge", "Forest", "Orchard", "Boulders", "Town", "Stone Wall", "Farmstead", "Railroad Cut", "Marsh"]
@@ -371,17 +376,55 @@ def build():
     return tiles, sorted(rivers), cities, road_tiles
 
 
-def unit_positions():
+CIVILIAN_KEYS = ("GEN", "AMB", "HOSP")
+
+
+def unit_positions(city_sides):
+    """Tiles of every unit on the field at the start: the 7:00 AM positions (oob.START), then the opening
+    deployment (oob.OPENING). A tile holds one military and one civilian unit (generals are civilians).
+    Units may start in their own side's cities (a garrison) but never in an enemy city.
+    city_sides maps each city tile to the side that holds it."""
     out = []
     taken = set()
-    for side, key, inst, px, py in oob.START:
-        h = nearest_hex(px, py)
-        unit = oob.unit_name(side, key)
-        is_civilian = key in ("GEN", "AMB", "HOSP")
-        slot = (h, is_civilian)
-        assert slot not in taken, ("two units on one tile", inst)
+
+    def put(side, key, inst, h, group=None):
+        slot = (h, key in CIVILIAN_KEYS)
+        assert slot not in taken and city_sides.get(h, side) == side, ("tile taken", inst, h)
         taken.add(slot)
-        out.append({"civ": side, "unit": unit, "name": inst, "x": h[0], "y": h[1]})
+        out.append({"civ": side, "unit": oob.unit_name(side, key), "name": inst, "x": h[0], "y": h[1], "group": group})
+
+    for side, key, inst, px, py in oob.START:
+        put(side, key, inst, nearest_hex(px, py))
+
+    def free(h, side, civilian):
+        return city_sides.get(h, side) == side and (h, civilian) not in taken
+
+    for side, road, first, last, label, line in oob.OPENING:
+        units = [(turn, key, name) for turn, s_, entry, key, names in oob.ARRIVALS
+                 if s_ == side and entry == road and first <= turn <= last for name in names]
+        # candidate tiles: along the anchor line, then ring after ring around it
+        candidates = hex_path(line) or [nearest_hex(*line[0])]
+        seen = set(candidates)
+        i = 0
+        while len(candidates) < 4 * len(units) + 20 and i < len(candidates):
+            for n in neighbors(candidates[i]):
+                if n not in seen:
+                    seen.add(n)
+                    candidates.append(n)
+            i += 1
+        troops = []  # (turn, tile) of this group's military units, so generals ride with their own men
+        for turn, key, name in units:
+            if key in CIVILIAN_KEYS:
+                continue
+            h = next(c for c in candidates if free(c, side, False))
+            put(side, key, name, h, label)
+            troops.append((turn, h))
+        for turn, key, name in units:
+            if key not in CIVILIAN_KEYS:
+                continue
+            near = [h for t, h in sorted(troops, key=lambda th: abs(th[0] - turn))] + candidates
+            h = next(c for c in near if free(c, side, True))
+            put(side, key, name, h, label)
     return out
 
 
@@ -392,7 +435,7 @@ def export(path):
         "tiles": [{"x": h[0], "y": h[1], **t} for h, t in tiles.items()],
         "rivers": [[a[0], a[1], b[0], b[1]] for a, b in rivers],
         "cities": cities,
-        "startUnits": unit_positions(),
+        "startUnits": unit_positions({(c["x"], c["y"]): c["civ"] for c in cities}),
         "startingLocations": [{"x": c["x"], "y": c["y"], "nation": c["civ"]} for c in cities if c["capital"]],
     }
     os.makedirs(os.path.dirname(path), exist_ok=True)

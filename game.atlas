@@ -25,13 +25,6 @@ BuildingIcons/Confederate Arrivals: Harrisburg Road
   orig: 100, 100
   offset: 0, 0
   index: -1
-BuildingIcons/Confederate Arrivals: Middletown Road
-  rotate: false
-  xy: 484, 512
-  size: 100, 100
-  orig: 100, 100
-  offset: 0, 0
-  index: -1
 BuildingIcons/Union Arrivals: Baltimore Pike
   rotate: false
   xy: 484, 512
@@ -56,6 +49,13 @@ BuildingIcons/Union Arrivals: Hanover Road
 BuildingIcons/Union Arrivals: Taneytown Road
   rotate: false
   xy: 484, 512
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+BuildingIcons/Key Position
+  rotate: false
+  xy: 1456, 460
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
@@ -769,28 +769,28 @@ UnitIcons/General
   index: -1
 UnitIcons/Horse Artillery
   rotate: false
-  xy: 1464, 568
+  xy: 1464, 676
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Stuart Horse Artillery
   rotate: false
-  xy: 1464, 568
+  xy: 1464, 676
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/US Horse Artillery
   rotate: false
-  xy: 1464, 568
+  xy: 1464, 676
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Iron Brigade
   rotate: false
-  xy: 1456, 460
+  xy: 1464, 568
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
@@ -1372,13 +1372,6 @@ UnitPromotionIcons/Gunnery
 UnitPromotionIcons/Hardened Veterans
   rotate: false
   xy: 1464, 784
-  size: 100, 100
-  orig: 100, 100
-  offset: 0, 0
-  index: -1
-UnitPromotionIcons/Holding Key Terrain
-  rotate: false
-  xy: 1464, 676
   size: 100, 100
   orig: 100, 100
   offset: 0, 0

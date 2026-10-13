@@ -14,16 +14,35 @@ import gen_promotions
 def order_of_battle():
     out = ["# Gettysburg scenario - order of battle and arrival timetable", "",
            "Generated from `tools/gettysburg_oob.py`. Turn numbers are Unciv's turn counter (top bar).",
-           "Each daylight turn is about one hour; each night is two turns. Reinforcements appear at the start of the turn, in or next to the entry city on their road.", "",
-           "## On the field at 7:00 AM, July 1 (turn 0)", "", "| Side | Unit | Name |", "|---|---|---|"]
+           "Each daylight turn is about one hour; each night is two turns.", "",
+           "## Key positions", "",
+           "Seven cities founded on landmarks at the start. All begin in Union hands and cannot be razed. "
+           "The army holding more of them at the end of turn %d (nightfall, July 3) wins **Hold the Field**." % oob.LAST_TURN, "",
+           "| Key position | Held at the start by | Why it mattered |", "|---|---|---|"]
+    for name, side, why in oob.OBJECTIVES:
+        out.append("| %s | %s | %s |" % (name, side, why))
+    out += ["", "## On the field at the start (turn 0)", "",
+            "To make the battle big from the first turn, every force that reached the field on July 1 starts on the map, "
+            "in or near the place it fought: the day's marches are compressed.", "",
+            "| Side | Group | Units |", "|---|---|---|"]
+    start_names = OrderedDict()
     for side, key, inst, x, y in oob.START:
-        out.append("| %s | %s | %s |" % (side, oob.unit_name(side, key), inst))
+        start_names.setdefault((side, "Buford's cavalry division" if side == "Union" else "Heth's division"), []).append(inst or oob.unit_name(side, key))
+    for (side, label), names in start_names.items():
+        out.append("| %s | %s (7:00 AM positions) | %s |" % (side, label, "; ".join(names)))
+    for side, road, first, last, label, line in oob.OPENING:
+        names = [n if n else oob.unit_name(side, key) for turn, s_, entry, key, ns in oob.ARRIVALS
+                 if s_ == side and entry == road and first <= turn <= last for n in ns]
+        out.append("| %s | %s | %s |" % (side, label, "; ".join(names)))
     out += ["", "## Entry roads", "", "| Road | Side | Notes |", "|---|---|---|"]
     for name, side, x, y, cap, desc in oob.ENTRIES:
         out.append("| %s%s | %s | %s |" % (name, " (army HQ)" if cap else "", side, desc))
-    out += ["", "## Arrivals", "", "| Turn | Time | Side | Road | Arrives |", "|---|---|---|---|---|"]
+    out += ["", "## Reinforcements", "",
+            "They appear at the start of the turn, in or next to the entry city on their road. "
+            "If the enemy has captured that city, they are lost.", "",
+            "| Turn | Time | Side | Road | Arrives |", "|---|---|---|---|---|"]
     rows = OrderedDict()
-    for turn, side, entry, key, names in sorted(oob.ARRIVALS, key=lambda a: (a[0], a[1] != "Union")):
+    for turn, side, entry, key, names in sorted(oob.timetable(), key=lambda a: (a[0], a[1] != "Union")):
         k = (turn, side, entry)
         rows.setdefault(k, []).extend(n if n else oob.unit_name(side, key) for n in names)
     for (turn, side, entry), names in rows.items():

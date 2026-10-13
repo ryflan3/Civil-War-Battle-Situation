@@ -129,19 +129,6 @@ def wall(img, pts):
             put(img, x, y - 1, ROCK_D if k % 2 else ROCK)
 
 
-def key_marker(img):
-    """Small gold star in the top-right corner: KEY TERRAIN for the Hold the Field victory."""
-    star = new(TW, TH)
-    cx, cy = 50, 9
-    for dx in range(-3, 4):
-        for dy in range(-3, 4):
-            if abs(dx) + abs(dy) <= 3 and not (abs(dx) == 3 and dy > 0):
-                put(star, cx + dx, cy + dy, GOLD)
-    put(star, cx, cy, (255, 240, 160))
-    outline(star, (60, 40, 10))
-    img.alpha_composite(star)
-
-
 def small_cannon(img, x, y):
     rect(img, x, y - 3, 6, 1, IRON)
     disc(img, x + 1, y - 1, 1.5, WOOD)
@@ -282,7 +269,6 @@ def nw_cemetery_hill(east=False):
             x, y = random.randint(14, 50), random.randint(30, 44)
             put(img, x, y, (236, 236, 228)); put(img, x, y - 1, (236, 236, 228))
         tree(img, 16, 26, 3); tree(img, 48, 30, 3)
-    key_marker(img)
     return clip(img)
 
 
@@ -296,7 +282,6 @@ def nw_culps_hill():
         rock(img, x, y, 2)
     for i, x in enumerate(range(18, 46, 6)):           # Greene's breastworks
         rect(img, x, 30 - (i % 2), 6, 2, WOOD_D)
-    key_marker(img)
     return clip(img)
 
 
@@ -308,7 +293,6 @@ def nw_little_round_top():
         rock(img, x, y, r)
     tree(img, 44, 22, 3); tree(img, 50, 30, 3)
     flag(img, 30, 10, "us", pole_len=12)              # the signal station on the summit
-    key_marker(img)
     return clip(img)
 
 
@@ -334,7 +318,6 @@ def nw_the_angle():
     wall(img, [(4, 40), (30, 34), (30, 18), (58, 14)])
     for x, y in ((38, 28), (44, 26), (41, 33), (48, 31), (45, 37)):   # the Copse of Trees
         tree(img, x, y, 3)
-    key_marker(img)
     return clip(img)
 
 

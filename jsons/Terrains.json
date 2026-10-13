@@ -423,7 +423,6 @@
         "weight": 0,
         "uniques": [
             "Has an elevation of [2] for visibility calculations",
-            "Key Terrain",
             "Doesn't generate naturally"
         ],
         "civilopediaText": [
@@ -434,7 +433,7 @@
                 "text": "Lee asked Ewell to take it 'if practicable'. He did not, and massed Union guns on the hill dominated the battle for two more days."
             },
             {
-                "text": "KEY TERRAIN: military units ending their turn here count toward the 'Hold the Field' victory.",
+                "text": "KEY POSITION: in the Gettysburg scenario a city stands here at the start of the battle. The army holding more key positions at nightfall on July 3 wins the 'Hold the Field' victory.",
                 "color": "#FFD966"
             }
         ]
@@ -452,16 +451,11 @@
         "weight": 0,
         "uniques": [
             "Has an elevation of [2] for visibility calculations",
-            "Key Terrain",
             "Doesn't generate naturally"
         ],
         "civilopediaText": [
             {
                 "text": "The eastern shoulder of Cemetery Hill, crowded with Union batteries. At dusk on July 2 Hays's Louisiana Tigers and Avery's North Carolinians reached the guns before being driven off."
-            },
-            {
-                "text": "KEY TERRAIN: military units ending their turn here count toward the 'Hold the Field' victory.",
-                "color": "#FFD966"
             }
         ]
     },
@@ -480,7 +474,6 @@
             "Has an elevation of [2] for visibility calculations",
             "Rough terrain",
             "Blocks line-of-sight from tiles at same elevation",
-            "Key Terrain",
             "Doesn't generate naturally"
         ],
         "civilopediaText": [
@@ -491,7 +484,7 @@
                 "text": "The fight for the hill raged again from dawn to late morning on July 3."
             },
             {
-                "text": "KEY TERRAIN: military units ending their turn here count toward the 'Hold the Field' victory.",
+                "text": "KEY POSITION: in the Gettysburg scenario a city stands here at the start of the battle. The army holding more key positions at nightfall on July 3 wins the 'Hold the Field' victory.",
                 "color": "#FFD966"
             }
         ]
@@ -510,7 +503,6 @@
         "uniques": [
             "Has an elevation of [2] for visibility calculations",
             "Rough terrain",
-            "Key Terrain",
             "Doesn't generate naturally"
         ],
         "civilopediaText": [
@@ -521,7 +513,7 @@
                 "text": "Colonel Joshua Chamberlain's 20th Maine held its extreme left with a bayonet charge."
             },
             {
-                "text": "KEY TERRAIN: military units ending their turn here count toward the 'Hold the Field' victory.",
+                "text": "KEY POSITION: in the Gettysburg scenario a city stands here at the start of the battle. The army holding more key positions at nightfall on July 3 wins the 'Hold the Field' victory.",
                 "color": "#FFD966"
             }
         ]
@@ -585,7 +577,6 @@
         "weight": 0,
         "uniques": [
             "Has an elevation of [1] for visibility calculations",
-            "Key Terrain",
             "Doesn't generate naturally"
         ],
         "civilopediaText": [
@@ -596,7 +587,7 @@
                 "text": "Armistead's Virginians crossed the wall here; the spot is remembered as the High Water Mark of the Confederacy."
             },
             {
-                "text": "KEY TERRAIN: military units ending their turn here count toward the 'Hold the Field' victory.",
+                "text": "KEY POSITION: in the Gettysburg scenario a city stands here at the start of the battle. The army holding more key positions at nightfall on July 3 wins the 'Hold the Field' victory.",
                 "color": "#FFD966"
             }
         ]
@@ -661,6 +652,10 @@
         "civilopediaText": [
             {
                 "text": "The Seminary on Seminary Ridge. Buford watched the Confederate approach from its cupola on the morning of July 1. Later it became Lee's lines and a field hospital."
+            },
+            {
+                "text": "KEY POSITION: in the Gettysburg scenario a city stands here at the start of the battle. The army holding more key positions at nightfall on July 3 wins the 'Hold the Field' victory.",
+                "color": "#FFD966"
             }
         ]
     },
@@ -683,6 +678,10 @@
         "civilopediaText": [
             {
                 "text": "A commanding height north-west of town. Rodes's division and its guns arrived here at midday on July 1, enfilading the Union I Corps line."
+            },
+            {
+                "text": "KEY POSITION: in the Gettysburg scenario a city stands here at the start of the battle. The army holding more key positions at nightfall on July 3 wins the 'Hold the Field' victory.",
+                "color": "#FFD966"
             }
         ]
     },
@@ -767,6 +766,10 @@
         "civilopediaText": [
             {
                 "text": "The Diamond, the town square of Gettysburg, where ten roads from across south-central Pennsylvania and Maryland met. That is why two armies collided here."
+            },
+            {
+                "text": "KEY POSITION: in the Gettysburg scenario a city stands here at the start of the battle. The army holding more key positions at nightfall on July 3 wins the 'Hold the Field' victory.",
+                "color": "#FFD966"
             }
         ]
     }

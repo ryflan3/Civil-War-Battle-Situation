@@ -1,223 +1,12 @@
 [
     {
-        "name": "Union General arriving on turn 1",
-        "unitNames": [
-            "John F. Reynolds"
-        ],
-        "uniques": [
-            "Union General",
-            "Only available <after turn number [1]> <before turn number [2]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union Infantry arriving on turn 1",
-        "unitNames": [
-            "Cutler's Brigade (I Corps)"
-        ],
-        "uniques": [
-            "Union Infantry",
-            "Only available <after turn number [1]> <before turn number [2]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union Ordnance Rifles arriving on turn 1",
-        "unitNames": [
-            "Hall's 2nd Maine Battery"
-        ],
-        "uniques": [
-            "Union Ordnance Rifles",
-            "Only available <after turn number [1]> <before turn number [2]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union General arriving on turn 2",
-        "unitNames": [
-            "Abner Doubleday"
-        ],
-        "uniques": [
-            "Union General",
-            "Only available <after turn number [2]> <before turn number [3]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union Infantry arriving on turn 2",
-        "unitNames": [
-            "Biddle's Brigade (I Corps)",
-            "Stone's Bucktail Brigade (I Corps)"
-        ],
-        "uniques": [
-            "Union Infantry",
-            "Only available <after turn number [2]> <before turn number [3]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union Napoleon Battery arriving on turn 2",
-        "unitNames": [
-            "I Corps Artillery (Wainwright)"
-        ],
-        "uniques": [
-            "Union Napoleon Battery",
-            "Only available <after turn number [2]> <before turn number [3]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union Infantry arriving on turn 3",
-        "unitNames": [
-            "Paul's Brigade (I Corps)",
-            "Baxter's Brigade (I Corps)"
-        ],
-        "uniques": [
-            "Union Infantry",
-            "Only available <after turn number [3]> <before turn number [4]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union General arriving on turn 3",
-        "unitNames": [
-            "Oliver O. Howard"
-        ],
-        "uniques": [
-            "Union General",
-            "Only available <after turn number [3]> <before turn number [4]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union Infantry arriving on turn 4",
-        "unitNames": [
-            "von Gilsa's Brigade (XI Corps)",
-            "Ames's Brigade (XI Corps)"
-        ],
-        "uniques": [
-            "Union Infantry",
-            "Only available <after turn number [4]> <before turn number [5]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union Infantry arriving on turn 5",
-        "unitNames": [
-            "Schimmelfennig's Brigade (XI Corps)",
-            "Krzyzanowski's Brigade (XI Corps)"
-        ],
-        "uniques": [
-            "Union Infantry",
-            "Only available <after turn number [5]> <before turn number [6]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union Napoleon Battery arriving on turn 5",
-        "unitNames": [
-            "XI Corps Artillery (Osborn)"
-        ],
-        "uniques": [
-            "Union Napoleon Battery",
-            "Only available <after turn number [5]> <before turn number [6]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union Infantry arriving on turn 6",
-        "unitNames": [
-            "Coster's Brigade (XI Corps)",
-            "Orland Smith's Brigade (XI Corps)"
-        ],
-        "uniques": [
-            "Union Infantry",
-            "Only available <after turn number [6]> <before turn number [7]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union General arriving on turn 8",
-        "unitNames": [
-            "Winfield S. Hancock"
-        ],
-        "uniques": [
-            "Union General",
-            "Only available <after turn number [8]> <before turn number [9]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union General arriving on turn 9",
-        "unitNames": [
-            "Henry W. Slocum"
-        ],
-        "uniques": [
-            "Union General",
-            "Only available <after turn number [9]> <before turn number [10]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union Infantry arriving on turn 9",
-        "unitNames": [
-            "McDougall's Brigade (XII Corps)",
-            "Lockwood's Brigade (XII Corps)",
-            "Ruger's Brigade (XII Corps)"
-        ],
-        "uniques": [
-            "Union Infantry",
-            "Only available <after turn number [9]> <before turn number [10]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union Ordnance Rifles arriving on turn 9",
-        "unitNames": [
-            "XII Corps Artillery (Muhlenberg)"
-        ],
-        "uniques": [
-            "Union Ordnance Rifles",
-            "Only available <after turn number [9]> <before turn number [10]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union Infantry arriving on turn 10",
-        "unitNames": [
-            "Candy's Brigade (XII Corps)",
-            "Kane's Brigade (XII Corps)",
-            "Greene's Brigade (XII Corps)"
-        ],
-        "uniques": [
-            "Union Infantry",
-            "Only available <after turn number [10]> <before turn number [11]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union General arriving on turn 10",
-        "unitNames": [
-            "Daniel E. Sickles"
-        ],
-        "uniques": [
-            "Union General",
-            "Only available <after turn number [10]> <before turn number [11]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Union Infantry arriving on turn 11",
-        "unitNames": [
-            "Graham's Brigade (III Corps)",
-            "Ward's Brigade (III Corps)",
-            "de Trobriand's Brigade (III Corps)"
-        ],
-        "uniques": [
-            "Union Infantry",
-            "Only available <after turn number [11]> <before turn number [12]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "US Sharpshooters arriving on turn 11",
-        "unitNames": [
-            "Berdan's Sharpshooters (1st & 2nd USSS)"
-        ],
-        "uniques": [
-            "US Sharpshooters",
-            "Only available <after turn number [11]> <before turn number [12]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
         "name": "Union General arriving on turn 13",
         "unitNames": [
             "George G. Meade"
         ],
         "uniques": [
             "Union General",
-            "Only available <after turn number [13]> <before turn number [14]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [13]> <before turn number [14]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -229,7 +18,7 @@
         ],
         "uniques": [
             "Union Infantry",
-            "Only available <after turn number [13]> <before turn number [14]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [13]> <before turn number [14]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -239,7 +28,7 @@
         ],
         "uniques": [
             "Union Napoleon Battery",
-            "Only available <after turn number [13]> <before turn number [14]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [13]> <before turn number [14]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -252,7 +41,7 @@
         ],
         "uniques": [
             "Union Infantry",
-            "Only available <after turn number [14]> <before turn number [15]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [14]> <before turn number [15]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -262,7 +51,7 @@
         ],
         "uniques": [
             "Union Napoleon Battery",
-            "Only available <after turn number [14]> <before turn number [15]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [14]> <before turn number [15]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -273,7 +62,7 @@
         ],
         "uniques": [
             "Union General",
-            "Only available <after turn number [15]> <before turn number [16]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [15]> <before turn number [16]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -285,7 +74,7 @@
         ],
         "uniques": [
             "Union Infantry",
-            "Only available <after turn number [15]> <before turn number [16]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [15]> <before turn number [16]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -297,7 +86,7 @@
         ],
         "uniques": [
             "Union Infantry",
-            "Only available <after turn number [16]> <before turn number [17]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [16]> <before turn number [17]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -307,7 +96,7 @@
         ],
         "uniques": [
             "Union General",
-            "Only available <after turn number [17]> <before turn number [18]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [17]> <before turn number [18]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -319,7 +108,7 @@
         ],
         "uniques": [
             "Union Infantry",
-            "Only available <after turn number [17]> <before turn number [18]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [17]> <before turn number [18]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -331,7 +120,7 @@
         ],
         "uniques": [
             "Union Infantry",
-            "Only available <after turn number [18]> <before turn number [19]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [18]> <before turn number [19]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -341,7 +130,7 @@
         ],
         "uniques": [
             "Union Ordnance Rifles",
-            "Only available <after turn number [18]> <before turn number [19]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [18]> <before turn number [19]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -351,7 +140,7 @@
         ],
         "uniques": [
             "Union Infantry",
-            "Only available <after turn number [19]> <before turn number [20]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [19]> <before turn number [20]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -361,7 +150,7 @@
         ],
         "uniques": [
             "Union General",
-            "Only available <after turn number [20]> <before turn number [21]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [20]> <before turn number [21]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -371,7 +160,7 @@
         ],
         "uniques": [
             "Union Napoleon Battery",
-            "Only available <after turn number [20]> <before turn number [21]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [20]> <before turn number [21]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -382,7 +171,7 @@
         ],
         "uniques": [
             "Union Ordnance Rifles",
-            "Only available <after turn number [20]> <before turn number [21]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [20]> <before turn number [21]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -392,7 +181,7 @@
         ],
         "uniques": [
             "Union Napoleon Battery",
-            "Only available <after turn number [21]> <before turn number [22]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [21]> <before turn number [22]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -402,7 +191,7 @@
         ],
         "uniques": [
             "Union Ordnance Rifles",
-            "Only available <after turn number [21]> <before turn number [22]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [21]> <before turn number [22]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -412,7 +201,7 @@
         ],
         "uniques": [
             "Union General",
-            "Only available <after turn number [22]> <before turn number [23]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [22]> <before turn number [23]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -423,7 +212,7 @@
         ],
         "uniques": [
             "Union Infantry",
-            "Only available <after turn number [22]> <before turn number [23]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [22]> <before turn number [23]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -434,7 +223,7 @@
         ],
         "uniques": [
             "Union Cavalry",
-            "Only available <after turn number [22]> <before turn number [23]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [22]> <before turn number [23]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -444,7 +233,7 @@
         ],
         "uniques": [
             "US Horse Artillery",
-            "Only available <after turn number [22]> <before turn number [23]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [22]> <before turn number [23]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -454,7 +243,7 @@
         ],
         "uniques": [
             "Union General",
-            "Only available <after turn number [24]> <before turn number [25]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [24]> <before turn number [25]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -466,7 +255,7 @@
         ],
         "uniques": [
             "Union Infantry",
-            "Only available <after turn number [24]> <before turn number [25]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [24]> <before turn number [25]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -477,7 +266,7 @@
         ],
         "uniques": [
             "Union Infantry",
-            "Only available <after turn number [25]> <before turn number [26]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [25]> <before turn number [26]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -489,7 +278,7 @@
         ],
         "uniques": [
             "Union Infantry",
-            "Only available <after turn number [26]> <before turn number [27]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [26]> <before turn number [27]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -499,7 +288,7 @@
         ],
         "uniques": [
             "Union Napoleon Battery",
-            "Only available <after turn number [26]> <before turn number [27]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [26]> <before turn number [27]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -509,7 +298,7 @@
         ],
         "uniques": [
             "US Horse Artillery",
-            "Only available <after turn number [33]> <before turn number [34]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [33]> <before turn number [34]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -519,7 +308,7 @@
         ],
         "uniques": [
             "Union General",
-            "Only available <after turn number [36]> <before turn number [37]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [36]> <before turn number [37]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -529,7 +318,7 @@
         ],
         "uniques": [
             "Union Cavalry",
-            "Only available <after turn number [36]> <before turn number [37]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [36]> <before turn number [37]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -539,7 +328,7 @@
         ],
         "uniques": [
             "Union Cavalry",
-            "Only available <after turn number [38]> <before turn number [39]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [38]> <before turn number [39]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -549,261 +338,7 @@
         ],
         "uniques": [
             "US Horse Artillery",
-            "Only available <after turn number [38]> <before turn number [39]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate General arriving on turn 1",
-        "unitNames": [
-            "A. P. Hill"
-        ],
-        "uniques": [
-            "Confederate General",
-            "Only available <after turn number [1]> <before turn number [2]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate General arriving on turn 2",
-        "unitNames": [
-            "William D. Pender"
-        ],
-        "uniques": [
-            "Confederate General",
-            "Only available <after turn number [2]> <before turn number [3]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Infantry arriving on turn 2",
-        "unitNames": [
-            "Perrin's Brigade (Pender)",
-            "Lane's Brigade (Pender)",
-            "Thomas's Brigade (Pender)",
-            "Scales's Brigade (Pender)"
-        ],
-        "uniques": [
-            "Confederate Infantry",
-            "Only available <after turn number [2]> <before turn number [3]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Napoleon Battery arriving on turn 2",
-        "unitNames": [
-            "McIntosh's Battalion"
-        ],
-        "uniques": [
-            "Confederate Napoleon Battery",
-            "Only available <after turn number [2]> <before turn number [3]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate General arriving on turn 4",
-        "unitNames": [
-            "Robert E. Rodes",
-            "Richard S. Ewell"
-        ],
-        "uniques": [
-            "Confederate General",
-            "Only available <after turn number [4]> <before turn number [5]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Infantry arriving on turn 4",
-        "unitNames": [
-            "Daniel's Brigade (Rodes)",
-            "Iverson's Brigade (Rodes)",
-            "O'Neal's Brigade (Rodes)"
-        ],
-        "uniques": [
-            "Confederate Infantry",
-            "Only available <after turn number [4]> <before turn number [5]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Parrott Rifles arriving on turn 4",
-        "unitNames": [
-            "Carter's Battalion"
-        ],
-        "uniques": [
-            "Confederate Parrott Rifles",
-            "Only available <after turn number [4]> <before turn number [5]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Infantry arriving on turn 5",
-        "unitNames": [
-            "Doles's Brigade (Rodes)",
-            "Ramseur's Brigade (Rodes)"
-        ],
-        "uniques": [
-            "Confederate Infantry",
-            "Only available <after turn number [5]> <before turn number [6]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Sharpshooters arriving on turn 5",
-        "unitNames": [
-            "Blackford's Sharpshooters (Rodes)"
-        ],
-        "uniques": [
-            "Confederate Sharpshooters",
-            "Only available <after turn number [5]> <before turn number [6]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate General arriving on turn 5",
-        "unitNames": [
-            "Robert E. Lee"
-        ],
-        "uniques": [
-            "Confederate General",
-            "Only available <after turn number [5]> <before turn number [6]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate General arriving on turn 6",
-        "unitNames": [
-            "Jubal A. Early"
-        ],
-        "uniques": [
-            "Confederate General",
-            "Only available <after turn number [6]> <before turn number [7]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Infantry arriving on turn 6",
-        "unitNames": [
-            "Gordon's Brigade (Early)",
-            "Hays's Louisiana Tigers (Early)"
-        ],
-        "uniques": [
-            "Confederate Infantry",
-            "Only available <after turn number [6]> <before turn number [7]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Napoleon Battery arriving on turn 6",
-        "unitNames": [
-            "Jones's Battalion"
-        ],
-        "uniques": [
-            "Confederate Napoleon Battery",
-            "Only available <after turn number [6]> <before turn number [7]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Infantry arriving on turn 7",
-        "unitNames": [
-            "Avery's Brigade (Early)",
-            "Extra Billy Smith's Brigade (Early)"
-        ],
-        "uniques": [
-            "Confederate Infantry",
-            "Only available <after turn number [7]> <before turn number [8]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Cavalry arriving on turn 7",
-        "unitNames": [
-            "Jenkins's Brigade"
-        ],
-        "uniques": [
-            "Confederate Cavalry",
-            "Only available <after turn number [7]> <before turn number [8]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate General arriving on turn 9",
-        "unitNames": [
-            "Richard H. Anderson"
-        ],
-        "uniques": [
-            "Confederate General",
-            "Only available <after turn number [9]> <before turn number [10]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Infantry arriving on turn 9",
-        "unitNames": [
-            "Wilcox's Brigade (Anderson)",
-            "Wright's Brigade (Anderson)",
-            "Mahone's Brigade (Anderson)"
-        ],
-        "uniques": [
-            "Confederate Infantry",
-            "Only available <after turn number [9]> <before turn number [10]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Napoleon Battery arriving on turn 9",
-        "unitNames": [
-            "Lane's Battalion (Sumter Artillery)"
-        ],
-        "uniques": [
-            "Confederate Napoleon Battery",
-            "Only available <after turn number [9]> <before turn number [10]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Infantry arriving on turn 10",
-        "unitNames": [
-            "Perry's Florida Brigade (Anderson)",
-            "Posey's Brigade (Anderson)"
-        ],
-        "uniques": [
-            "Confederate Infantry",
-            "Only available <after turn number [10]> <before turn number [11]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Napoleon Battery arriving on turn 10",
-        "unitNames": [
-            "Poague's Battalion"
-        ],
-        "uniques": [
-            "Confederate Napoleon Battery",
-            "Only available <after turn number [10]> <before turn number [11]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Parrott Rifles arriving on turn 10",
-        "unitNames": [
-            "Garnett's Battalion"
-        ],
-        "uniques": [
-            "Confederate Parrott Rifles",
-            "Only available <after turn number [10]> <before turn number [11]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate General arriving on turn 12",
-        "unitNames": [
-            "Edward Johnson"
-        ],
-        "uniques": [
-            "Confederate General",
-            "Only available <after turn number [12]> <before turn number [13]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Infantry arriving on turn 12",
-        "unitNames": [
-            "Steuart's Brigade (Johnson)",
-            "Nicholls's Louisiana Brigade (Johnson)",
-            "J. M. Jones's Brigade (Johnson)"
-        ],
-        "uniques": [
-            "Confederate Infantry",
-            "Only available <after turn number [12]> <before turn number [13]> <if [Gettysburg Arrivals] is constructed>"
-        ]
-    },
-    {
-        "name": "Confederate Parrott Rifles arriving on turn 12",
-        "unitNames": [
-            "Latimer's Battalion"
-        ],
-        "uniques": [
-            "Confederate Parrott Rifles",
-            "Only available <after turn number [12]> <before turn number [13]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [38]> <before turn number [39]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -813,7 +348,7 @@
         ],
         "uniques": [
             "Confederate Parrott Rifles",
-            "Only available <after turn number [13]> <before turn number [14]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [13]> <before turn number [14]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -823,7 +358,7 @@
         ],
         "uniques": [
             "Confederate Napoleon Battery",
-            "Only available <after turn number [13]> <before turn number [14]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [13]> <before turn number [14]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -834,7 +369,7 @@
         ],
         "uniques": [
             "Confederate General",
-            "Only available <after turn number [15]> <before turn number [16]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [15]> <before turn number [16]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -847,7 +382,7 @@
         ],
         "uniques": [
             "Confederate Infantry",
-            "Only available <after turn number [15]> <before turn number [16]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [15]> <before turn number [16]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -857,7 +392,7 @@
         ],
         "uniques": [
             "Confederate Parrott Rifles",
-            "Only available <after turn number [15]> <before turn number [16]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [15]> <before turn number [16]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -867,7 +402,7 @@
         ],
         "uniques": [
             "Confederate General",
-            "Only available <after turn number [16]> <before turn number [17]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [16]> <before turn number [17]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -878,7 +413,7 @@
         ],
         "uniques": [
             "Confederate Infantry",
-            "Only available <after turn number [16]> <before turn number [17]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [16]> <before turn number [17]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -888,7 +423,7 @@
         ],
         "uniques": [
             "Confederate Napoleon Battery",
-            "Only available <after turn number [16]> <before turn number [17]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [16]> <before turn number [17]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -898,7 +433,7 @@
         ],
         "uniques": [
             "Confederate Sharpshooters",
-            "Only available <after turn number [16]> <before turn number [17]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [16]> <before turn number [17]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -908,7 +443,7 @@
         ],
         "uniques": [
             "Confederate General",
-            "Only available <after turn number [17]> <before turn number [18]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [17]> <before turn number [18]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -918,7 +453,7 @@
         ],
         "uniques": [
             "Confederate Parrott Rifles",
-            "Only available <after turn number [17]> <before turn number [18]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [17]> <before turn number [18]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -928,7 +463,7 @@
         ],
         "uniques": [
             "Confederate Napoleon Battery",
-            "Only available <after turn number [17]> <before turn number [18]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [17]> <before turn number [18]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -938,7 +473,7 @@
         ],
         "uniques": [
             "Confederate Infantry",
-            "Only available <after turn number [21]> <before turn number [22]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [21]> <before turn number [22]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -948,7 +483,7 @@
         ],
         "uniques": [
             "Confederate General",
-            "Only available <after turn number [27]> <before turn number [28]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [27]> <before turn number [28]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -960,7 +495,7 @@
         ],
         "uniques": [
             "Confederate Cavalry",
-            "Only available <after turn number [27]> <before turn number [28]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [27]> <before turn number [28]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -970,7 +505,7 @@
         ],
         "uniques": [
             "Stuart Horse Artillery",
-            "Only available <after turn number [27]> <before turn number [28]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [27]> <before turn number [28]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -980,7 +515,7 @@
         ],
         "uniques": [
             "Confederate General",
-            "Only available <after turn number [30]> <before turn number [31]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [30]> <before turn number [31]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -992,7 +527,7 @@
         ],
         "uniques": [
             "Confederate Infantry",
-            "Only available <after turn number [30]> <before turn number [31]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [30]> <before turn number [31]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -1002,7 +537,7 @@
         ],
         "uniques": [
             "Confederate Parrott Rifles",
-            "Only available <after turn number [30]> <before turn number [31]> <if [Gettysburg Arrivals] is constructed>"
+            "Only available <after turn number [30]> <before turn number [31]> <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -1026,7 +561,7 @@
         ],
         "uniques": [
             "Union General",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ]
     },
     {
@@ -1050,7 +585,7 @@
         ],
         "uniques": [
             "Confederate General",
-            "Unavailable <if [Gettysburg Arrivals] is constructed>"
+            "Unavailable <if [Gettysburg Scenario] is constructed>"
         ]
     }
 ]

@@ -10,8 +10,8 @@ sys.path.insert(0, HERE)
 from figures import *
 from units_art import SPRITES
 from icons_art import (portrait_background, nation_union, nation_confederacy, leader_portrait, PROMOTION_ICONS,
-                       vector_icon, pi_union_general, pi_confed_general, bi_headquarters, bi_depot, bi_arrivals,
-                       ii_breastworks, icon_pioneer)
+                       vector_icon, pi_union_general, pi_confed_general, pi_hillflag, bi_headquarters, bi_depot,
+                       bi_arrivals, ii_breastworks, icon_pioneer)
 from tiles_art import FEATURES, WONDERS, CITY_CENTERS
 
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
@@ -143,9 +143,11 @@ def main():
         save(union_gen if is_union else confed_gen, "UnitPromotionIcons", g["name"] + ".png"); count += 1
 
     buildings = [b["name"] for b in json.load(open(os.path.join(ROOT, "jsons", "Buildings.json")))]
-    hq, depot, arr = vector_icon(bi_headquarters), vector_icon(bi_depot), vector_icon(bi_arrivals)
+    icons = {"Army Headquarters": vector_icon(bi_headquarters), "Supply Depot": vector_icon(bi_depot),
+             oob.OBJECTIVE_BUILDING: vector_icon(pi_hillflag)}
+    arr = vector_icon(bi_arrivals)
     for b in buildings:
-        save(hq if b == "Army Headquarters" else depot if b == "Supply Depot" else arr, "BuildingIcons", b + ".png"); count += 1
+        save(icons.get(b, arr), "BuildingIcons", b + ".png"); count += 1
     save(vector_icon(ii_breastworks), "ImprovementIcons", "Breastworks.png"); count += 1
 
     tiles = {}

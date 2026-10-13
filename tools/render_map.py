@@ -129,14 +129,16 @@ def render(scale=1.0, with_units=True, labels=True):
             img.alpha_composite(sp, (int(cx - 32), int(cy - 30)))
     if labels:
         font = ImageFont.truetype(FONT, 17)
+        city_tiles = {(c["x"], c["y"]) for c in data["cities"]}
         for h, t in tiles.items():
-            if t["wonder"]:
+            if t["wonder"] and h not in city_tiles:   # a key position is labelled once, as a city
                 cx, cy = centers[h]
                 d.text((cx - 4, cy + 10), t["wonder"], fill=(255, 250, 230), font=font, stroke_width=3, stroke_fill=(20, 16, 12), anchor="mt")
         for c in data["cities"]:
             cx, cy = centers[(c["x"], c["y"])]
             col = (150, 180, 255) if c["civ"] == "Union" else (255, 160, 150)
-            d.text((cx, cy + 22), c["name"], fill=col, font=font, stroke_width=3, stroke_fill=(20, 16, 12), anchor="mt")
+            name = ("\u2605 " + c["name"]) if c.get("objective") else c["name"]   # key positions get a star
+            d.text((cx, cy + 22), name, fill=col, font=font, stroke_width=3, stroke_fill=(20, 16, 12), anchor="mt")
     if scale != 1.0:
         img = img.resize((int(W * scale), int(H * scale)), Image.LANCZOS)
     return img

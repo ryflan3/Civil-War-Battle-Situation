@@ -3,8 +3,7 @@
         "name": "Infantry",
         "movementType": "Land",
         "uniques": [
-            "Can build [Breastworks] improvements on tiles",
-            "[This Unit] gains the [Holding Key Terrain] status for [1] turn(s) <upon ending a turn in a [Key Terrain] tile>"
+            "Can build [Breastworks] improvements on tiles"
         ],
         "civilopediaText": [
             {"text": "Infantry brigades of 1,000-2,000 men armed with rifle-muskets. They fought shoulder to shoulder in two-rank lines and decided almost every battle of the war."},
@@ -14,9 +13,6 @@
     {
         "name": "Skirmisher",
         "movementType": "Land",
-        "uniques": [
-            "[This Unit] gains the [Holding Key Terrain] status for [1] turn(s) <upon ending a turn in a [Key Terrain] tile>"
-        ],
         "civilopediaText": [
             {"text": "Sharpshooters fought in open order ahead of the main line, using cover to pick off officers and artillery crews at long range."}
         ]
@@ -25,8 +21,7 @@
         "name": "Cavalry",
         "movementType": "Land",
         "uniques": [
-            "Can move after attacking",
-            "[This Unit] gains the [Holding Key Terrain] status for [1] turn(s) <upon ending a turn in a [Key Terrain] tile>"
+            "Can move after attacking"
         ],
         "civilopediaText": [
             {"text": "By 1863 cavalry scouted, screened the army, raided and often fought dismounted with carbines. Charging steady infantry armed with rifle-muskets was usually suicidal."}
@@ -37,8 +32,7 @@
         "movementType": "Land",
         "uniques": [
             "Must set up to ranged attack",
-            "Rough terrain penalty",
-            "[This Unit] gains the [Holding Key Terrain] status for [1] turn(s) <upon ending a turn in a [Key Terrain] tile>"
+            "Rough terrain penalty"
         ],
         "civilopediaText": [
             {"text": "Batteries of four to six guns. Each unit here represents a battalion or brigade of several batteries."},

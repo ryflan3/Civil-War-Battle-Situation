@@ -4,11 +4,11 @@
 
 A Civil War ruleset for [Unciv](https://github.com/yairm210/Unciv), starting with the **Battle of Gettysburg, July 1–3, 1863**.
 
-* **Gettysburg scenario** – both armies at their 7:00 AM positions on July 1. Every brigade, artillery battalion and corps commander then arrives on its historical road at its historical hour: 93 Union and 77 Confederate units in total.
+* **Gettysburg scenario** – a big battle from the first turn. Everything that reached the field on July 1 starts on the map, in every sector: 36 Union and 47 Confederate units. The rest of both armies then arrives on its historical road at its historical hour: 93 Union and 77 Confederate units in total. Seven **key positions** (cities on Oak Hill, the Lutheran Seminary, the town, Cemetery Hill, Culp's Hill, the Angle and Little Round Top) decide who holds the field.
 * **Gettysburg map** – a 34 × 37 hex map of the battlefield (about 250 yards per hex). It includes Seminary, Cemetery, McPherson's and Herr Ridges, Oak Hill, Culp's Hill and the Round Tops, Devil's Den, the Wheatfield and Peach Orchard, the town, the stone wall at the Angle, the unfinished railroad cut, Willoughby Run, Plum Run, Rock Creek and the ten roads that met at Gettysburg.
 * **30 units** with original pixel art (map sprites, full-color portraits and icons), for the Union, the Confederacy and a neutral base set. Each is modeled on its real weapons and tactics, from the Springfield rifle-musket and the 12-pounder Napoleon to Berdan's Sharps rifles, Custer's Spencers and Hurt's Whitworths.
 * **30 named generals** with personal abilities (Hancock the Superb, Buford's eye for ground, Hunt's artillery, Lee, Longstreet, Stuart…), plus sepia portraits of Meade and Lee.
-* **15 landmarks** with their own art and history. Five of them are *key terrain* that decides who holds the field.
+* **15 landmarks** with their own art and history. Seven of them are the scenario's key positions.
 
 ![The Gettysburg map](docs/gettysburg_map.png)
 
@@ -41,7 +41,13 @@ Once the repository has the `unciv-mod` topic (see *Final steps* below), it also
 2. **Choose your side.** By default you command the Union. To play the Confederacy, click **Human** next to the Union to make it **AI**, then click **AI** next to the Confederacy to make it **Human**. Set both to Human for a two-player hotseat game.
 3. **Start game!**
 
-A scenario is a battle that is already set up, so Unciv locks the other New Game options while one is selected: the base ruleset, the map, which nations take part, the difficulty and the game options. This is normal. Only the Human/AI buttons stay open. For a game with your own settings, use one of the other modes below.
+A scenario is a battle that is already set up, so Unciv locks the other New Game options while one is selected: the base ruleset, the map, which nations take part, the difficulty and the game options. This is normal. Only the Human/AI buttons stay open. The locked options panel still shows your last game's settings, not the scenario's. What the scenario actually uses:
+
+* **At war from the first turn.** The war cannot end in peace.
+* **The terrain is revealed and units are hidden.** Both commanders have maps, so you see the whole battlefield, but enemy troops only appear where your own units can see them.
+* **No barbarians.**
+* **Cities cannot be razed.** A captured city stays on the map and can be taken back.
+* **No new units.** Cities cannot raise any: the armies are the historical ones.
 
 **Scale.** One hex is about 250 yards. One turn is about one hour of daylight, and each night is compressed into two turns.
 
@@ -53,11 +59,18 @@ A scenario is a battle that is already set up, so Unciv locks the other New Game
 | 31 – 32 | Night of July 2–3 |
 | 33 – 47 | July 3, 5 AM – 7 PM |
 
-**Reinforcements** appear at the start of their turn in or next to their entry city: Taneytown Road (Meade's HQ), Emmitsburg Road, Baltimore Pike and Hanover Road for the Union; Chambersburg Pike (Lee's HQ), Middletown Road and Harrisburg Road for the Confederacy. The full timetable is in [docs/ORDER_OF_BATTLE.md](docs/ORDER_OF_BATTLE.md), and in-game in the Civilopedia under each "Arrivals" building. If the enemy captures an entry city, the reinforcements still due on that road are lost. In the scenario, cities cannot raise extra combat units: the armies are the historical ones.
+**On the field at the start.** To make the battle big from the first turn, the marches of July 1 are compressed. Every force that reached Gettysburg that day starts on the map, in or near the ground it fought over:
+
+* **Union:** Buford's cavalry west of town, Wadsworth's division behind him at the Seminary, the rest of the I Corps and the XI Corps around the Angle and the Taneytown Road, the XII Corps on the Baltimore Pike, and the III Corps coming up the Emmitsburg Road.
+* **Confederacy:** Heth's, Pender's and Anderson's divisions to the west, Rodes's division north of Oak Hill, and Early's and Johnson's divisions on the Harrisburg Road to the northeast.
+
+**Key positions.** Seven cities stand on Oak Hill, the Lutheran Seminary, the town of Gettysburg, Cemetery Hill, Culp's Hill, the Angle and Little Round Top. All of them start in Union hands, so the Confederates must take them and the Union must hold them. They are stronger than ordinary towns, and they are never burned: whoever captures one keeps it until the enemy takes it back.
+
+**Reinforcements** from the night of July 1–2 onward appear at the start of their turn in or next to their entry city: Taneytown Road (Meade's HQ), Emmitsburg Road, Baltimore Pike and Hanover Road for the Union; Chambersburg Pike (Lee's HQ) and Harrisburg Road for the Confederacy. The full order of battle is in [docs/ORDER_OF_BATTLE.md](docs/ORDER_OF_BATTLE.md), and in-game in the Civilopedia under each "Arrivals" building. If the enemy captures an entry city, the reinforcements still due on that road are lost.
 
 **Victory**
 
-* **Hold the Field** – from the end of turn 47 (nightfall, July 3), the army with more military units standing on the five gold-starred **key terrain** landmarks (Cemetery Hill, East Cemetery Hill, Culp's Hill, Little Round Top, the Angle) wins.
+* **Hold the Field** – from the end of turn 47 (nightfall, July 3), the army holding more of the seven **key positions** wins. In 1863 the Confederates took Oak Hill, the seminary and the town, but the Union kept the other four, and Lee retreated.
 * **Decisive Victory** – capture the enemy army's headquarters at any time.
 
 **Tactics of 1863**
@@ -69,7 +82,7 @@ A scenario is a battle that is already set up, so Unciv locks the other New Game
 
 ## Other ways to play
 
-* **Custom map:** New Game → base ruleset **Civil War Battle Situation** → **Map Type: Custom** → map **Gettysburg**. Pick your nation and the AI's nation in the player list as in any Unciv game. Each side starts with a Supply Train (founds an HQ), Pioneers and a small army, and builds the rest. The historical armies and the arrival timetable are only in the scenario. Unciv's AI does not start wars in a battle this small, so **declare war yourself on turn 1**: open **Diplomacy** (top left), select the enemy and choose *Declare war*.
+* **Custom map:** New Game → base ruleset **Civil War Battle Situation** → **Map Type: Custom** → map **Gettysburg**. Pick your nation and the AI's nation in the player list as in any Unciv game. Each side starts with a Supply Train (founds an HQ), Pioneers and a small army, and builds the rest. The historical armies, key positions and arrival timetable are only in the scenario. The terrain is revealed from turn 1, and there are never barbarians. Unciv's AI does not start wars in a battle this small, so **declare war yourself on turn 1**: open **Diplomacy** (top left), select the enemy and choose *Declare war*.
 * **Random maps:** pick **Civil War Battle Situation** as the base ruleset on any generated map.
 * **Map editor:** the Gettysburg map can be opened and edited in Unciv's map editor.
 
@@ -142,7 +155,7 @@ Most JSON files and **all images** are generated by the scripts in `tools/`. Edi
 |---|---|
 | Unit stats and abilities | `tools/gen_units.py` |
 | Promotions and generals' abilities | `tools/gen_promotions.py` |
-| The order of battle, arrival times and entry roads | `tools/gettysburg_oob.py` |
+| The order of battle, key positions, opening deployment, arrival times and entry roads | `tools/gettysburg_oob.py` |
 | The map's geography | `tools/gettysburg_geo.py` |
 | Graphics | `tools/art/*.py` |
 | Nations, terrain, eras, victories, difficulties, global rules | the hand-written files in `jsons/` (`Nations.json`, `Terrains.json`, `Eras.json`, `VictoryTypes.json`, `Difficulties.json`, `GlobalUniques.json`, `ModOptions.json`, …) |
@@ -176,7 +189,7 @@ tools/          generators and the Unciv-engine build tool (tools/cwtool)
 * Unciv 4.22.9's own ruleset validator (the in-game "Locate mod errors" check) reports **no problems**.
 * The map and the scenario were written and read back by the real Unciv 4.22.9 engine.
 * Unciv's own *Download mod from URL* code was run on this repository's GitHub archives. It installs the mod as **Civil War Battle Situation** when the default branch is `main`, and the scenario then starts.
-* The scenario was loaded the same way the New Game screen loads it, and the computer played the whole battle from each seat. Every arrival appeared on its turn with its historical name. In these test games the army run by Unciv's AI won, whichever side that was, so expect a hard fight at the standard difficulty. If it is too hard, pick an *Easier* or *Easiest* scenario.
+* The scenario was loaded the same way the New Game screen loads it, and the computer played the whole battle from each seat. The armies started at war, with the terrain revealed and enemy units hidden, and with no barbarians. Every arrival appeared on its turn with its historical name, and no city was razed. In one test game the Confederates took Oak Hill, the seminary and Cemetery Hill, and the Union won Hold the Field by four key positions to three. In the other, the Union counterattacked and captured Lee's headquarters for a Decisive Victory. Expect a hard fight; if it is too hard, pick an *Easier* or *Easiest* scenario.
 
 ## Notes
 
