@@ -49,6 +49,7 @@ A scenario is a battle that is already set up, so Unciv locks the other New Game
 * **Cities cannot be razed.** A captured city stays on the map and can be taken back.
 * **Neutral key positions.** The town, Cemetery Hill, Culp's Hill and Little Round Top belong to *Adams County*, a neutral city-state that both armies are at war with for the whole battle. It has no army: a neutral position falls to a brigade or two, but it must be attacked and taken before it counts for anyone.
 * **No new units.** Cities cannot raise any: the armies are the historical ones.
+* **No happiness or golden ages.** Holding and capturing towns causes no unhappiness, so happiness stays at 0 all battle and there are no golden ages.
 
 **Scale.** One hex is about 250 yards. One turn is about one hour of daylight, and each night is compressed into two turns.
 

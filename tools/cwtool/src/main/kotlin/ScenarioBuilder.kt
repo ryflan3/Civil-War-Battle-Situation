@@ -190,6 +190,8 @@ fun simulateScenario(scenarioFile: File, turns: Int, humanSide: String = "Union"
         val enemyUnitsSeen = enemy.units.getCivUnits().count { civ.viewableTiles.contains(it.currentTile) }
         println("  ${civ.civID}: ${civ.units.getCivUnits().count()} units, explored ${explored}/${game.tileMap.values.size} tiles, sees ${enemyUnitsSeen}/${enemy.units.getCivUnits().count()} enemy units, key positions ${keyPositions(civ)}")
     }
+    for (civ in listOf(union, confed))
+        println("  ${civ.civID} happiness: ${civ.stats.getHappinessBreakdown().filterValues { it != 0f }}")
     val neutral = game.getCivilizationOrNull(NEUTRAL)
     if (neutral != null) println("  $NEUTRAL (neutral): key positions ${keyPositions(neutral)}, at war with Union ${union.isAtWarWith(neutral)}, with Confederacy ${confed.isAtWarWith(neutral)}")
     val human = game.getCivilization(humanSide)
@@ -209,7 +211,8 @@ fun simulateScenario(scenarioFile: File, turns: Int, humanSide: String = "Union"
             val lost = lastNames[civ.civID].orEmpty().toMutableList().apply { names.forEach { remove(it) } }
             totalLost[civ.civID] = (totalLost[civ.civID] ?: 0) + lost.size
             val mil = civ.units.getCivUnits().count { it.isMilitary() }
-            line.append(" | ${civ.civID}: units=${names.size} mil=$mil lost=${lost.size} (total ${totalLost[civ.civID]}) cities=${civ.cities.size} keys=${keyPositions(civ).size}")
+            line.append(" | ${civ.civID}: units=${names.size} mil=$mil lost=${lost.size} (total ${totalLost[civ.civID]}) cities=${civ.cities.size} keys=${keyPositions(civ).size}" +
+                " happiness=${civ.getHappiness()} (${civ.goldenAges.storedHappiness})")
             if (new.isNotEmpty()) line.append(" NEW=${new.size}")
         }
         println(line)

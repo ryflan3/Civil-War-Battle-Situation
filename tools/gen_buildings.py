@@ -17,6 +17,11 @@ import gettysburg_oob as oob
 SCENARIO_TAG = "Gettysburg Scenario"
 
 
+# A captured city normally costs its new owner 2 happiness. Happiness is meant to stay at exactly 0 (no unhappiness,
+# no golden ages: see Difficulties.json and GlobalUniques.json), so every city keeps a building that removes it: the
+# Supply Depot (never destroyed on capture) or the Key Position.
+NO_OCCUPATION_UNHAPPINESS = "Removes extra unhappiness from annexed cities"
+
 # The capital building of the neutral city-state that holds some key positions at the start
 NEUTRAL_CAPITAL = "Home Guard Command"
 
@@ -42,7 +47,7 @@ def build():
             # (cityStrengthFromTechsFullMultiplier 0), so their defence is base + buildings + garrison.
             "cityStrength": 40,
             "cityHealth": 300,
-            "uniques": ["Indicates the capital city", "[+25]% Production when constructing [Military] units [in this city]"],
+            "uniques": ["Indicates the capital city", "[+25]% Production when constructing [Military] units [in this city]", NO_OCCUPATION_UNHAPPINESS],
             "civilopediaText": [
                 {"text": "The army commander's headquarters, with its staff, couriers, signal officers and the guard. Losing it means losing the army: capturing the enemy headquarters wins a Decisive Victory."},
                 {"text": "It is far stronger than any other city: taking it needs a deliberate assault, with artillery and several brigades."}
@@ -68,7 +73,8 @@ def build():
             "gold": 2,
             "cityStrength": 5,
             "cityHealth": 25,
-            "uniques": ["[+15]% Production when constructing [Military] units [in this city]"],
+            "uniques": ["[+15]% Production when constructing [Military] units [in this city]", NO_OCCUPATION_UNHAPPINESS,
+                        "Never destroyed when the city is captured"],
             "civilopediaText": [
                 {"text": "Wagon parks, ammunition trains and commissary stores at the end of a road or railroad."}
             ]
@@ -78,7 +84,7 @@ def build():
             "cost": 1,
             "cityStrength": 4,
             "cityHealth": 25,
-            "uniques": [SCENARIO_TAG, "Unbuildable", "Unsellable", "Never destroyed when the city is captured"],
+            "uniques": [SCENARIO_TAG, "Unbuildable", "Unsellable", "Never destroyed when the city is captured", NO_OCCUPATION_UNHAPPINESS],
             "civilopediaText": [
                 {"text": "One of the seven key positions of the Gettysburg scenario: %s." % ", ".join(o[0] for o in oob.OBJECTIVES)},
                 {"text": "Each is a city that cannot be razed. %s start in Union hands; %s start neutral (held by %s) and must be taken by force. At nightfall on July 3 (the end of turn %d) the army holding more key positions wins the Hold the Field victory." % (

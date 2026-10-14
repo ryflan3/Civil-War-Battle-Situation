@@ -9,7 +9,8 @@
         "cityHealth": 300,
         "uniques": [
             "Indicates the capital city",
-            "[+25]% Production when constructing [Military] units [in this city]"
+            "[+25]% Production when constructing [Military] units [in this city]",
+            "Removes extra unhappiness from annexed cities"
         ],
         "civilopediaText": [
             {
@@ -47,7 +48,9 @@
         "cityStrength": 5,
         "cityHealth": 25,
         "uniques": [
-            "[+15]% Production when constructing [Military] units [in this city]"
+            "[+15]% Production when constructing [Military] units [in this city]",
+            "Removes extra unhappiness from annexed cities",
+            "Never destroyed when the city is captured"
         ],
         "civilopediaText": [
             {
@@ -64,7 +67,8 @@
             "Gettysburg Scenario",
             "Unbuildable",
             "Unsellable",
-            "Never destroyed when the city is captured"
+            "Never destroyed when the city is captured",
+            "Removes extra unhappiness from annexed cities"
         ],
         "civilopediaText": [
             {
