@@ -15,24 +15,37 @@ x = miles east, y = miles north.
 
 def turn_label(t):
     """Human readable time of day for a turn number."""
-    if t <= 12:
-        return "%s, July 1" % _hour(7 + t)
     if t in (13, 14):
         return "Night of July 1-2"
-    if t <= 30:
-        return "%s, July 2" % _hour(5 + t - 15)
     if t in (31, 32):
         return "Night of July 2-3"
-    return "%s, July 3" % _hour(5 + t - 33)
+    day, h = clock(t)
+    return "%s, July %d" % (_hour(h), day)
+
+
+def clock(t):
+    """(day of July, hour on the 24-hour clock) at the start of turn t - the in-game clock in the top bar.
+    Matches turn_label: the two night turns are 11 PM and 2 AM."""
+    if t <= 12:
+        return 1, 7 + t
+    if t in (13, 14):
+        return (1, 23) if t == 13 else (2, 2)
+    if t <= 30:
+        return 2, t - 10
+    if t in (31, 32):
+        return (2, 23) if t == 31 else (3, 2)
+    h = t - 28           # July 3 from 5 AM; past turn 47 the clock runs on into the night
+    return (3, h) if h < 24 else (4, h - 24)
 
 
 def _hour(h):
-    suffix = "AM" if h < 12 else "PM"
-    h12 = h if h <= 12 else h - 12
-    return "%d:00 %s" % (h12, suffix)
+    # no "7:00": Unciv reformats the numbers in displayed text, and would show it as "7:0"
+    if h in (0, 12):
+        return "Midnight" if h == 0 else "Noon"
+    return "%d %s" % (h % 12, "AM" if h < 12 else "PM")
 
 
-LAST_TURN = 47  # 7:00 PM, July 3 - "Hold the Field" (more key positions held) is decided from here on
+LAST_TURN = 47  # 7 PM, July 3 - "Hold the Field" (more key positions held) is decided from here on
 
 # ---------------------------------------------------------------- unit type keys
 

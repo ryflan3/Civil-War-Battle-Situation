@@ -19,7 +19,7 @@
         ],
         "civilopediaText": [
             {"text": "One turn represents roughly one hour of daylight. Nights are compressed into two turns, during which armies marched and dug in."},
-            {"text": "The calendar stays on the year of the battle - watch the turn counter instead: Turn 0 is 7:00 AM on July 1."}
+            {"text": "The year in the top bar stays on the year of the battle. In the scenario, the clock beside it shows the day of July (the calendar) and the hour on the 24-hour clock (the watch): turn 0 is 7 AM on July 1."}
         ]
     }
 ]

@@ -55,28 +55,28 @@ BuildingIcons/Union Arrivals: Taneytown Road
   index: -1
 BuildingIcons/Home Guard Command
   rotate: false
-  xy: 1464, 568
+  xy: 1456, 460
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 CityStateIcons/Neutral Ground
   rotate: false
-  xy: 1464, 568
+  xy: 1456, 460
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 BuildingIcons/Key Position
   rotate: false
-  xy: 1572, 704
+  xy: 1680, 704
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 BuildingIcons/Supply Depot
   rotate: false
-  xy: 1788, 488
+  xy: 248, 284
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
@@ -118,7 +118,28 @@ NationIcons/Confederacy
   index: -1
 NationIcons/Union
   rotate: false
-  xy: 248, 176
+  xy: 356, 296
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+ResourceIcons/History off
+  rotate: false
+  xy: 1464, 568
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+ResourceIcons/Hour
+  rotate: false
+  xy: 1572, 704
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+ResourceIcons/July
+  rotate: false
+  xy: 1572, 596
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
@@ -132,385 +153,385 @@ TileSets/CivilWar/Units/Ambulance Corps
   index: -1
 TileSets/CivilWar/Units/Cavalry Brigade
   rotate: false
-  xy: 644, 448
+  xy: 752, 448
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Confederate Cavalry
   rotate: false
-  xy: 932, 448
+  xy: 1112, 448
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Confederate General
   rotate: false
-  xy: 1004, 448
+  xy: 1184, 448
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Confederate Infantry
   rotate: false
-  xy: 1076, 448
+  xy: 1256, 448
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Confederate Napoleon Battery
   rotate: false
-  xy: 1148, 448
+  xy: 356, 60
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Confederate Parrott Rifles
   rotate: false
-  xy: 1220, 448
+  xy: 76, 4
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Confederate Sharpshooters
   rotate: false
-  xy: 76, 4
+  xy: 148, 4
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Field Hospital
   rotate: false
-  xy: 716, 384
+  xy: 824, 384
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/General
   rotate: false
-  xy: 788, 384
+  xy: 896, 384
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Horse Artillery
   rotate: false
-  xy: 932, 384
+  xy: 1040, 384
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Infantry Brigade
   rotate: false
-  xy: 1004, 384
+  xy: 1112, 384
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Iron Brigade
   rotate: false
-  xy: 1076, 384
+  xy: 1184, 384
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Michigan Cavalry Brigade
   rotate: false
-  xy: 428, 212
+  xy: 1472, 396
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Napoleon Battery
   rotate: false
-  xy: 428, 148
+  xy: 428, 104
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Pioneers
   rotate: false
-  xy: 608, 320
+  xy: 644, 320
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Rifled Battery
   rotate: false
-  xy: 824, 320
+  xy: 860, 320
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Sharpshooters
   rotate: false
-  xy: 896, 320
+  xy: 932, 320
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Stonewall Brigade
   rotate: false
-  xy: 1040, 320
+  xy: 1076, 320
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Stuart Horse Artillery
   rotate: false
-  xy: 1112, 320
+  xy: 1148, 320
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Supply Train
   rotate: false
-  xy: 1184, 320
+  xy: 1220, 320
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Texas Brigade
   rotate: false
-  xy: 536, 256
+  xy: 644, 256
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/US Horse Artillery
   rotate: false
-  xy: 824, 256
+  xy: 932, 256
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/US Sharpshooters
   rotate: false
-  xy: 896, 256
+  xy: 1004, 256
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Union Cavalry
   rotate: false
-  xy: 968, 256
+  xy: 1076, 256
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Union General
   rotate: false
-  xy: 1040, 256
+  xy: 1148, 256
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Union Infantry
   rotate: false
-  xy: 1112, 256
+  xy: 1220, 256
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Union Napoleon Battery
   rotate: false
-  xy: 1184, 256
+  xy: 500, 84
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Union Ordnance Rifles
   rotate: false
-  xy: 1256, 320
+  xy: 500, 20
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/CivilWar/Units/Whitworth Battery
   rotate: false
-  xy: 1256, 256
+  xy: 1292, 320
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Barlow's Knoll
   rotate: false
-  xy: 356, 4
+  xy: 1292, 284
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Benner's Hill
   rotate: false
-  xy: 1292, 476
+  xy: 572, 112
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Big Round Top
   rotate: false
-  xy: 1292, 440
+  xy: 572, 76
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Boulders
   rotate: false
-  xy: 1292, 404
+  xy: 572, 40
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Breastworks
   rotate: false
-  xy: 2004, 884
+  xy: 572, 4
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Cemetery Hill
   rotate: false
-  xy: 2004, 848
+  xy: 612, 4
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/City center-Civil War era
   rotate: false
-  xy: 2004, 812
+  xy: 1292, 248
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/City center-Confederacy-Civil War era
   rotate: false
-  xy: 2004, 776
+  xy: 1332, 284
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/City center-Union-Civil War era
   rotate: false
-  xy: 2004, 740
+  xy: 1332, 248
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Culp's Hill
   rotate: false
-  xy: 2004, 704
+  xy: 2004, 884
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Devil's Den
   rotate: false
-  xy: 2004, 668
+  xy: 2004, 848
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/East Cemetery Hill
   rotate: false
-  xy: 2004, 632
+  xy: 2004, 812
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Farmstead
   rotate: false
-  xy: 2004, 596
+  xy: 2004, 776
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Gettysburg
   rotate: false
-  xy: 2004, 560
+  xy: 2004, 740
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Little Round Top
   rotate: false
-  xy: 2004, 524
+  xy: 2004, 704
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Lutheran Seminary
   rotate: false
-  xy: 2004, 488
+  xy: 2004, 668
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/McPherson's Ridge
   rotate: false
-  xy: 1332, 424
+  xy: 2004, 632
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Oak Hill
   rotate: false
-  xy: 1372, 424
+  xy: 2004, 596
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Orchard
   rotate: false
-  xy: 1412, 424
+  xy: 2004, 560
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Peach Orchard
   rotate: false
-  xy: 1452, 424
+  xy: 2004, 524
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Railroad Cut
   rotate: false
-  xy: 1492, 424
+  xy: 2004, 488
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Ridge
   rotate: false
-  xy: 1532, 424
+  xy: 1544, 424
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Stone Wall
   rotate: false
-  xy: 1572, 452
+  xy: 1544, 388
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/The Angle
   rotate: false
-  xy: 1612, 452
+  xy: 1584, 452
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/The Wheatfield
   rotate: false
-  xy: 1652, 452
+  xy: 1584, 416
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
   index: -1
 TileSets/FantasyHex/Tiles/Town
   rotate: false
-  xy: 1692, 452
+  xy: 1624, 452
   size: 32, 28
   orig: 32, 28
   offset: 0, 0
@@ -524,175 +545,175 @@ TileSets/HexaRealm/Tiles/Barlow's Knoll
   index: -1
 TileSets/HexaRealm/Tiles/Benner's Hill
   rotate: false
-  xy: 356, 232
+  xy: 356, 124
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Big Round Top
   rotate: false
-  xy: 464, 340
+  xy: 464, 232
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Boulders
   rotate: false
-  xy: 572, 448
+  xy: 572, 340
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Breastworks
   rotate: false
-  xy: 356, 168
+  xy: 680, 448
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Cemetery Hill
   rotate: false
-  xy: 356, 104
+  xy: 824, 448
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/City center-Civil War era
   rotate: false
-  xy: 716, 448
+  xy: 896, 448
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/City center-Confederacy-Civil War era
   rotate: false
-  xy: 788, 448
+  xy: 968, 448
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/City center-Union-Civil War era
   rotate: false
-  xy: 860, 448
+  xy: 1040, 448
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Culp's Hill
   rotate: false
-  xy: 148, 4
+  xy: 464, 168
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Devil's Den
   rotate: false
-  xy: 464, 276
+  xy: 572, 276
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/East Cemetery Hill
   rotate: false
-  xy: 572, 384
+  xy: 680, 384
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Farmstead
   rotate: false
-  xy: 644, 384
+  xy: 752, 384
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Gettysburg
   rotate: false
-  xy: 860, 384
+  xy: 968, 384
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Little Round Top
   rotate: false
-  xy: 1148, 384
+  xy: 1256, 384
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Lutheran Seminary
   rotate: false
-  xy: 1220, 384
+  xy: 1328, 396
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/McPherson's Ridge
   rotate: false
-  xy: 356, 40
+  xy: 1400, 396
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Oak Hill
   rotate: false
-  xy: 428, 84
+  xy: 428, 40
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Orchard
   rotate: false
-  xy: 428, 20
+  xy: 536, 212
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Peach Orchard
   rotate: false
-  xy: 536, 320
+  xy: 536, 148
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Railroad Cut
   rotate: false
-  xy: 680, 320
+  xy: 716, 320
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Ridge
   rotate: false
-  xy: 752, 320
+  xy: 788, 320
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Stone Wall
   rotate: false
-  xy: 968, 320
+  xy: 1004, 320
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/The Angle
   rotate: false
-  xy: 608, 256
+  xy: 716, 256
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/The Wheatfield
   rotate: false
-  xy: 680, 256
+  xy: 788, 256
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
   index: -1
 TileSets/HexaRealm/Tiles/Town
   rotate: false
-  xy: 752, 256
+  xy: 860, 256
   size: 64, 56
   orig: 64, 56
   offset: 0, 0
@@ -790,119 +811,119 @@ UnitIcons/General
   index: -1
 UnitIcons/Horse Artillery
   rotate: false
-  xy: 1456, 460
+  xy: 1572, 812
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Stuart Horse Artillery
   rotate: false
-  xy: 1456, 460
+  xy: 1572, 812
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/US Horse Artillery
   rotate: false
-  xy: 1456, 460
+  xy: 1572, 812
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Iron Brigade
   rotate: false
-  xy: 1572, 812
+  xy: 1680, 812
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Michigan Cavalry Brigade
   rotate: false
-  xy: 1572, 596
+  xy: 1680, 596
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Pioneers
   rotate: false
-  xy: 1680, 704
+  xy: 1788, 704
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Rifled Battery
   rotate: false
-  xy: 1788, 704
+  xy: 1896, 704
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Union Ordnance Rifles
   rotate: false
-  xy: 1788, 704
+  xy: 1896, 704
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Sharpshooters
   rotate: false
-  xy: 1896, 704
+  xy: 1680, 488
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Stonewall Brigade
   rotate: false
-  xy: 1680, 488
+  xy: 248, 392
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Supply Train
   rotate: false
-  xy: 1896, 488
+  xy: 248, 176
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Texas Brigade
   rotate: false
-  xy: 248, 392
+  xy: 248, 68
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/US Sharpshooters
   rotate: false
-  xy: 248, 284
+  xy: 356, 404
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Union Cavalry
   rotate: false
-  xy: 248, 68
+  xy: 464, 404
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Union General
   rotate: false
-  xy: 356, 404
+  xy: 356, 188
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Union Infantry
   rotate: false
-  xy: 356, 296
+  xy: 464, 296
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Whitworth Battery
   rotate: false
-  xy: 464, 404
+  xy: 572, 404
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
@@ -1399,49 +1420,49 @@ UnitPromotionIcons/Hardened Veterans
   index: -1
 UnitPromotionIcons/Long Range
   rotate: false
-  xy: 1680, 812
+  xy: 1788, 812
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitPromotionIcons/Prolonge
   rotate: false
-  xy: 1788, 812
+  xy: 1896, 812
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitPromotionIcons/Rally
   rotate: false
-  xy: 1680, 596
+  xy: 1788, 596
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitPromotionIcons/Saber Charge
   rotate: false
-  xy: 1896, 812
+  xy: 1896, 596
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitPromotionIcons/Screening
   rotate: false
-  xy: 1788, 596
+  xy: 1572, 488
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitPromotionIcons/Skirmish Drill
   rotate: false
-  xy: 1896, 596
+  xy: 1788, 488
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitPromotionIcons/Steady
   rotate: false
-  xy: 1572, 488
+  xy: 1896, 488
   size: 100, 100
   orig: 100, 100
   offset: 0, 0

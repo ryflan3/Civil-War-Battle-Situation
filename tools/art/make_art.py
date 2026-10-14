@@ -11,7 +11,7 @@ from figures import *
 from units_art import SPRITES
 from icons_art import (portrait_background, nation_union, nation_confederacy, nation_adams_county, leader_portrait, PROMOTION_ICONS,
                        vector_icon, pi_union_general, pi_confed_general, pi_hillflag, bi_headquarters, bi_depot,
-                       bi_arrivals, bi_fence, ii_breastworks, icon_pioneer)
+                       bi_arrivals, bi_fence, ri_calendar, ri_watch, ri_scroll, ii_breastworks, icon_pioneer)
 from tiles_art import FEATURES, WONDERS, CITY_CENTERS
 
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
@@ -19,6 +19,7 @@ IMAGES = os.path.join(ROOT, "Images")
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 import gen_promotions
 import gen_buildings
+import gen_events
 import gettysburg_oob as oob
 
 # ------------------------------------------------------------------ hero figures (one figure per unit, in its own uniform)
@@ -152,6 +153,8 @@ def main():
     for b in buildings:
         save(icons.get(b, arr), "BuildingIcons", b + ".png"); count += 1
     save(vector_icon(ii_breastworks), "ImprovementIcons", "Breastworks.png"); count += 1
+    for name, fn in ((gen_events.DAY, ri_calendar), (gen_events.HOUR, ri_watch), (gen_events.HISTORY_OFF, ri_scroll)):
+        save(vector_icon(fn), "ResourceIcons", name + ".png"); count += 1
 
     tiles = {}
     tiles.update(FEATURES); tiles.update(WONDERS); tiles.update(CITY_CENTERS)

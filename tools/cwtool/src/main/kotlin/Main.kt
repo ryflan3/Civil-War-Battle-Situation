@@ -48,7 +48,7 @@ fun main(args: Array<String>) {
         "pack" -> packAtlas(File(args[1]))
         "map" -> buildMap(File(args[1]), File(args[2]))
         "scenario" -> buildScenario(File(args[1]), File(args[2]), File(args[3]), args.getOrElse(4) { "Veterans" })
-        "simulate" -> simulateScenario(File(args[1]), args[2].toInt(), args.getOrElse(3) { "Union" })
+        "simulate" -> simulateScenario(File(args[1]), args[2].toInt(), args.getOrElse(3) { "Union" }, args.getOrNull(4) == "history-off")
         "balance" -> balanceRun(File(args[1]), args[2], args[3].toInt())  // balance <scenario> <AI|Union|Confederacy> <seed>
         "build" -> {  // build <modDir>: everything in one JVM
             val mod = File(args[1])
@@ -59,6 +59,6 @@ fun main(args: Array<String>) {
             for ((name, difficulty) in SCENARIOS) buildScenario(tiles, map, File(mod, "scenarios/$name"), difficulty)
             if (validate() > 0) System.exit(1)
         }
-        else -> println("usage: build <modDir> | validate | pack <modDir> | map <tiles.json> <out> | scenario <tiles.json> <map> <out> [difficulty] | simulate <scenario> <turns> [Union|Confederacy] | balance <scenario> <AI|Union|Confederacy> <seed>")
+        else -> println("usage: build <modDir> | validate | pack <modDir> | map <tiles.json> <out> | scenario <tiles.json> <map> <out> [difficulty] | simulate <scenario> <turns> [Union|Confederacy] [history-off] | balance <scenario> <AI|Union|Confederacy> <seed>")
     }
 }

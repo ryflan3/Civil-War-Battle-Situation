@@ -6,7 +6,9 @@ import com.unciv.UncivGame
 import com.unciv.logic.GameInfo
 import com.unciv.logic.GameStarter
 import com.unciv.logic.city.managers.CityFounder
+import com.unciv.logic.civilization.AlertType
 import com.unciv.logic.civilization.PlayerType
+import com.unciv.logic.civilization.PopupAlert
 import com.unciv.logic.civilization.diplomacy.DiplomacyFlags
 import com.unciv.logic.civilization.managers.quests.QuestManager
 import com.unciv.logic.files.UncivFiles
@@ -22,6 +24,12 @@ val VICTORIES = arrayListOf("Hold the Field", "Decisive Victory")
 const val KEY_POSITION = "Key Position"  // the building that marks an objective city (gettysburg_oob.OBJECTIVE_BUILDING)
 /** The city-state that holds the neutral key positions (gettysburg_oob.NEUTRAL): at war with both armies for good */
 const val NEUTRAL = "Adams County"
+/** The clock in the top bar (gen_events.py DAY and HOUR): the day of July and the hour. gen_events.py sets it at the end
+ *  of every turn for the next one; the builder starts it at turn 0, 7 AM on July 1 (gettysburg_oob.clock(0)). */
+const val CLOCK_DAY = "July"
+const val CLOCK_HOUR = "Hour"
+/** Each army's opening briefing (gen_events.opening_event), shown when its first turn starts */
+fun openingBriefing(civ: String) = "Gettysburg: $civ briefing"
 
 /** One scenario file per difficulty. While a scenario is selected, Unciv's New Game screen locks the game options and
  *  uses the difficulty saved in the scenario, so the difficulty (the AI armies' strength) is chosen from the scenario list. */
@@ -146,13 +154,20 @@ fun buildScenario(tilesJson: File, mapFile: File, outFile: File, difficulty: Str
         civ.popupAlerts.clear()
         civ.notifications.clear()
     }
+    // Turn 0's clock and briefings are set here, not by "upon turn start" uniques: when the New Game screen starts a
+    // scenario, the first turn starts with the turn counter still at 1.
+    for (civ in sides) {
+        civ.resourceStockpiles.add(CLOCK_DAY, 1)
+        civ.resourceStockpiles.add(CLOCK_HOUR, 7)
+        civ.popupAlerts.add(PopupAlert(AlertType.Event, openingBriefing(civ.civID)))
+    }
     outFile.parentFile.mkdirs()
     outFile.writeText(UncivFiles.gameInfoToString(game, forceZip = true))
     println("Scenario written: ${outFile.path} (${outFile.length()} bytes, $difficulty). Civs: ${game.civilizations.map { it.civID }}, current=${game.currentPlayer}, turn=${game.turns}")
 }
 
 /** Loads the scenario exactly like NewGameScreen does, then plays [turns] turns. The human side's moves are made by the AI too. */
-fun simulateScenario(scenarioFile: File, turns: Int, humanSide: String = "Union") {
+fun simulateScenario(scenarioFile: File, turns: Int, humanSide: String = "Union", historyOff: Boolean = false) {
     initUnciv()
     val game = UncivFiles.gameInfoFromString(scenarioFile.readText())
     UncivGame.Current.gameInfo = game
@@ -160,8 +175,12 @@ fun simulateScenario(scenarioFile: File, turns: Int, humanSide: String = "Union"
     game.civilizations.removeIf { it.civID == Constants.spectator }
     for (civ in game.civilizations) { civ.playerType = PlayerType.AI; civ.diplomacy.remove(Constants.spectator) }
     game.getCivilization(humanSide).playerType = PlayerType.Human
+    // as if the player chose "no history messages" in the opening orders (gen_events.HISTORY_OFF)
+    if (historyOff) game.getCivilization(humanSide).resourceStockpiles.add("History off", 1)
     if (game.currentPlayer == Constants.spectator) { game.currentPlayer = ""; game.nextTurn(); game.turns-- }
-    println("Start: current=${game.currentPlayer} turn=${game.turns} human=$humanSide")
+    println("Start: current=${game.currentPlayer} turn=${game.turns} human=$humanSide" +
+        " clock=July ${game.getCivilization(humanSide).resourceStockpiles[CLOCK_DAY]}, ${game.getCivilization(humanSide).resourceStockpiles[CLOCK_HOUR]}:00" +
+        " popups=${game.getCivilization(humanSide).popupAlerts.map { "${it.type}(${it.value})" }}")
     val union = game.getCivilization("Union")
     val confed = game.getCivilization("Confederacy")
     println("  at war: ${union.isAtWarWith(confed)}, barbarians in game: ${game.civilizations.any { it.isBarbarian }}, razing allowed: ${!game.gameParameters.noCityRazing}")
@@ -183,7 +202,7 @@ fun simulateScenario(scenarioFile: File, turns: Int, humanSide: String = "Union"
         // the pop-ups the human player would have to click through this turn
         if (human.popupAlerts.isNotEmpty()) println("  popups for $humanSide: ${human.popupAlerts.map { "${it.type}(${it.value.take(30)})" }}")
         human.popupAlerts.clear()
-        val line = StringBuilder("Turn ${game.turns}:")
+        val line = StringBuilder("Turn ${game.turns} (July ${human.resourceStockpiles[CLOCK_DAY]}, ${human.resourceStockpiles[CLOCK_HOUR]}:00):")
         for (civ in game.civilizations.filter { it.isMajorCiv() }) {
             val names = civ.units.getCivUnits().map { u -> u.instanceName ?: u.name }.toList()
             val new = names.toMutableList().apply { lastNames[civ.civID].orEmpty().forEach { remove(it) } }

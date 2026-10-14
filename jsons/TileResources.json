@@ -1,0 +1,48 @@
+[
+    {
+        "name": "July",
+        "resourceType": "Strategic",
+        "uniques": [
+            "Stockpiled",
+            "Cannot be traded"
+        ],
+        "civilopediaText": [
+            {
+                "text": "The scenario's calendar: the day of July. It is shown in the top bar next to the turn number."
+            },
+            {
+                "text": "July 1: turns 0-12. The night of July 1-2: turns 13-14. July 2: turns 15-30. The night of July 2-3: turns 31-32. July 3: turns 33-47."
+            }
+        ]
+    },
+    {
+        "name": "Hour",
+        "resourceType": "Strategic",
+        "uniques": [
+            "Stockpiled",
+            "Cannot be traded"
+        ],
+        "civilopediaText": [
+            {
+                "text": "The scenario's clock: the hour at the start of this turn, on the 24-hour clock (13 is 1 PM). It is shown in the top bar next to the turn number."
+            },
+            {
+                "text": "Each daylight turn is one hour, from 7 AM on July 1 and from 5 AM on July 2 and 3. Each night passes in two turns, at 11 PM and 2 AM."
+            }
+        ]
+    },
+    {
+        "name": "History off",
+        "resourceType": "Strategic",
+        "uniques": [
+            "Stockpiled",
+            "Cannot be traded",
+            "Not shown on world screen"
+        ],
+        "civilopediaText": [
+            {
+                "text": "1 when you have turned off the scenario's history messages, otherwise 0."
+            }
+        ]
+    }
+]

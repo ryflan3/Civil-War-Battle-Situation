@@ -406,6 +406,42 @@ def bi_fence(d):
         d.polygon([(40, y), (360, y - 20), (360, y + 14), (40, y + 34)], fill=W8)   # rails
 
 
+def ri_calendar(d):
+    """The scenario clock's day of July: a calendar page with binder rings."""
+    d.rounded_rectangle([60, 80, 340, 350], radius=24, fill=W8)
+    d.rectangle([60, 150, 340, 166], fill=CLEAR)                       # below the header band
+    for x in (130, 270):
+        d.rounded_rectangle([x - 14, 40, x + 14, 120], radius=12, fill=W8)
+        d.ellipse([x - 22, 92, x + 22, 136], fill=CLEAR)
+        d.rounded_rectangle([x - 9, 50, x + 9, 120], radius=8, fill=W8)
+    for row in range(3):
+        for col in range(4):
+            x, y = 100 + col * 58, 195 + row * 50
+            d.rectangle([x, y, x + 30, y + 26], fill=CLEAR)
+
+
+def ri_watch(d):
+    """The scenario clock's hour: a pocket watch."""
+    d.ellipse([60, 90, 340, 370], fill=W8)
+    d.ellipse([84, 114, 316, 346], fill=CLEAR)
+    d.ellipse([104, 134, 296, 326], fill=W8)
+    d.rectangle([186, 40, 214, 96], fill=W8)                           # stem
+    d.ellipse([166, 16, 234, 62], fill=W8)
+    d.ellipse([182, 28, 218, 52], fill=CLEAR)                          # bow
+    d.line([200, 230, 200, 160], fill=CLEAR, width=16)                 # hands
+    d.line([200, 230, 255, 255], fill=CLEAR, width=14)
+    d.ellipse([186, 216, 214, 244], fill=CLEAR)
+
+
+def ri_scroll(d):
+    """The history messages switch: a scroll."""
+    d.rounded_rectangle([90, 70, 310, 330], radius=20, fill=W8)
+    d.ellipse([60, 40, 340, 110], fill=W8)
+    d.ellipse([60, 290, 340, 360], fill=W8)
+    for y in (140, 185, 230, 275):
+        d.line([130, y, 270, y], fill=CLEAR, width=12)
+
+
 def ii_breastworks(d):
     for i in range(4):
         y = 300 - i * 52

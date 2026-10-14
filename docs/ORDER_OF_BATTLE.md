@@ -19,8 +19,8 @@ Seven cities founded on landmarks at the start. They cannot be razed. The ones m
 
 ## On the field at the start (turn 0)
 
-* **Confederacy**: everything due by turn 12 (7:00 PM, July 1) starts on the map, in or near the ground it fought over; later forces arrive on the timetable below.
-* **Union**: everything due by turn 1 (8:00 AM, July 1) starts on the map, in or near the ground it fought over; later forces arrive on the timetable below.
+* **Confederacy**: everything due by turn 12 (7 PM, July 1) starts on the map, in or near the ground it fought over; later forces arrive on the timetable below.
+* **Union**: everything due by turn 1 (8 AM, July 1) starts on the map, in or near the ground it fought over; later forces arrive on the timetable below.
 
 So the Confederate marches of July 1 are compressed, while the Union corps race up their roads on the historical timetable - the race for the high ground that the Confederacy won on July 1.
 
@@ -53,40 +53,40 @@ They appear at the start of the turn, in or next to the entry city on their road
 
 | Turn | Time | Side | Road | Arrives |
 |---|---|---|---|---|
-| 2 | 9:00 AM, July 1 | Union | Emmitsburg Road | Abner Doubleday; Biddle's Brigade (I Corps); Stone's Bucktail Brigade (I Corps); I Corps Artillery (Wainwright) |
-| 3 | 10:00 AM, July 1 | Union | Emmitsburg Road | Paul's Brigade (I Corps); Baxter's Brigade (I Corps) |
-| 3 | 10:00 AM, July 1 | Union | Taneytown Road | Oliver O. Howard |
-| 4 | 11:00 AM, July 1 | Union | Taneytown Road | von Gilsa's Brigade (XI Corps); Ames's Brigade (XI Corps) |
-| 5 | 12:00 PM, July 1 | Union | Taneytown Road | Schimmelfennig's Brigade (XI Corps); Krzyzanowski's Brigade (XI Corps); XI Corps Artillery (Osborn) |
-| 6 | 1:00 PM, July 1 | Union | Taneytown Road | Coster's Brigade (XI Corps); Orland Smith's Brigade (XI Corps) |
-| 8 | 3:00 PM, July 1 | Union | Taneytown Road | Winfield S. Hancock |
-| 9 | 4:00 PM, July 1 | Union | Baltimore Pike | Henry W. Slocum; McDougall's Brigade (XII Corps); Lockwood's Brigade (XII Corps); Ruger's Brigade (XII Corps); XII Corps Artillery (Muhlenberg) |
-| 10 | 5:00 PM, July 1 | Union | Baltimore Pike | Candy's Brigade (XII Corps); Kane's Brigade (XII Corps); Greene's Brigade (XII Corps) |
-| 10 | 5:00 PM, July 1 | Union | Emmitsburg Road | Daniel E. Sickles |
-| 11 | 6:00 PM, July 1 | Union | Emmitsburg Road | Graham's Brigade (III Corps); Ward's Brigade (III Corps); de Trobriand's Brigade (III Corps); Berdan's Sharpshooters (1st & 2nd USSS) |
+| 2 | 9 AM, July 1 | Union | Emmitsburg Road | Abner Doubleday; Biddle's Brigade (I Corps); Stone's Bucktail Brigade (I Corps); I Corps Artillery (Wainwright) |
+| 3 | 10 AM, July 1 | Union | Emmitsburg Road | Paul's Brigade (I Corps); Baxter's Brigade (I Corps) |
+| 3 | 10 AM, July 1 | Union | Taneytown Road | Oliver O. Howard |
+| 4 | 11 AM, July 1 | Union | Taneytown Road | von Gilsa's Brigade (XI Corps); Ames's Brigade (XI Corps) |
+| 5 | Noon, July 1 | Union | Taneytown Road | Schimmelfennig's Brigade (XI Corps); Krzyzanowski's Brigade (XI Corps); XI Corps Artillery (Osborn) |
+| 6 | 1 PM, July 1 | Union | Taneytown Road | Coster's Brigade (XI Corps); Orland Smith's Brigade (XI Corps) |
+| 8 | 3 PM, July 1 | Union | Taneytown Road | Winfield S. Hancock |
+| 9 | 4 PM, July 1 | Union | Baltimore Pike | Henry W. Slocum; McDougall's Brigade (XII Corps); Lockwood's Brigade (XII Corps); Ruger's Brigade (XII Corps); XII Corps Artillery (Muhlenberg) |
+| 10 | 5 PM, July 1 | Union | Baltimore Pike | Candy's Brigade (XII Corps); Kane's Brigade (XII Corps); Greene's Brigade (XII Corps) |
+| 10 | 5 PM, July 1 | Union | Emmitsburg Road | Daniel E. Sickles |
+| 11 | 6 PM, July 1 | Union | Emmitsburg Road | Graham's Brigade (III Corps); Ward's Brigade (III Corps); de Trobriand's Brigade (III Corps); Berdan's Sharpshooters (1st & 2nd USSS) |
 | 13 | Night of July 1-2 | Union | Taneytown Road | George G. Meade |
 | 13 | Night of July 1-2 | Union | Emmitsburg Road | Carr's Brigade (III Corps); Brewster's Excelsior Brigade (III Corps); Stannard's Vermont Brigade (I Corps); III Corps Artillery (Randolph) |
 | 13 | Night of July 1-2 | Confederacy | Harrisburg Road | Dance's Battalion; Nelson's Battalion |
 | 14 | Night of July 1-2 | Union | Taneytown Road | Cross's Brigade (II Corps); Kelly's Irish Brigade (II Corps); Zook's Brigade (II Corps); Brooke's Brigade (II Corps); II Corps Artillery (Hazard); Ambulance Corps |
-| 15 | 5:00 AM, July 2 | Union | Taneytown Road | John Gibbon; Gouverneur K. Warren; Harrow's Brigade (II Corps); Webb's Philadelphia Brigade (II Corps); Hall's Brigade (II Corps) |
-| 15 | 5:00 AM, July 2 | Confederacy | Chambersburg Pike | James Longstreet; Lafayette McLaws; Kershaw's Brigade (McLaws); Barksdale's Brigade (McLaws); Semmes's Brigade (McLaws); Wofford's Brigade (McLaws); Cabell's Battalion; Field Hospital |
-| 16 | 6:00 AM, July 2 | Union | Taneytown Road | Carroll's Brigade (II Corps); Smyth's Brigade (II Corps); Willard's Brigade (II Corps) |
-| 16 | 6:00 AM, July 2 | Confederacy | Chambersburg Pike | John B. Hood; Texas Brigade; G. T. Anderson's Brigade (Hood); Benning's Brigade (Hood); Henry's Battalion; Hood's Division Sharpshooters |
-| 17 | 7:00 AM, July 2 | Union | Hanover Road | George Sykes; Tilton's Brigade (V Corps); Sweitzer's Brigade (V Corps); Vincent's Brigade (V Corps) |
-| 17 | 7:00 AM, July 2 | Confederacy | Chambersburg Pike | E. Porter Alexander; Alexander's Battalion; Washington Artillery of New Orleans (Eshleman) |
-| 18 | 8:00 AM, July 2 | Union | Hanover Road | Day's U.S. Regulars (V Corps); Burbank's U.S. Regulars (V Corps); Weed's Brigade (V Corps); V Corps Artillery (Martin) |
-| 19 | 9:00 AM, July 2 | Union | Emmitsburg Road | Burling's Brigade (III Corps) |
-| 20 | 10:00 AM, July 2 | Union | Taneytown Road | Henry J. Hunt; 1st Volunteer Brigade, Artillery Reserve (McGilvery); 1st Regular Brigade, Artillery Reserve (Ransom); 2nd Volunteer Brigade, Artillery Reserve (Taft) |
-| 21 | 11:00 AM, July 2 | Union | Taneytown Road | 3rd Volunteer Brigade, Artillery Reserve (Huntington); 4th Volunteer Brigade, Artillery Reserve (Fitzhugh) |
-| 21 | 11:00 AM, July 2 | Confederacy | Chambersburg Pike | Law's Alabama Brigade (Hood) |
-| 22 | 12:00 PM, July 2 | Union | Hanover Road | David M. Gregg; McCandless's Pennsylvania Reserves (V Corps); Fisher's Pennsylvania Reserves (V Corps); McIntosh's Brigade (Gregg); Irvin Gregg's Brigade (Gregg); Randol's Battery (E & G, 1st US) |
-| 24 | 2:00 PM, July 2 | Union | Baltimore Pike | John Sedgwick; Torbert's New Jersey Brigade (VI Corps); Bartlett's Brigade (VI Corps); Russell's Brigade (VI Corps); Ambulance Corps |
-| 25 | 3:00 PM, July 2 | Union | Baltimore Pike | Grant's Vermont Brigade (VI Corps); Neill's Brigade (VI Corps) |
-| 26 | 4:00 PM, July 2 | Union | Baltimore Pike | Shaler's Brigade (VI Corps); Eustis's Brigade (VI Corps); Wheaton's Brigade (VI Corps); VI Corps Artillery (Tompkins) |
-| 27 | 5:00 PM, July 2 | Confederacy | Harrisburg Road | J. E. B. Stuart; Hampton's Brigade (Stuart); Fitz Lee's Brigade (Stuart); Chambliss's Brigade (Stuart); Beckham's Stuart Horse Artillery |
-| 30 | 8:00 PM, July 2 | Confederacy | Chambersburg Pike | George E. Pickett; Garnett's Brigade (Pickett); Kemper's Brigade (Pickett); Armistead's Brigade (Pickett); Dearing's Battalion |
-| 33 | 5:00 AM, July 3 | Union | Hanover Road | Michigan Cavalry Brigade; Pennington's Battery (M, 2nd US) |
-| 36 | 8:00 AM, July 3 | Union | Taneytown Road | Judson Kilpatrick; Farnsworth's Brigade (Kilpatrick) |
-| 38 | 10:00 AM, July 3 | Union | Emmitsburg Road | Merritt's Reserve Brigade (Buford); Graham's Battery (K, 1st US) |
+| 15 | 5 AM, July 2 | Union | Taneytown Road | John Gibbon; Gouverneur K. Warren; Harrow's Brigade (II Corps); Webb's Philadelphia Brigade (II Corps); Hall's Brigade (II Corps) |
+| 15 | 5 AM, July 2 | Confederacy | Chambersburg Pike | James Longstreet; Lafayette McLaws; Kershaw's Brigade (McLaws); Barksdale's Brigade (McLaws); Semmes's Brigade (McLaws); Wofford's Brigade (McLaws); Cabell's Battalion; Field Hospital |
+| 16 | 6 AM, July 2 | Union | Taneytown Road | Carroll's Brigade (II Corps); Smyth's Brigade (II Corps); Willard's Brigade (II Corps) |
+| 16 | 6 AM, July 2 | Confederacy | Chambersburg Pike | John B. Hood; Texas Brigade; G. T. Anderson's Brigade (Hood); Benning's Brigade (Hood); Henry's Battalion; Hood's Division Sharpshooters |
+| 17 | 7 AM, July 2 | Union | Hanover Road | George Sykes; Tilton's Brigade (V Corps); Sweitzer's Brigade (V Corps); Vincent's Brigade (V Corps) |
+| 17 | 7 AM, July 2 | Confederacy | Chambersburg Pike | E. Porter Alexander; Alexander's Battalion; Washington Artillery of New Orleans (Eshleman) |
+| 18 | 8 AM, July 2 | Union | Hanover Road | Day's U.S. Regulars (V Corps); Burbank's U.S. Regulars (V Corps); Weed's Brigade (V Corps); V Corps Artillery (Martin) |
+| 19 | 9 AM, July 2 | Union | Emmitsburg Road | Burling's Brigade (III Corps) |
+| 20 | 10 AM, July 2 | Union | Taneytown Road | Henry J. Hunt; 1st Volunteer Brigade, Artillery Reserve (McGilvery); 1st Regular Brigade, Artillery Reserve (Ransom); 2nd Volunteer Brigade, Artillery Reserve (Taft) |
+| 21 | 11 AM, July 2 | Union | Taneytown Road | 3rd Volunteer Brigade, Artillery Reserve (Huntington); 4th Volunteer Brigade, Artillery Reserve (Fitzhugh) |
+| 21 | 11 AM, July 2 | Confederacy | Chambersburg Pike | Law's Alabama Brigade (Hood) |
+| 22 | Noon, July 2 | Union | Hanover Road | David M. Gregg; McCandless's Pennsylvania Reserves (V Corps); Fisher's Pennsylvania Reserves (V Corps); McIntosh's Brigade (Gregg); Irvin Gregg's Brigade (Gregg); Randol's Battery (E & G, 1st US) |
+| 24 | 2 PM, July 2 | Union | Baltimore Pike | John Sedgwick; Torbert's New Jersey Brigade (VI Corps); Bartlett's Brigade (VI Corps); Russell's Brigade (VI Corps); Ambulance Corps |
+| 25 | 3 PM, July 2 | Union | Baltimore Pike | Grant's Vermont Brigade (VI Corps); Neill's Brigade (VI Corps) |
+| 26 | 4 PM, July 2 | Union | Baltimore Pike | Shaler's Brigade (VI Corps); Eustis's Brigade (VI Corps); Wheaton's Brigade (VI Corps); VI Corps Artillery (Tompkins) |
+| 27 | 5 PM, July 2 | Confederacy | Harrisburg Road | J. E. B. Stuart; Hampton's Brigade (Stuart); Fitz Lee's Brigade (Stuart); Chambliss's Brigade (Stuart); Beckham's Stuart Horse Artillery |
+| 30 | 8 PM, July 2 | Confederacy | Chambersburg Pike | George E. Pickett; Garnett's Brigade (Pickett); Kemper's Brigade (Pickett); Armistead's Brigade (Pickett); Dearing's Battalion |
+| 33 | 5 AM, July 3 | Union | Hanover Road | Michigan Cavalry Brigade; Pennington's Battery (M, 2nd US) |
+| 36 | 8 AM, July 3 | Union | Taneytown Road | Judson Kilpatrick; Farnsworth's Brigade (Kilpatrick) |
+| 38 | 10 AM, July 3 | Union | Emmitsburg Road | Merritt's Reserve Brigade (Buford); Graham's Battery (K, 1st US) |
 
 Totals: Union 93 units, Confederacy 77 units (historically about 94,000 and 71,000-75,000 men).
