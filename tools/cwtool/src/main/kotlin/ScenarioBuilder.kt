@@ -12,6 +12,7 @@ import com.unciv.logic.map.HexCoord
 import com.unciv.models.metadata.GameParameters
 import com.unciv.models.metadata.GameSetupInfo
 import com.unciv.models.metadata.Player
+import com.unciv.models.ruleset.PerpetualConstruction
 import com.unciv.models.ruleset.RulesetCache
 import java.io.File
 
@@ -21,11 +22,12 @@ const val KEY_POSITION = "Key Position"  // the building that marks an objective
 /** One scenario file per difficulty. While a scenario is selected, Unciv's New Game screen locks the game options and
  *  uses the difficulty saved in the scenario, so the difficulty (the AI armies' strength) is chosen from the scenario list. */
 val SCENARIOS = linkedMapOf(
-    "Gettysburg - July 1, 1863" to "Veterans",
-    "Gettysburg - July 1, 1863 (Easiest - Militia)" to "Militia",
-    "Gettysburg - July 1, 1863 (Easier - Volunteers)" to "Volunteers",
-    "Gettysburg - July 1, 1863 (Harder - Regulars)" to "Regulars",
-    "Gettysburg - July 1, 1863 (Hardest - Iron Brigade)" to "Iron Brigade",
+    // No four-digit year in the names: Unciv's New Game screen would display "1863" as "1,863"
+    "Battle of Gettysburg" to "Veterans",
+    "Battle of Gettysburg (Easiest - Militia)" to "Militia",
+    "Battle of Gettysburg (Easier - Volunteers)" to "Volunteers",
+    "Battle of Gettysburg (Harder - Regulars)" to "Regulars",
+    "Battle of Gettysburg (Hardest - Iron Brigade)" to "Iron Brigade",
 )
 
 fun buildScenario(tilesJson: File, mapFile: File, outFile: File, difficulty: String = "Veterans") {
@@ -75,6 +77,8 @@ fun buildScenario(tilesJson: File, mapFile: File, outFile: File, difficulty: Str
         val arrivals = (if (civ.civID == "Union") "Union" else "Confederate") + " Arrivals: " + city.name
         if (ruleset.buildings.containsKey(arrivals)) city.cityConstructions.addBuilding(arrivals)
         if (!city.cityConstructions.isBuilt("Supply Depot")) city.cityConstructions.addBuilding("Supply Depot")
+        // nothing can be raised in the scenario: produce "Nothing", so the game never stops to ask "Pick construction"
+        city.cityConstructions.editQueue { clear(); add(PerpetualConstruction.Idle.name) }
         println("City ${city.name} (${civ.civID}) capital=${city.isCapital()} buildings=${city.cityConstructions.getBuiltBuildings().map { it.name }.toList()}")
     }
 
@@ -110,10 +114,12 @@ fun buildScenario(tilesJson: File, mapFile: File, outFile: File, difficulty: Str
     confed.playerType = PlayerType.AI
     game.gameParameters.players.first { it.chosenCiv == "Confederacy" }.playerType = PlayerType.AI
     game.currentPlayer = Constants.spectator
-    for (civ in sides) {
+    // Update sight first, then clear: updating adds first-contact messages. The Spectator seat must meet both armies
+    // here too, or it meets them when the New Game screen loads the file and the Union is told "We have encountered Spectator!"
+    for (civ in game.civilizations) civ.cache.updateSightAndResources()
+    for (civ in game.civilizations) {
         civ.popupAlerts.clear()
         civ.notifications.clear()
-        civ.cache.updateSightAndResources()
     }
     outFile.parentFile.mkdirs()
     outFile.writeText(UncivFiles.gameInfoToString(game, forceZip = true))

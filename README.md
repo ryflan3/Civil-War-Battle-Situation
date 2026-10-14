@@ -32,11 +32,11 @@ Once the repository has the `unciv-mod` topic (see *Final steps* below), it also
 
    | Scenario | Difficulty | AI army strength |
    |---|---|---|
-   | Gettysburg - July 1, 1863 (Easiest - Militia) | Militia | −15% |
-   | Gettysburg - July 1, 1863 (Easier - Volunteers) | Volunteers | −5% |
-   | **Gettysburg - July 1, 1863** | Veterans | normal |
-   | Gettysburg - July 1, 1863 (Harder - Regulars) | Regulars | +10% |
-   | Gettysburg - July 1, 1863 (Hardest - Iron Brigade) | Iron Brigade | +20% |
+   | Battle of Gettysburg (Easiest - Militia) | Militia | −15% |
+   | Battle of Gettysburg (Easier - Volunteers) | Volunteers | −5% |
+   | **Battle of Gettysburg** | Veterans | normal |
+   | Battle of Gettysburg (Harder - Regulars) | Regulars | +10% |
+   | Battle of Gettysburg (Hardest - Iron Brigade) | Iron Brigade | +20% |
 
 2. **Choose your side.** By default you command the Union. To play the Confederacy, click **Human** next to the Union to make it **AI**, then click **AI** next to the Confederacy to make it **Human**. Set both to Human for a two-player hotseat game.
 3. **Start game!**
@@ -88,13 +88,19 @@ A scenario is a battle that is already set up, so Unciv locks the other New Game
 
 ## Troubleshooting
 
-**The scenario shows "Civ V - Gods & Kings", you can't pick anything, and Start says "It looks like we can't make a map with the parameters you requested!"**
+**Picking a Gettysburg scenario resets the Base Ruleset to a Civ V ruleset, the players turn into "Random", nothing can be changed, and Start says "It looks like we can't make a map with the parameters you requested!"**
 
-The mod was installed under the wrong folder name, so Unciv can't find the *Civil War Battle Situation* ruleset that the scenario needs. This happens when the repository's default branch name contains a slash. For example, `claude/unciv-civil-war-mod-j2xmgj` makes Unciv name the mod *Civil War Battle Situation claude unciv civil war mod j2xmgj*. To fix it:
+Your copy of the mod is installed under the wrong name, so Unciv can't find the *Civil War Battle Situation* ruleset that the scenario needs. The custom map still works with a wrongly named copy, which makes this easy to miss.
 
-1. Make sure the repository's default branch is `main` (see *Final steps*).
-2. In Unciv, open **Mods**, select the wrongly named mod and **delete** it.
-3. Download the mod again (see *Install*). It should now be listed as **Civil War Battle Situation**.
+**Check:** on the New Game screen, open the **Base Ruleset** list. It must contain exactly `Civil War Battle Situation`. A longer name, such as `Civil War Battle Situation claude unciv civil war mod j2xmgj` or `Civil War Battle Situation main`, is a broken copy. It comes from a download made while the repository's default branch was not `main`, or from a link to a specific branch.
+
+**Fix:**
+
+1. In Unciv, open **Mods** and **delete every copy** of the mod.
+2. Install it again in either of these ways:
+   * from the **Downloadable mods** list in the Mods screen, or
+   * with **Download mod from URL** and exactly `https://github.com/ryflan3/Civil-War-Battle-Situation`.
+3. Check that the Mods list shows exactly **Civil War Battle Situation**.
 
 On desktop you can instead rename the folder inside Unciv's `mods` folder to exactly `Civil War Battle Situation`.
 
@@ -142,8 +148,8 @@ The landmarks (Cemetery Hill, Culp's Hill, Little Round Top, Big Round Top, Devi
 
 ## Final steps for you
 
-1. **Rename the default branch to `main` (required).** Unciv downloads a mod from the repository's default branch and names the mod after the repository and that branch. It only strips simple branch names cleanly: with `claude/unciv-civil-war-mod-j2xmgj`, the mod installs under the wrong name and the scenario cannot start (see *Troubleshooting*). On GitHub, open the repository → **Settings** → **General** → **Default branch**, click the pencil icon (*Rename branch*), type `main` and confirm. GitHub moves all the files and history to `main` and redirects links to the old name.
-2. **Add GitHub topics** so Unciv's mod browser lists the mod: on the repository page, click the gear next to *About* and add `unciv-mod`, `unciv-mod-rulesets` and `unciv-mod-maps`.
+1. ✅ **Rename the default branch to `main` (required, done).** Unciv downloads a mod from the repository's default branch and names the mod after the repository and that branch. It only strips simple branch names cleanly: with `claude/unciv-civil-war-mod-j2xmgj`, the mod installs under the wrong name and the scenario cannot start (see *Troubleshooting*). On GitHub, open the repository → **Settings** → **General** → **Default branch**, click the pencil icon (*Rename branch*), type `main` and confirm. GitHub moves all the files and history to `main` and redirects links to the old name.
+2. ✅ **Add GitHub topics** (done) so Unciv's mod browser lists the mod: on the repository page, click the gear next to *About* and add `unciv-mod`, `unciv-mod-rulesets` and `unciv-mod-maps`.
 3. **Install and test in Unciv** (see *Install* above), then play a few turns of the scenario as each side.
 4. **Optional:** add a `LICENSE` file if you want others to reuse the mod (MIT or CC-BY are common for Unciv mods).
 

@@ -6,7 +6,7 @@
             {"text": "A Civil War ruleset for Unciv, beginning with the Battle of Gettysburg, July 1-3, 1863."},
             {"separator": true},
             {"text": "How to play the battle", "header": 3},
-            {"text": "New Game > Map Type: Scenario > 'Gettysburg - July 1, 1863'. The scenario sets the ruleset, map and both armies for you. The variants marked Easiest, Easier, Harder and Hardest are the same battle with a weaker or stronger AI army. You command the Union by default: to play the Confederacy, click the Human/AI button next to each army to swap them."},
+            {"text": "New Game > Map Type: Scenario > 'Battle of Gettysburg'. The scenario sets the ruleset, map and both armies for you. The variants marked Easiest, Easier, Harder and Hardest are the same battle with a weaker or stronger AI army. You command the Union by default: to play the Confederacy, click the Human/AI button next to each army to swap them."},
             {"text": "Or: Map Type: Custom map > 'Gettysburg' to fight a free-form battle on the historical terrain, building your own army. In that mode, declare war on the enemy yourself on turn 1 (Diplomacy, top left)."},
             {"separator": true},
             {"text": "Scale", "header": 3},

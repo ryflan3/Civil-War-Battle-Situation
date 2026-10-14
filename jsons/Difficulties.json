@@ -1,7 +1,7 @@
 [
     {
         "name": "Militia",
-        "baseHappiness": 25,
+        "baseHappiness": 55,
         "extraHappinessPerLuxury": 1,
         "researchCostModifier": 1.0,
         "unitCostModifier": 0.67,
@@ -46,7 +46,7 @@
     },
     {
         "name": "Volunteers",
-        "baseHappiness": 20,
+        "baseHappiness": 50,
         "extraHappinessPerLuxury": 1,
         "researchCostModifier": 1.0,
         "unitCostModifier": 0.85,
@@ -91,7 +91,7 @@
     },
     {
         "name": "Veterans",
-        "baseHappiness": 15,
+        "baseHappiness": 45,
         "extraHappinessPerLuxury": 1,
         "researchCostModifier": 1.0,
         "unitCostModifier": 1.0,
@@ -136,7 +136,7 @@
     },
     {
         "name": "Regulars",
-        "baseHappiness": 12,
+        "baseHappiness": 42,
         "extraHappinessPerLuxury": 1,
         "researchCostModifier": 1.0,
         "unitCostModifier": 1.0,
@@ -183,7 +183,7 @@
     },
     {
         "name": "Iron Brigade",
-        "baseHappiness": 10,
+        "baseHappiness": 40,
         "extraHappinessPerLuxury": 1,
         "researchCostModifier": 1.0,
         "unitCostModifier": 1.0,

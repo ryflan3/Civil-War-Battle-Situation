@@ -35,6 +35,6 @@ python3 tools/render_map.py
 python3 tools/gen_docs.py
 
 if [ "${1:-}" = "--simulate" ]; then
-  (cd "$TOOL" && ./gradlew --no-daemon -q run --args="simulate '$ROOT/scenarios/Gettysburg - July 1, 1863' 49 Union")
+  (cd "$TOOL" && ./gradlew --no-daemon -q run --args="simulate '$ROOT/scenarios/Battle of Gettysburg' 49 Union")
 fi
 echo "== done"
