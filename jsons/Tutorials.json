@@ -3,11 +3,11 @@
         "name": "Civil War Battle Situation",
         "civilopediaText": [
             {"text": "Civil War Battle Situation", "header": 2},
-            {"text": "A Civil War ruleset for Unciv, beginning with the Battle of Gettysburg, July 1-3, 1863."},
+            {"text": "A Civil War ruleset for Unciv, beginning with the Battle of Gettysburg, July 1-3, in the third summer of the war."},
             {"separator": true},
             {"text": "How to play the battle", "header": 3},
             {"text": "New Game > Map Type: Scenario > 'Battle of Gettysburg'. The scenario sets the ruleset, map and both armies for you. The variants marked Easiest, Easier, Harder and Hardest are the same battle with a weaker or stronger AI army. You command the Union by default: to play the Confederacy, click the Human/AI button next to each army to swap them."},
-            {"text": "Or: Map Type: Custom map > 'Gettysburg' to fight a free-form battle on the historical terrain, building your own army. In that mode, declare war on the enemy yourself on turn 1 (Diplomacy, top left)."},
+            {"text": "Or: Map Type: Custom > 'Gettysburg (free play)' for a free-form game on the historical terrain: no armies, cities or war at the start - you build your own army. In that mode, declare war on the enemy yourself on turn 1 (Diplomacy, top left)."},
             {"separator": true},
             {"text": "Scale", "header": 3},
             {"text": "One hex is about 250 yards. One turn is about one hour of daylight; each night is two turns. Turn 0 is 7:00 AM on July 1 and turn 47 is 7:00 PM on July 3."},
@@ -18,7 +18,7 @@
             {"text": "Hold the Field: seven key positions - cities on Oak Hill, the Lutheran Seminary, Gettysburg, Cemetery Hill, Culp's Hill, the Angle and Little Round Top - all start in Union hands. At the end of turn 47 (nightfall, July 3), the side holding more of them wins.", "link": "Victory/Hold the Field"},
             {"text": "Decisive Victory: capture the enemy army's headquarters at any time.", "link": "Victory/Decisive Victory"},
             {"separator": true},
-            {"text": "Tactics of 1863", "header": 3},
+            {"text": "Tactics of the Civil War", "header": 3},
             {"text": "Rifle-muskets made frontal attacks against steady troops costly: use woods, stone walls, breastworks and high ground. Attack from several sides at once - every extra adjacent unit adds a flanking bonus. Artillery must unlimber (Set Up) to fire and needs line of sight, so put it on hills. Generals inspire troops within range, but a general who is caught falls."}
         ]
     }

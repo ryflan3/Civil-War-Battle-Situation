@@ -5,7 +5,7 @@ One hex is about 250 yards. The map is 34 columns x 37 rows.
 
 Run from the repository root:
     python3 tools/gettysburg_geo.py            -> writes tools/build/gettysburg_tiles.json (+ preview PNG)
-The Kotlin tool (tools/cwtool) turns that JSON into the Unciv map file maps/Gettysburg.
+The Kotlin tool (tools/cwtool) turns that JSON into the Unciv map file "maps/Gettysburg (free play)" and the scenario saves.
 """
 import json, math, os, sys
 from collections import OrderedDict

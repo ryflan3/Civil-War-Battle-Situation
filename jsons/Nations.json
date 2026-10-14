@@ -10,8 +10,8 @@
         "preferredVictoryType": "Hold the Field",
         "startBias": ["Hill"],
 
-        "startIntroPart1": "General Meade, you took command of the Army of the Potomac only three days ago. Lee's Army of Northern Virginia has invaded Pennsylvania, and its corps are converging on Gettysburg, the crossroads town where ten roads meet. At dawn on July 1, 1863, John Buford's cavalry division holds the ridges west of town and waits for the infantry to come up.",
-        "startIntroPart2": "The I, III, XI and XII Corps are coming onto the field from the south and south-east. You hold all seven key positions: Oak Hill, the Lutheran Seminary, the town, Cemetery Hill, Culp's Hill, the Angle and Little Round Top. Hold more of them than the enemy at nightfall on July 3, and the road to Baltimore, Philadelphia and Washington stays closed.",
+        "startIntroPart1": "General Meade, you took command of the Army of the Potomac only three days ago. Lee's Army of Northern Virginia has invaded Pennsylvania, and its corps are converging on Gettysburg, the crossroads town where ten roads meet. At dawn on July 1, John Buford's cavalry division holds the ridges west of town and waits for the infantry to come up.",
+        "startIntroPart2": "This is FREE PLAY, not the historical battle: you start with a Supply Train to found your headquarters and a small force, and the war begins when you declare it (Diplomacy, top left). To fight the Battle of Gettysburg itself - both armies on the field, the seven key positions and the reinforcements - start a New Game and choose Map Type: Scenario, then Battle of Gettysburg.",
 
         "declaringWar": "The rebel army has invaded Pennsylvania. We will meet it here, and we will drive it back across the Potomac.",
         "attacked": "You have attacked the Army of the Potomac. Every corps on the road is marching to the sound of the guns.",
@@ -44,8 +44,8 @@
         "preferredVictoryType": "Hold the Field",
         "startBias": ["Hill"],
 
-        "startIntroPart1": "General Lee, after your victory at Chancellorsville the Army of Northern Virginia has marched north into Pennsylvania. Jeb Stuart's cavalry is away raiding, and you are blind to the enemy's movements. This morning, July 1, 1863, Heth's division is marching down the Chambersburg Pike toward Gettysburg - and has run into Union cavalry on the ridges west of town.",
-        "startIntroPart2": "Hill's corps is deploying to the west, and Ewell's is coming down from the north and north-east. The enemy holds all seven key positions: Oak Hill, the Lutheran Seminary, the town, Cemetery Hill, Culp's Hill, the Angle and Little Round Top. Take and hold more than half of them by nightfall on July 3, before the whole Union army arrives. A victory on Northern soil could break the North's will to fight.",
+        "startIntroPart1": "General Lee, after your victory at Chancellorsville the Army of Northern Virginia has marched north into Pennsylvania. Jeb Stuart's cavalry is away raiding, and you are blind to the enemy's movements. This morning, July 1, Heth's division is marching down the Chambersburg Pike toward Gettysburg - and has run into Union cavalry on the ridges west of town.",
+        "startIntroPart2": "This is FREE PLAY, not the historical battle: you start with a Supply Train to found your headquarters and a small force, and the war begins when you declare it (Diplomacy, top left). To fight the Battle of Gettysburg itself - both armies on the field, the seven key positions and the reinforcements - start a New Game and choose Map Type: Scenario, then Battle of Gettysburg.",
 
         "declaringWar": "If the enemy is there tomorrow, we must attack him.",
         "attacked": "The Army of Northern Virginia does not give ground easily.",

@@ -52,7 +52,7 @@ fun main(args: Array<String>) {
         "build" -> {  // build <modDir>: everything in one JVM
             val mod = File(args[1])
             val tiles = File(mod, "tools/build/gettysburg_tiles.json")
-            val map = File(mod, "maps/Gettysburg")
+            val map = File(mod, "maps/$MAP_NAME")
             packAtlas(mod)
             buildMap(tiles, map)
             for ((name, difficulty) in SCENARIOS) buildScenario(tiles, map, File(mod, "scenarios/$name"), difficulty)

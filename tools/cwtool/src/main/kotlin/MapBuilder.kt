@@ -14,10 +14,13 @@ import com.unciv.models.ruleset.Ruleset
 import com.unciv.models.ruleset.RulesetCache
 import java.io.File
 
-const val MAP_DESCRIPTION = "The Battle of Gettysburg, July 1-3, 1863. About 250 yards per hex. " +
-    "Key terrain: Cemetery Hill, East Cemetery Hill, Culp's Hill, Little Round Top and the Angle. " +
-    "Union entry roads: Taneytown Road (HQ), Emmitsburg Road, Baltimore Pike, Hanover Road. " +
-    "Confederate entry roads: Chambersburg Pike (HQ), Middletown Road, Harrisburg Road."
+/** File name of the custom map. It says "free play" so nobody mistakes it for the scenario. */
+const val MAP_NAME = "Gettysburg (free play)"
+// Unciv shows the description unwrapped in the New Game screen's map column, so keep the lines short
+const val MAP_DESCRIPTION = "FREE PLAY: terrain only, no armies.\n" +
+    "For the historical battle, choose\n" +
+    "Map Type: Scenario, then\n" +
+    "Battle of Gettysburg."
 
 fun JsonValue.ints(name: String) = get(name).asIntArray()
 
@@ -28,7 +31,7 @@ fun buildTileMap(tilesJson: File, ruleset: Ruleset): Pair<TileMap, JsonValue> {
     val height = data.getInt("height")
     val map = TileMap(width, height, ruleset, false)
     map.mapParameters = MapParameters().apply {
-        name = "Gettysburg"
+        name = MAP_NAME
         type = MapType.empty
         shape = MapShape.rectangular
         mapSize = MapSize(width, height)

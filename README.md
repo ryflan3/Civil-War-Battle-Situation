@@ -82,11 +82,15 @@ A scenario is a battle that is already set up, so Unciv locks the other New Game
 
 ## Other ways to play
 
-* **Custom map:** New Game → base ruleset **Civil War Battle Situation** → **Map Type: Custom** → map **Gettysburg**. Pick your nation and the AI's nation in the player list as in any Unciv game. Each side starts with a Supply Train (founds an HQ), Pioneers and a small army, and builds the rest. The historical armies, key positions and arrival timetable are only in the scenario. The terrain is revealed from turn 1, and there are never barbarians. Unciv's AI does not start wars in a battle this small, so **declare war yourself on turn 1**: open **Diplomacy** (top left), select the enemy and choose *Declare war*.
+* **Custom map:** New Game → base ruleset **Civil War Battle Situation** → **Map Type: Custom** → map **Gettysburg (free play)**. Pick your nation and the AI's nation in the player list as in any Unciv game. Each side starts with a Supply Train (founds an HQ), Pioneers and a small army, and builds the rest. The historical armies, key positions and arrival timetable are only in the scenario. The terrain is revealed from turn 1, and there are never barbarians. Unciv's AI does not start wars in a battle this small, so **declare war yourself on turn 1**: open **Diplomacy** (top left), select the enemy and choose *Declare war*.
 * **Random maps:** pick **Civil War Battle Situation** as the base ruleset on any generated map.
 * **Map editor:** the Gettysburg map can be opened and edited in Unciv's map editor.
 
 ## Troubleshooting
+
+**The game starts with a Supply Train, a handful of units, no cities and a dark map.**
+
+That is free play, not the battle: the game was started with **Map Type: Custom** (map *Gettysburg (free play)*) or **Generated**. Its opening message says so. For the battle, start a New Game and set **Map Type: Scenario**, then pick **Battle of Gettysburg**. The player list must show **Union** and **Confederacy** with Human/AI buttons. The battle opens with 36 Union units on the field, the cities already built, the whole map revealed and the armies at war.
 
 **Picking a Gettysburg scenario resets the Base Ruleset to a Civ V ruleset, the players turn into "Random", nothing can be changed, and Start says "It looks like we can't make a map with the parameters you requested!"**
 
@@ -173,7 +177,7 @@ tools/build_all.sh              # regenerate everything and run Unciv's validato
 tools/build_all.sh --simulate   # ...and let the AI play the whole battle as a smoke test
 ```
 
-This needs Python 3 with Pillow, Java 21 and internet access. The first run downloads the official `Unciv.jar` (4.22.9) and Gradle. The build uses the real Unciv engine to pack the texture atlas (`game.atlas`/`game.png`), write `maps/Gettysburg` and the scenario saves in `scenarios/`, and run Unciv's own ruleset validator.
+This needs Python 3 with Pillow, Java 21 and internet access. The first run downloads the official `Unciv.jar` (4.22.9) and Gradle. The build uses the real Unciv engine to pack the texture atlas (`game.atlas`/`game.png`), write the free-play map in `maps/` and the scenario saves in `scenarios/`, and run Unciv's own ruleset validator.
 
 You can also simply start the desktop version of Unciv with this folder in its `mods` directory: it re-packs the atlas itself whenever images change.
 
@@ -184,7 +188,7 @@ jsons/          ruleset (Units, UnitTypes, UnitPromotions, Nations, Terrains, Bu
 jsons/TileSets/ how the HexaRealm and FantasyHex tilesets layer the new terrain
 Images/         source images (unit sprites, portraits, icons, terrain overlays, leaders, emblems)
 game.atlas, game.png, Atlases.json   packed textures the game loads
-maps/Gettysburg                       the map (also usable in the map editor)
+maps/Gettysburg (free play)           the map for free play (also usable in the map editor)
 scenarios/                            the Gettysburg scenario, one save per difficulty
 docs/           order of battle, unit reference, map picture
 tools/          generators and the Unciv-engine build tool (tools/cwtool)

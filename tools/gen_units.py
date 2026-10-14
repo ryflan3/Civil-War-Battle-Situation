@@ -36,7 +36,7 @@ UNITS = [
      "attackSound": "cannon",
      "uniques": ["[+50]% Strength <when defending> <vs [Infantry] units>", "[+50]% Strength <when defending> <vs [Cavalry] units>"],
      "civilopediaText": pedia(
-        "Smoothbore guns: the bronze 12-pounder Napoleon, Model 1857, the most common field gun of the war.",
+        "Smoothbore guns: the bronze 12-pounder Napoleon (M1857), the most common field gun of the war.",
         "Range about 1,600 yards. At close range it fired canister - tin cans full of iron balls that turned a cannon into a giant shotgun. Infantry assaulting a Napoleon battery head-on was torn apart.")},
     {"name": "Rifled Battery", "unitType": "Artillery", "movement": 3, "strength": 10, "rangedStrength": 20, "range": 3, "cost": 60,
      "attackSound": "artillery",
@@ -75,7 +75,7 @@ UNITS = [
      "movement": 3, "strength": 20, "cost": 45, "attackSound": "shot",
      "uniques": ["[+10]% Strength", INF_NAME("Union Infantry")],
      "civilopediaText": pedia(
-        "A Union infantry brigade in dark blue frock coats and kepis, armed with the Springfield Model 1861 rifle-musket.",
+        "A Union infantry brigade in dark blue frock coats and kepis, armed with the Springfield M1861 rifle-musket.",
         "Ample ammunition (60 rounds per man) and standardized weapons kept Union lines firing longer: +10% Strength. At Gettysburg the Army of the Potomac fought mostly from good ground, and its volleys broke one Confederate assault after another.")},
     {"name": "Iron Brigade", "unitType": "Infantry", "uniqueTo": "Union", "movement": 3, "strength": 23, "cost": 60, "attackSound": "shot",
      "uniques": ["Unbuildable", "[+15]% Strength <when defending>", "No damage penalty for wounded units",
@@ -138,7 +138,7 @@ UNITS = [
     {"name": "Ambulance Corps", "unitType": "Support", "uniqueTo": "Union", "replaces": "Field Hospital", "movement": 4, "cost": 40,
      "uniques": ["All adjacent units heal [+15] HP when healing"],
      "civilopediaText": pedia(
-        "Dr. Jonathan Letterman's Ambulance Corps, organized in 1862: trained stretcher bearers, dedicated ambulance wagons and a chain of field hospitals.",
+        "Dr. Jonathan Letterman's Ambulance Corps, organized the summer before: trained stretcher bearers, dedicated ambulance wagons and a chain of field hospitals.",
         "It removed the Union wounded from the field at Gettysburg far faster than in earlier battles, and became the model for modern military medicine.")},
 
     # ------------------------------------------------------------------ Confederacy
@@ -146,7 +146,7 @@ UNITS = [
      "movement": 3, "strength": 20, "cost": 45, "attackSound": "shot",
      "uniques": ["[+10]% Strength <when attacking>", INF_NAME("Confederate Infantry")],
      "civilopediaText": pedia(
-        "A Confederate infantry brigade in gray and butternut, slouch hats and kepis, carrying the British Enfield Pattern 1853 rifle-musket or captured Springfields.",
+        "A Confederate infantry brigade in gray and butternut, slouch hats and kepis, carrying the British Enfield P1853 rifle-musket or captured Springfields.",
         "Lean, fast-marching veterans who charged with the high-pitched 'Rebel Yell'. On July 1 they routed two Union corps; on July 2 and 3 they hurled themselves at the Union heights.")},
     {"name": "Texas Brigade", "unitType": "Infantry", "uniqueTo": "Confederacy", "movement": 3, "strength": 23, "cost": 60,
      "attackSound": "shot",
@@ -158,7 +158,7 @@ UNITS = [
      "attackSound": "shot",
      "uniques": ["Unbuildable", "[+15]% Strength <when attacking>"],
      "civilopediaText": pedia(
-        "The 2nd, 4th, 5th, 27th and 33rd Virginia - Stonewall Jackson's own brigade, 'foot cavalry' of the 1862 Shenandoah Valley campaign. Jackson had died two months earlier; James A. Walker led them at Gettysburg.",
+        "The 2nd, 4th, 5th, 27th and 33rd Virginia - Stonewall Jackson's own brigade, 'foot cavalry' of the Shenandoah Valley campaign. Jackson had died two months earlier; James A. Walker led them at Gettysburg.",
         "They fought at Brinkerhoff's Ridge on July 2 and attacked Culp's Hill on the morning of July 3. Moves 4 instead of 3.")},
     {"name": "Confederate Sharpshooters", "unitType": "Skirmisher", "uniqueTo": "Confederacy", "replaces": "Sharpshooters",
      "movement": 3, "strength": 10, "rangedStrength": 15, "range": 2, "cost": 40, "attackSound": "shot",

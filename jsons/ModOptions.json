@@ -4,7 +4,7 @@
     "uniques": [
         "Disable religion",
         "Cannot be used as permanent audiovisual mod",
-        "Mod preselects map [Gettysburg]"
+        "Mod preselects map [Gettysburg (free play)]"
     ],
     "constants": {
         "minimumWarDuration": 1000,
