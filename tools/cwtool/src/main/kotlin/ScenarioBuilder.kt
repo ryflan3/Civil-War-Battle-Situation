@@ -7,6 +7,8 @@ import com.unciv.logic.GameInfo
 import com.unciv.logic.GameStarter
 import com.unciv.logic.city.managers.CityFounder
 import com.unciv.logic.civilization.PlayerType
+import com.unciv.logic.civilization.diplomacy.DiplomacyFlags
+import com.unciv.logic.civilization.managers.quests.QuestManager
 import com.unciv.logic.files.UncivFiles
 import com.unciv.logic.map.HexCoord
 import com.unciv.models.metadata.GameParameters
@@ -18,6 +20,8 @@ import java.io.File
 
 val VICTORIES = arrayListOf("Hold the Field", "Decisive Victory")
 const val KEY_POSITION = "Key Position"  // the building that marks an objective city (gettysburg_oob.OBJECTIVE_BUILDING)
+/** The city-state that holds the neutral key positions (gettysburg_oob.NEUTRAL): at war with both armies for good */
+const val NEUTRAL = "Adams County"
 
 /** One scenario file per difficulty. While a scenario is selected, Unciv's New Game screen locks the game options and
  *  uses the difficulty saved in the scenario, so the difficulty (the AI armies' strength) is chosen from the scenario list. */
@@ -34,6 +38,7 @@ fun buildScenario(tilesJson: File, mapFile: File, outFile: File, difficulty: Str
     initUnciv()
     val ruleset = RulesetCache[MOD]!!
     val data = com.badlogic.gdx.utils.JsonReader().parse(tilesJson.readText())
+    val hasNeutral = data.get("cities").any { it.getString("civ") == NEUTRAL }
 
     val params = GameParameters().apply {
         baseRuleset = MOD
@@ -53,6 +58,8 @@ fun buildScenario(tilesJson: File, mapFile: File, outFile: File, difficulty: Str
         maxTurns = 60
         // The Spectator is the scenario builder's seat: NewGameScreen removes it and hands the first turn to the right side
         players = arrayListOf(Player("Union", PlayerType.Human), Player("Confederacy", PlayerType.Human), Player(Constants.spectator, PlayerType.Human))
+        // the neutral key positions' owner: GameStarter sets up a city-state for it (and gives it a start, removed below)
+        if (hasNeutral) players.add(Player(NEUTRAL, PlayerType.AI))
     }
     val setup = GameSetupInfo(params)
     setup.mapParameters.name = "Gettysburg"
@@ -63,9 +70,10 @@ fun buildScenario(tilesJson: File, mapFile: File, outFile: File, difficulty: Str
     val union = game.getCivilization("Union")
     val confed = game.getCivilization("Confederacy")
     val sides = listOf(confed, union)
+    val neutral = if (hasNeutral) game.getCivilization(NEUTRAL) else null
 
     // 1. remove the default starting armies GameStarter placed on the starting locations
-    for (civ in sides) for (u in civ.units.getCivUnits().toList()) u.destroy()
+    for (civ in sides + listOfNotNull(neutral)) for (u in civ.units.getCivUnits().toList()) u.destroy()
 
     // 2. found the entry cities (capital = army headquarters first), each with its timetable building,
     //    then the key positions on their landmarks
@@ -76,7 +84,9 @@ fun buildScenario(tilesJson: File, mapFile: File, outFile: File, difficulty: Str
         if (c.getBoolean("objective")) city.cityConstructions.addBuilding(KEY_POSITION)
         val arrivals = (if (civ.civID == "Union") "Union" else "Confederate") + " Arrivals: " + city.name
         if (ruleset.buildings.containsKey(arrivals)) city.cityConstructions.addBuilding(arrivals)
-        if (!city.cityConstructions.isBuilt("Supply Depot")) city.cityConstructions.addBuilding("Supply Depot")
+        // the armies' cities have a Supply Depot (the era gives every new city one); the neutral ones have no stores
+        if (civ == neutral) city.cityConstructions.removeBuilding("Supply Depot")
+        else if (!city.cityConstructions.isBuilt("Supply Depot")) city.cityConstructions.addBuilding("Supply Depot")
         // nothing can be raised in the scenario: produce "Nothing", so the game never stops to ask "Pick construction"
         city.cityConstructions.editQueue { clear(); add(PerpetualConstruction.Idle.name) }
         println("City ${city.name} (${civ.civID}) capital=${city.isCapital()} buildings=${city.cityConstructions.getBuiltBuildings().map { it.name }.toList()}")
@@ -86,6 +96,19 @@ fun buildScenario(tilesJson: File, mapFile: File, outFile: File, difficulty: Str
     //    Declared before the armies are placed: Unciv only lets units into enemy territory once at war.
     union.diplomacyFunctions.makeCivilizationsMeet(confed)
     union.getDiplomacyManager(confed)!!.declareWar()
+    // The neutral key positions must be taken by force: both armies are at war with their holder from the start.
+    // Declaring the war ourselves sets the same no-peace countdown, which also disables the "Negotiate Peace" button.
+    if (neutral != null) {
+        for (army in sides) {
+            army.diplomacyFunctions.makeCivilizationsMeet(neutral)
+            army.getDiplomacyManager(neutral)!!.declareWar()
+            neutral.getDiplomacyManager(army)!!.removeFlag(DiplomacyFlags.RecentlyAttacked)
+        }
+        // A declaration of war makes a city-state ask everyone else for help ("War against [Confederacy]: kill 3 of
+        // their units"). Both armies are at war with Adams County, so that request means nothing here: drop it.
+        val requests = QuestManager::class.java.getDeclaredField("unitsToKillForCiv").apply { isAccessible = true }
+        (requests.get(neutral.questManager) as MutableMap<*, *>).clear()
+    }
 
     // 4. the armies on the field at the start: the 7:00 AM positions and the opening deployment
     for (u in data.get("startUnits")) {
@@ -113,6 +136,8 @@ fun buildScenario(tilesJson: File, mapFile: File, outFile: File, difficulty: Str
     // side may end up human.
     confed.playerType = PlayerType.AI
     game.gameParameters.players.first { it.chosenCiv == "Confederacy" }.playerType = PlayerType.AI
+    // The neutral civ is not a seat: off the New Game screen's player list, it stays AI-run
+    game.gameParameters.players.removeIf { it.chosenCiv == NEUTRAL }
     game.currentPlayer = Constants.spectator
     // Update sight first, then clear: updating adds first-contact messages. The Spectator seat must meet both armies
     // here too, or it meets them when the New Game screen loads the file and the Union is told "We have encountered Spectator!"
@@ -146,6 +171,8 @@ fun simulateScenario(scenarioFile: File, turns: Int, humanSide: String = "Union"
         val enemyUnitsSeen = enemy.units.getCivUnits().count { civ.viewableTiles.contains(it.currentTile) }
         println("  ${civ.civID}: ${civ.units.getCivUnits().count()} units, explored ${explored}/${game.tileMap.values.size} tiles, sees ${enemyUnitsSeen}/${enemy.units.getCivUnits().count()} enemy units, key positions ${keyPositions(civ)}")
     }
+    val neutral = game.getCivilizationOrNull(NEUTRAL)
+    if (neutral != null) println("  $NEUTRAL (neutral): key positions ${keyPositions(neutral)}, at war with Union ${union.isAtWarWith(neutral)}, with Confederacy ${confed.isAtWarWith(neutral)}")
     val human = game.getCivilization(humanSide)
     var lastNames = game.civilizations.associate { it.civID to it.units.getCivUnits().map { u -> u.instanceName ?: u.name }.toList() }
     val totalLost = HashMap<String, Int>()
@@ -153,6 +180,9 @@ fun simulateScenario(scenarioFile: File, turns: Int, humanSide: String = "Union"
     for (t in 1..turns) {
         com.unciv.logic.civilization.managers.TurnManager(human).automateTurn()
         game.nextTurn()
+        // the pop-ups the human player would have to click through this turn
+        if (human.popupAlerts.isNotEmpty()) println("  popups for $humanSide: ${human.popupAlerts.map { "${it.type}(${it.value.take(30)})" }}")
+        human.popupAlerts.clear()
         val line = StringBuilder("Turn ${game.turns}:")
         for (civ in game.civilizations.filter { it.isMajorCiv() }) {
             val names = civ.units.getCivUnits().map { u -> u.instanceName ?: u.name }.toList()

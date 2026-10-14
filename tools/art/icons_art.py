@@ -155,6 +155,18 @@ def nation_confederacy():
     return finish_icon(img)
 
 
+def nation_adams_county():
+    """The neutral city-state of the Gettysburg scenario: a keystone (Pennsylvania, the Keystone State) with a
+    farmhouse roof cut out of it."""
+    img, d = vcanvas()
+    d.polygon([(60, 50), (340, 50), (290, 360), (110, 360)], fill=W8)
+    d.polygon([(200, 120), (285, 200), (115, 200)], fill=CLEAR)      # roof
+    d.rectangle([140, 200, 260, 300], fill=CLEAR)                     # walls
+    d.rectangle([150, 205, 250, 295], fill=W8)
+    d.rectangle([185, 235, 215, 295], fill=CLEAR)                     # door
+    return finish_icon(img)
+
+
 def leader_portrait(name):
     """Sepia 'carte de visite' style bust portraits."""
     n = 512
@@ -384,6 +396,14 @@ def bi_arrivals(d):
     d.rectangle([194, 60, 206, 100], fill=CLEAR); d.rectangle([194, 170, 206, 220], fill=CLEAR); d.rectangle([194, 290, 206, 340], fill=CLEAR)
     d.polygon([(40, 200), (110, 130), (110, 170), (150, 170), (150, 230), (110, 230), (110, 270)], fill=W8)
     d.polygon([(360, 200), (290, 130), (290, 170), (250, 170), (250, 230), (290, 230), (290, 270)], fill=W8)
+
+
+def bi_fence(d):
+    """Neutral ground (the Adams County city-state type and its Home Guard Command): a split-rail fence."""
+    for x in (70, 200, 330):
+        d.rectangle([x - 16, 90, x + 16, 330], fill=W8)          # posts
+    for y in (140, 230):
+        d.polygon([(40, y), (360, y - 20), (360, y + 14), (40, y + 34)], fill=W8)   # rails
 
 
 def ii_breastworks(d):

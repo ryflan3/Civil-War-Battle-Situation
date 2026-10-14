@@ -56,6 +56,8 @@ fun balanceRun(scenarioFile: File, mode: String, seed: Int, lastTurn: Int = 49) 
 
     val union = game.getCivilization("Union")
     val confed = game.getCivilization("Confederacy")
+    val neutral = game.getCivilizationOrNull(NEUTRAL)
+    fun neutralKeys() = if (neutral == null || neutral.isDefeated()) 0 else keys(neutral)
     val startUnits = mapOf("Union" to union.units.getCivUnitsSize(), "Confederacy" to confed.units.getCivUnitsSize())
     val arrived = HashMap<String, Int>()
     val keysAt = LinkedHashMap<Int, String>()
@@ -74,7 +76,7 @@ fun balanceRun(scenarioFile: File, mode: String, seed: Int, lastTurn: Int = 49) 
         }
         prevNames = mapOf("Union" to unitIds(union), "Confederacy" to unitIds(confed))
         val uk = keys(union); val ck = keys(confed)
-        if (game.turns in setOf(6, 12, 20, 30, 40, 47)) keysAt[game.turns] = "$uk-$ck"
+        if (game.turns in setOf(6, 12, 20, 30, 40, 47)) keysAt[game.turns] = "$uk-$ck-${neutralKeys()}"
         if (ck >= 4 && firstConfed4 == null) firstConfed4 = game.turns
         if (hqLost == null) {
             if (!union.cities.any { it.name == "Taneytown Road" }) hqLost = "Union@${game.turns}"
@@ -84,7 +86,7 @@ fun balanceRun(scenarioFile: File, mode: String, seed: Int, lastTurn: Int = 49) 
     val v = game.victoryData
     fun mil(c: Civilization) = c.units.getCivUnits().count { it.isMilitary() }
     println("RESULT mode=$mode seed=$seed winner=${v?.winningCiv ?: "none"} by=${v?.victoryType?.replace(' ', '_') ?: "-"} turn=${v?.victoryTurn ?: game.turns}" +
-        " keysU=${keys(union)} keysC=${keys(confed)} keyTimeline=${keysAt.entries.joinToString(",") { "t${it.key}:${it.value}" }}" +
+        " keysU=${keys(union)} keysC=${keys(confed)} keysN=${neutralKeys()} keyTimeline=${keysAt.entries.joinToString(",") { "t${it.key}:${it.value}" }}" +
         " confed4keysAt=${firstConfed4 ?: "-"} hqLost=${hqLost ?: "-"}" +
         " unitsU=${startUnits["Union"]}+${arrived["Union"] ?: 0}-${lost["Union"] ?: 0} milU=${mil(union)}" +
         " unitsC=${startUnits["Confederacy"]}+${arrived["Confederacy"] ?: 0}-${lost["Confederacy"] ?: 0} milC=${mil(confed)}" +

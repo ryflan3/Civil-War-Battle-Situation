@@ -9,15 +9,16 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from figures import *
 from units_art import SPRITES
-from icons_art import (portrait_background, nation_union, nation_confederacy, leader_portrait, PROMOTION_ICONS,
+from icons_art import (portrait_background, nation_union, nation_confederacy, nation_adams_county, leader_portrait, PROMOTION_ICONS,
                        vector_icon, pi_union_general, pi_confed_general, pi_hillflag, bi_headquarters, bi_depot,
-                       bi_arrivals, ii_breastworks, icon_pioneer)
+                       bi_arrivals, bi_fence, ii_breastworks, icon_pioneer)
 from tiles_art import FEATURES, WONDERS, CITY_CENTERS
 
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
 IMAGES = os.path.join(ROOT, "Images")
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 import gen_promotions
+import gen_buildings
 import gettysburg_oob as oob
 
 # ------------------------------------------------------------------ hero figures (one figure per unit, in its own uniform)
@@ -131,9 +132,11 @@ def main():
 
     save(nation_union(), "NationIcons", "Union.png")
     save(nation_confederacy(), "NationIcons", "Confederacy.png")
+    save(nation_adams_county(), "NationIcons", "Adams County.png")
+    save(vector_icon(bi_fence), "CityStateIcons", "Neutral Ground.png")
     for leader in ("George G. Meade", "Robert E. Lee"):
         save(leader_portrait(leader), "LeaderIcons", leader + ".png")
-    count += 4
+    count += 6
 
     for name, fn in PROMOTION_ICONS.items():
         save(vector_icon(fn), "UnitPromotionIcons", name + ".png"); count += 1
@@ -144,7 +147,7 @@ def main():
 
     buildings = [b["name"] for b in json.load(open(os.path.join(ROOT, "jsons", "Buildings.json")))]
     icons = {"Army Headquarters": vector_icon(bi_headquarters), "Supply Depot": vector_icon(bi_depot),
-             oob.OBJECTIVE_BUILDING: vector_icon(pi_hillflag)}
+             oob.OBJECTIVE_BUILDING: vector_icon(pi_hillflag), gen_buildings.NEUTRAL_CAPITAL: vector_icon(bi_fence)}
     arr = vector_icon(bi_arrivals)
     for b in buildings:
         save(icons.get(b, arr), "BuildingIcons", b + ".png"); count += 1

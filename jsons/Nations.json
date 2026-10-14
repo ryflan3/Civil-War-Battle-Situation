@@ -70,5 +70,30 @@
             {"text": "The Army of Northern Virginia at Gettysburg numbered about 71,000 to 75,000 men in three infantry corps under Longstreet, Ewell and A. P. Hill, with Stuart's cavalry and about 283 guns."},
             {"text": "It reached the field from the west and the north and fought mostly on the offensive, from Seminary Ridge and the town toward the Union heights."}
         ]
+    },
+    {
+        "name": "Adams County",
+        "adjective": ["Adams County"],
+        "cityStateType": "Neutral Ground",
+        "personality": "Neutral",
+
+        "declaringWar": "Gettysburg has no quarrel with either army. Leave our town in peace!",
+        "attacked": "The home guard will hold what it can.",
+        "defeated": "The armies have the town now. God help us all.",
+        "introduction": "The town of Gettysburg and the farms of Adams County, Pennsylvania.",
+        "neutralHello": "Good day, General. Mind the fences.",
+        "hateHello": "Your men have trampled every field from here to the Round Tops.",
+
+        "outerColor": [94, 72, 44],
+        "innerColor": [228, 212, 168],
+
+        "uniques": ["Will not be chosen for new games"],
+        "cities": ["Gettysburg", "Cemetery Hill", "Culp's Hill", "The Angle", "Little Round Top", "Oak Hill", "Lutheran Seminary",
+            "Cashtown", "Fairfield", "Hunterstown", "Bonneauville", "Two Taverns", "Mummasburg", "Table Rock"],
+        "civilopediaText": [
+            {"text": "NEUTRAL GROUND: in the Gettysburg scenario, the key positions that neither army holds at dawn on July 1 belong to Adams County."},
+            {"text": "Both armies are at war with it for the whole battle and cannot make peace, so a neutral key position must be taken by force. A few home-guard companies and the lie of the ground are its only defence: a brigade or two takes one quickly. Until it is taken, it counts for neither side in the Hold the Field victory."},
+            {"text": "Gettysburg, the county seat, was a town of about 2,400 people in 1863. Its townspeople sheltered in their cellars during the battle and nursed thousands of wounded for months afterwards."}
+        ]
     }
 ]

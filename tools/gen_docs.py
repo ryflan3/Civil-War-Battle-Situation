@@ -16,14 +16,20 @@ def order_of_battle():
            "Generated from `tools/gettysburg_oob.py`. Turn numbers are Unciv's turn counter (top bar).",
            "Each daylight turn is about one hour; each night is two turns.", "",
            "## Key positions", "",
-           "Seven cities founded on landmarks at the start. All begin in Union hands and cannot be razed. "
-           "The army holding more of them at the end of turn %d (nightfall, July 3) wins **Hold the Field**." % oob.LAST_TURN, "",
+           "Seven cities founded on landmarks at the start. They cannot be razed. "
+           "The ones marked *neutral* belong to the city-state of %s, which is at war with both armies for the whole battle "
+           "and cannot make peace: they must be taken by force, and until then they count for neither side. "
+           "The army holding more key positions at the end of turn %d (nightfall, July 3) wins **Hold the Field**." % (oob.NEUTRAL, oob.LAST_TURN), "",
            "| Key position | Held at the start by | Why it mattered |", "|---|---|---|"]
     for name, side, why in oob.OBJECTIVES:
-        out.append("| %s | %s | %s |" % (name, side, why))
-    out += ["", "## On the field at the start (turn 0)", "",
-            "To make the battle big from the first turn, every force that reached the field on July 1 starts on the map, "
-            "in or near the place it fought: the day's marches are compressed.", "",
+        out.append("| %s | %s | %s |" % (name, "%s (neutral)" % side if side == oob.NEUTRAL else side, why))
+    out += ["", "## On the field at the start (turn 0)", ""]
+    for side in ("Confederacy", "Union"):
+        cut = oob.OPENING_CUTOFF[side]
+        out.append("* **%s**: everything due by turn %d (%s) starts on the map, in or near the ground it fought over; "
+                   "later forces arrive on the timetable below." % (side, cut, oob.turn_label(cut)))
+    out += ["", "So the Confederate marches of July 1 are compressed, while the Union corps race up their roads on the "
+            "historical timetable - the race for the high ground that the Confederacy won on July 1.", "",
             "| Side | Group | Units |", "|---|---|---|"]
     start_names = OrderedDict()
     for side, key, inst, x, y in oob.START:

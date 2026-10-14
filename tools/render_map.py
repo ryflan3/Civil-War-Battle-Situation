@@ -120,7 +120,8 @@ def render(scale=1.0, with_units=True, labels=True):
     # cities
     for c in data["cities"]:
         cx, cy = centers[(c["x"], c["y"])]
-        city = art("City center-%s-Civil War era" % c["civ"])
+        # a neutral (Adams County) city is the plain camp without a flag
+        city = art("City center-%s-Civil War era" % c["civ"]) or art("City center-Civil War era")
         img.alpha_composite(city, (int(cx - 32), int(cy - 28)))
     if with_units:
         for u in data["startUnits"]:
@@ -136,7 +137,7 @@ def render(scale=1.0, with_units=True, labels=True):
                 d.text((cx - 4, cy + 10), t["wonder"], fill=(255, 250, 230), font=font, stroke_width=3, stroke_fill=(20, 16, 12), anchor="mt")
         for c in data["cities"]:
             cx, cy = centers[(c["x"], c["y"])]
-            col = (150, 180, 255) if c["civ"] == "Union" else (255, 160, 150)
+            col = {"Union": (150, 180, 255), "Confederacy": (255, 160, 150)}.get(c["civ"], (235, 220, 170))
             name = ("\u2605 " + c["name"]) if c.get("objective") else c["name"]   # key positions get a star
             d.text((cx, cy + 22), name, fill=col, font=font, stroke_width=3, stroke_fill=(20, 16, 12), anchor="mt")
     if scale != 1.0:

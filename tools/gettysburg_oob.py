@@ -68,24 +68,32 @@ ENTRIES = [
 ]
 
 # ---------------------------------------------------------------- key positions (objective cities)
-# The scenario founds a city on each of these landmarks. All of them start in Union hands: on the morning of
-# July 1 Buford's cavalry screened the town and the ridges, and the rest lay behind the Union lines.
-# Cities cannot be razed. The army holding more of them at nightfall on July 3 (end of turn 47) wins "Hold the Field".
+# The scenario founds a city on each of these landmarks. At dawn on July 1 Buford's cavalry screened the ridges west
+# and north of town, and Cemetery Ridge (the Angle) lay on the Taneytown Road, the Union army's line of march: those
+# start in Union hands. The town, the two hills above it and Little Round Top were held by nobody. They start NEUTRAL:
+# they belong to the city-state of Adams County, which is at war with both armies for the whole battle, so they must
+# be taken by force (an empty city falls to a few attacks). Cities cannot be razed. The army holding more key
+# positions at nightfall on July 3 (end of turn 47) wins "Hold the Field"; neutral ones count for nobody.
+# Balance: which positions start neutral is the strongest balance lever of the scenario. Confederate share of the wins
+# in AI-vs-AI battles (tools/cwtool Balance.kt, Veterans): all in Union hands 92% (12 games), town + Cemetery Hill +
+# Culp's Hill neutral 75% (12), these four neutral 44% (32), the Angle neutral instead of Little Round Top 81% (16),
+# all five southern positions neutral 33% (12).
 OBJECTIVE_BUILDING = "Key Position"
+NEUTRAL = "Adams County"
 OBJECTIVES = [  # (landmark = city name, side at the start, why it mattered)
     ("Oak Hill", "Union",
      "The high ground north of town. Rodes's guns on Oak Hill raked the Union I Corps line on the afternoon of July 1."),
     ("Lutheran Seminary", "Union",
      "Buford watched Heth's approach from the seminary cupola, and the I Corps made its last stand on Seminary Ridge on July 1."),
-    ("Gettysburg", "Union",
+    ("Gettysburg", NEUTRAL,
      "Ten roads met in the town square. Whoever held the town held the roads both armies needed."),
-    ("Cemetery Hill", "Union",
+    ("Cemetery Hill", NEUTRAL,
      "The key to the whole field, where the beaten Union corps rallied on the evening of July 1."),
-    ("Culp's Hill", "Union",
+    ("Culp's Hill", NEUTRAL,
      "The barb of the Union fishhook, guarding the Baltimore Pike - the army's line of supply and retreat."),
     ("The Angle", "Union",
      "The bend in the stone wall on Cemetery Ridge, where Pickett's Charge struck the Union centre on July 3."),
-    ("Little Round Top", "Union",
+    ("Little Round Top", NEUTRAL,
      "The rocky hill anchoring the Union left. Had it fallen on July 2, Confederate guns could have swept the whole line."),
 ]
 
@@ -227,22 +235,17 @@ ARRIVALS = [
 ]
 
 # ---------------------------------------------------------------- opening deployment
-# To make the battle big from the first turn, every force that reached the field on July 1 (arrivals up to
-# OPENING_CUTOFF) starts the scenario on the map instead of arriving later: the day's marches are compressed.
+# To make the battle big from the first turn, the forces that reached the field early on July 1 start the scenario
+# on the map instead of arriving later: arrivals of a side up to its OPENING_CUTOFF turn. The Confederate marches of
+# July 1 are compressed (Hill, Ewell, Early and Johnson are all on the field), while the Union corps race up their
+# roads on the historical timetable - only Buford and Wadsworth's division are there at the start. That race, which
+# the Confederacy won on July 1, is what lets Lee's army take the town and the ridges before Meade can hold them.
 # Each group takes the arrivals of one side on one road between two turns, and is placed along its anchor line
 # (miles), earliest arrivals first, filling the nearest free tiles. Later arrivals keep their timetable.
-OPENING_CUTOFF = 12
+OPENING_CUTOFF = {"Union": 1, "Confederacy": 12}
 OPENING = [  # (side, road, first turn, last turn, label, anchor line)
     ("Union", "Emmitsburg Road", 1, 1, "Wadsworth's division of the I Corps, coming up behind Buford",
      [(-0.80, -0.30), (-0.88, 0.05)]),
-    ("Union", "Emmitsburg Road", 2, 3, "The rest of the I Corps on the Emmitsburg Road",
-     [(-0.42, -0.98), (-0.65, -1.40), (-0.98, -1.85)]),
-    ("Union", "Emmitsburg Road", 10, 12, "Sickles's III Corps marching up from Emmitsburg",
-     [(-1.22, -2.25), (-1.50, -2.75), (-1.80, -3.15)]),
-    ("Union", "Taneytown Road", 3, 8, "Howard's XI Corps on the Taneytown Road",
-     [(-0.08, -1.10), (-0.12, -1.70), (-0.16, -2.30), (-0.20, -2.90)]),
-    ("Union", "Baltimore Pike", 9, 10, "Slocum's XII Corps on the Baltimore Pike",
-     [(0.48, -1.35), (0.70, -1.85), (0.95, -2.40)]),
     ("Confederacy", "Chambersburg Pike", 1, 5, "Hill, Pender's division and Lee, behind Heth on Herr Ridge",
      [(-2.25, 0.75), (-2.30, -0.45)]),
     ("Confederacy", "Chambersburg Pike", 9, 10, "Anderson's division along the Fairfield Road",
@@ -258,7 +261,7 @@ OPENING = [  # (side, road, first turn, last turn, label, anchor line)
 
 def opening_group(turn, side, entry):
     """The OPENING group an arrival belongs to, or None if it keeps its place in the timetable."""
-    if turn > OPENING_CUTOFF:
+    if turn > OPENING_CUTOFF[side]:
         return None
     for g in OPENING:
         if g[0] == side and g[1] == entry and g[2] <= turn <= g[3]:
@@ -268,7 +271,7 @@ def opening_group(turn, side, entry):
 
 def timetable():
     """Arrivals that still come in during the scenario (after the opening deployment)."""
-    return [a for a in ARRIVALS if a[0] > OPENING_CUTOFF]
+    return [a for a in ARRIVALS if a[0] > OPENING_CUTOFF[a[1]]]
 
 
 # Free-play name pools for generals (used outside the scenario)
@@ -316,5 +319,5 @@ if __name__ == "__main__":
     print("OK - %d named units, %d arrival lines" % (len(n), len(ARRIVALS)))
     for side in ("Union", "Confederacy"):
         total = sum(len(a[4]) for a in ARRIVALS if a[1] == side) + sum(1 for s in START if s[0] == side)
-        opening = sum(len(a[4]) for a in ARRIVALS if a[1] == side and a[0] <= OPENING_CUTOFF) + sum(1 for s in START if s[0] == side)
+        opening = sum(len(a[4]) for a in ARRIVALS if a[1] == side and a[0] <= OPENING_CUTOFF[side]) + sum(1 for s in START if s[0] == side)
         print(side, total, "units,", opening, "on the field at the start")

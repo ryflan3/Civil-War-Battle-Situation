@@ -7,7 +7,7 @@
         "victoryString": "The enemy has fallen back. Your army holds the field at Gettysburg - and the history books will call it a turning point of the war.",
         "defeatString": "The enemy holds the heights. Your army must retreat in the rain, its wounded strung out for miles in the wagon trains.",
         "civilopediaText": [
-            {"text": "In the Gettysburg scenario each key position is a city that starts in Union hands. Cities cannot be razed, so every key position is always held by one army or the other."},
+            {"text": "In the Gettysburg scenario each key position is a city. Oak Hill, the Lutheran Seminary and the Angle start in Union hands. Gettysburg, Cemetery Hill, Culp's Hill and Little Round Top start NEUTRAL, held by Adams County, which both armies are at war with: they must be taken by force, and until then they count for neither side. Cities cannot be razed, so a key position, once taken, is always held by one army or the other.", "link": "Nation/Adams County"},
             {"text": "The check is made from turn 47 onward, at the end of each army's turn. Historically the Confederates took Oak Hill, the seminary and the town on July 1, but the Union held Cemetery Hill, Culp's Hill, the Angle and Little Round Top - four of seven - and Lee retreated to Virginia on July 4."}
         ]
     },

@@ -5,15 +5,36 @@
         "cost": 0,
         "production": 3,
         "gold": 3,
-        "cityStrength": 8,
-        "cityHealth": 50,
+        "cityStrength": 40,
+        "cityHealth": 300,
         "uniques": [
             "Indicates the capital city",
             "[+25]% Production when constructing [Military] units [in this city]"
         ],
         "civilopediaText": [
             {
-                "text": "The army commander's headquarters, with its staff, couriers and signal officers. Losing it means losing the army: capturing the enemy headquarters wins a Decisive Victory."
+                "text": "The army commander's headquarters, with its staff, couriers, signal officers and the guard. Losing it means losing the army: capturing the enemy headquarters wins a Decisive Victory."
+            },
+            {
+                "text": "It is far stronger than any other city: taking it needs a deliberate assault, with artillery and several brigades."
+            }
+        ]
+    },
+    {
+        "name": "Home Guard Command",
+        "cost": 0,
+        "uniqueTo": "City-States",
+        "uniques": [
+            "Indicates the capital city",
+            "Unbuildable",
+            "Unsellable"
+        ],
+        "civilopediaText": [
+            {
+                "text": "Marks the neutral key positions of the Gettysburg scenario, held by Adams County - the town and the farms that neither army has occupied yet."
+            },
+            {
+                "text": "Both armies are at war with Adams County for the whole battle, and no peace can be made: a neutral key position must be taken by force. Nobody defends it but a few home-guard companies, so a brigade or two takes it quickly - but until then it counts for neither side."
             }
         ]
     },
@@ -50,12 +71,36 @@
                 "text": "One of the seven key positions of the Gettysburg scenario: Oak Hill, Lutheran Seminary, Gettysburg, Cemetery Hill, Culp's Hill, The Angle, Little Round Top."
             },
             {
-                "text": "Each is a city that starts in Union hands and cannot be razed. At nightfall on July 3 (the end of turn 47) the army holding more key positions wins the Hold the Field victory."
+                "text": "Each is a city that cannot be razed. Oak Hill, Lutheran Seminary and The Angle start in Union hands; Gettysburg, Cemetery Hill, Culp's Hill and Little Round Top start neutral (held by Adams County) and must be taken by force. At nightfall on July 3 (the end of turn 47) the army holding more key positions wins the Hold the Field victory."
             },
             {
                 "text": "Rifle pits, gun emplacements and stone walls make the position stronger to defend than an ordinary town."
             }
         ]
+    },
+    {
+        "name": "Union Arrivals: Emmitsburg Road",
+        "cost": 1,
+        "uniqueTo": "Union",
+        "uniques": [
+            "Gettysburg Scenario",
+            "Unbuildable",
+            "Unsellable",
+            "Destroyed when the city is captured",
+            "Free [Union General] appears <upon turn start> <after turn number [2]> <before turn number [3]> <for [Union] Civilizations>",
+            "[2] free [Union Infantry] units appear <upon turn start> <after turn number [2]> <before turn number [3]> <for [Union] Civilizations>",
+            "Free [Union Napoleon Battery] appears <upon turn start> <after turn number [2]> <before turn number [3]> <for [Union] Civilizations>",
+            "[2] free [Union Infantry] units appear <upon turn start> <after turn number [3]> <before turn number [4]> <for [Union] Civilizations>",
+            "Free [Union General] appears <upon turn start> <after turn number [10]> <before turn number [11]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [11]> <before turn number [12]> <for [Union] Civilizations>",
+            "Free [US Sharpshooters] appears <upon turn start> <after turn number [11]> <before turn number [12]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [13]> <before turn number [14]> <for [Union] Civilizations>",
+            "Free [Union Napoleon Battery] appears <upon turn start> <after turn number [13]> <before turn number [14]> <for [Union] Civilizations>",
+            "Free [Union Infantry] appears <upon turn start> <after turn number [19]> <before turn number [20]> <for [Union] Civilizations>",
+            "Free [Union Cavalry] appears <upon turn start> <after turn number [38]> <before turn number [39]> <for [Union] Civilizations>",
+            "Free [US Horse Artillery] appears <upon turn start> <after turn number [38]> <before turn number [39]> <for [Union] Civilizations>"
+        ],
+        "replacementTextForUniques": "Order of march for the Emmitsburg Road.\nThe road from Emmitsburg, Maryland. The I Corps and III Corps marched up it on July 1.\n\nTurn 2 (9:00 AM, July 1): Abner Doubleday; Biddle's Brigade (I Corps); Stone's Bucktail Brigade (I Corps); I Corps Artillery (Wainwright)\nTurn 3 (10:00 AM, July 1): Paul's Brigade (I Corps); Baxter's Brigade (I Corps)\nTurn 10 (5:00 PM, July 1): Daniel E. Sickles\nTurn 11 (6:00 PM, July 1): Graham's Brigade (III Corps); Ward's Brigade (III Corps); de Trobriand's Brigade (III Corps); Berdan's Sharpshooters (1st & 2nd USSS)\nTurn 13 (Night of July 1-2): Carr's Brigade (III Corps); Brewster's Excelsior Brigade (III Corps); Stannard's Vermont Brigade (I Corps); III Corps Artillery (Randolph)\nTurn 19 (9:00 AM, July 2): Burling's Brigade (III Corps)\nTurn 38 (10:00 AM, July 3): Merritt's Reserve Brigade (Buford); Graham's Battery (K, 1st US)\n\nReinforcements appear in or next to this city at the start of the listed turn. If the enemy captures the city, the remaining reinforcements on this road are lost."
     },
     {
         "name": "Union Arrivals: Taneytown Road",
@@ -66,6 +111,12 @@
             "Unbuildable",
             "Unsellable",
             "Destroyed when the city is captured",
+            "Free [Union General] appears <upon turn start> <after turn number [3]> <before turn number [4]> <for [Union] Civilizations>",
+            "[2] free [Union Infantry] units appear <upon turn start> <after turn number [4]> <before turn number [5]> <for [Union] Civilizations>",
+            "[2] free [Union Infantry] units appear <upon turn start> <after turn number [5]> <before turn number [6]> <for [Union] Civilizations>",
+            "Free [Union Napoleon Battery] appears <upon turn start> <after turn number [5]> <before turn number [6]> <for [Union] Civilizations>",
+            "[2] free [Union Infantry] units appear <upon turn start> <after turn number [6]> <before turn number [7]> <for [Union] Civilizations>",
+            "Free [Union General] appears <upon turn start> <after turn number [8]> <before turn number [9]> <for [Union] Civilizations>",
             "Free [Union General] appears <upon turn start> <after turn number [13]> <before turn number [14]> <for [Union] Civilizations>",
             "[4] free [Union Infantry] units appear <upon turn start> <after turn number [14]> <before turn number [15]> <for [Union] Civilizations>",
             "Free [Union Napoleon Battery] appears <upon turn start> <after turn number [14]> <before turn number [15]> <for [Union] Civilizations>",
@@ -81,10 +132,10 @@
             "Free [Union General] appears <upon turn start> <after turn number [36]> <before turn number [37]> <for [Union] Civilizations>",
             "Free [Union Cavalry] appears <upon turn start> <after turn number [36]> <before turn number [37]> <for [Union] Civilizations>"
         ],
-        "replacementTextForUniques": "Order of march for the Taneytown Road.\nMeade's headquarters and the road from Taneytown, Maryland. The II Corps, XI Corps and the Artillery Reserve came up this road.\n\nTurn 13 (Night of July 1-2): George G. Meade\nTurn 14 (Night of July 1-2): Cross's Brigade (II Corps); Kelly's Irish Brigade (II Corps); Zook's Brigade (II Corps); Brooke's Brigade (II Corps); II Corps Artillery (Hazard); Ambulance Corps\nTurn 15 (5:00 AM, July 2): John Gibbon; Gouverneur K. Warren; Harrow's Brigade (II Corps); Webb's Philadelphia Brigade (II Corps); Hall's Brigade (II Corps)\nTurn 16 (6:00 AM, July 2): Carroll's Brigade (II Corps); Smyth's Brigade (II Corps); Willard's Brigade (II Corps)\nTurn 20 (10:00 AM, July 2): Henry J. Hunt; 1st Volunteer Brigade, Artillery Reserve (McGilvery); 1st Regular Brigade, Artillery Reserve (Ransom); 2nd Volunteer Brigade, Artillery Reserve (Taft)\nTurn 21 (11:00 AM, July 2): 3rd Volunteer Brigade, Artillery Reserve (Huntington); 4th Volunteer Brigade, Artillery Reserve (Fitzhugh)\nTurn 36 (8:00 AM, July 3): Judson Kilpatrick; Farnsworth's Brigade (Kilpatrick)\n\nReinforcements appear in or next to this city at the start of the listed turn. If the enemy captures the city, the remaining reinforcements on this road are lost."
+        "replacementTextForUniques": "Order of march for the Taneytown Road.\nMeade's headquarters and the road from Taneytown, Maryland. The II Corps, XI Corps and the Artillery Reserve came up this road.\n\nTurn 3 (10:00 AM, July 1): Oliver O. Howard\nTurn 4 (11:00 AM, July 1): von Gilsa's Brigade (XI Corps); Ames's Brigade (XI Corps)\nTurn 5 (12:00 PM, July 1): Schimmelfennig's Brigade (XI Corps); Krzyzanowski's Brigade (XI Corps); XI Corps Artillery (Osborn)\nTurn 6 (1:00 PM, July 1): Coster's Brigade (XI Corps); Orland Smith's Brigade (XI Corps)\nTurn 8 (3:00 PM, July 1): Winfield S. Hancock\nTurn 13 (Night of July 1-2): George G. Meade\nTurn 14 (Night of July 1-2): Cross's Brigade (II Corps); Kelly's Irish Brigade (II Corps); Zook's Brigade (II Corps); Brooke's Brigade (II Corps); II Corps Artillery (Hazard); Ambulance Corps\nTurn 15 (5:00 AM, July 2): John Gibbon; Gouverneur K. Warren; Harrow's Brigade (II Corps); Webb's Philadelphia Brigade (II Corps); Hall's Brigade (II Corps)\nTurn 16 (6:00 AM, July 2): Carroll's Brigade (II Corps); Smyth's Brigade (II Corps); Willard's Brigade (II Corps)\nTurn 20 (10:00 AM, July 2): Henry J. Hunt; 1st Volunteer Brigade, Artillery Reserve (McGilvery); 1st Regular Brigade, Artillery Reserve (Ransom); 2nd Volunteer Brigade, Artillery Reserve (Taft)\nTurn 21 (11:00 AM, July 2): 3rd Volunteer Brigade, Artillery Reserve (Huntington); 4th Volunteer Brigade, Artillery Reserve (Fitzhugh)\nTurn 36 (8:00 AM, July 3): Judson Kilpatrick; Farnsworth's Brigade (Kilpatrick)\n\nReinforcements appear in or next to this city at the start of the listed turn. If the enemy captures the city, the remaining reinforcements on this road are lost."
     },
     {
-        "name": "Union Arrivals: Emmitsburg Road",
+        "name": "Union Arrivals: Baltimore Pike",
         "cost": 1,
         "uniqueTo": "Union",
         "uniques": [
@@ -92,13 +143,18 @@
             "Unbuildable",
             "Unsellable",
             "Destroyed when the city is captured",
-            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [13]> <before turn number [14]> <for [Union] Civilizations>",
-            "Free [Union Napoleon Battery] appears <upon turn start> <after turn number [13]> <before turn number [14]> <for [Union] Civilizations>",
-            "Free [Union Infantry] appears <upon turn start> <after turn number [19]> <before turn number [20]> <for [Union] Civilizations>",
-            "Free [Union Cavalry] appears <upon turn start> <after turn number [38]> <before turn number [39]> <for [Union] Civilizations>",
-            "Free [US Horse Artillery] appears <upon turn start> <after turn number [38]> <before turn number [39]> <for [Union] Civilizations>"
+            "Free [Union General] appears <upon turn start> <after turn number [9]> <before turn number [10]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [9]> <before turn number [10]> <for [Union] Civilizations>",
+            "Free [Union Ordnance Rifles] appears <upon turn start> <after turn number [9]> <before turn number [10]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [10]> <before turn number [11]> <for [Union] Civilizations>",
+            "Free [Union General] appears <upon turn start> <after turn number [24]> <before turn number [25]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [24]> <before turn number [25]> <for [Union] Civilizations>",
+            "Free [Ambulance Corps] appears <upon turn start> <after turn number [24]> <before turn number [25]> <for [Union] Civilizations>",
+            "[2] free [Union Infantry] units appear <upon turn start> <after turn number [25]> <before turn number [26]> <for [Union] Civilizations>",
+            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [26]> <before turn number [27]> <for [Union] Civilizations>",
+            "Free [Union Napoleon Battery] appears <upon turn start> <after turn number [26]> <before turn number [27]> <for [Union] Civilizations>"
         ],
-        "replacementTextForUniques": "Order of march for the Emmitsburg Road.\nThe road from Emmitsburg, Maryland. The I Corps and III Corps marched up it on July 1.\n\nTurn 13 (Night of July 1-2): Carr's Brigade (III Corps); Brewster's Excelsior Brigade (III Corps); Stannard's Vermont Brigade (I Corps); III Corps Artillery (Randolph)\nTurn 19 (9:00 AM, July 2): Burling's Brigade (III Corps)\nTurn 38 (10:00 AM, July 3): Merritt's Reserve Brigade (Buford); Graham's Battery (K, 1st US)\n\nReinforcements appear in or next to this city at the start of the listed turn. If the enemy captures the city, the remaining reinforcements on this road are lost."
+        "replacementTextForUniques": "Order of march for the Baltimore Pike.\nThe turnpike from Baltimore and the army's supply line. The XII Corps and the VI Corps arrived by it.\n\nTurn 9 (4:00 PM, July 1): Henry W. Slocum; McDougall's Brigade (XII Corps); Lockwood's Brigade (XII Corps); Ruger's Brigade (XII Corps); XII Corps Artillery (Muhlenberg)\nTurn 10 (5:00 PM, July 1): Candy's Brigade (XII Corps); Kane's Brigade (XII Corps); Greene's Brigade (XII Corps)\nTurn 24 (2:00 PM, July 2): John Sedgwick; Torbert's New Jersey Brigade (VI Corps); Bartlett's Brigade (VI Corps); Russell's Brigade (VI Corps); Ambulance Corps\nTurn 25 (3:00 PM, July 2): Grant's Vermont Brigade (VI Corps); Neill's Brigade (VI Corps)\nTurn 26 (4:00 PM, July 2): Shaler's Brigade (VI Corps); Eustis's Brigade (VI Corps); Wheaton's Brigade (VI Corps); VI Corps Artillery (Tompkins)\n\nReinforcements appear in or next to this city at the start of the listed turn. If the enemy captures the city, the remaining reinforcements on this road are lost."
     },
     {
         "name": "Union Arrivals: Hanover Road",
@@ -121,24 +177,6 @@
             "Free [US Horse Artillery] appears <upon turn start> <after turn number [33]> <before turn number [34]> <for [Union] Civilizations>"
         ],
         "replacementTextForUniques": "Order of march for the Hanover Road.\nThe road from Hanover. The V Corps and Gregg's cavalry division came in from the east.\n\nTurn 17 (7:00 AM, July 2): George Sykes; Tilton's Brigade (V Corps); Sweitzer's Brigade (V Corps); Vincent's Brigade (V Corps)\nTurn 18 (8:00 AM, July 2): Day's U.S. Regulars (V Corps); Burbank's U.S. Regulars (V Corps); Weed's Brigade (V Corps); V Corps Artillery (Martin)\nTurn 22 (12:00 PM, July 2): David M. Gregg; McCandless's Pennsylvania Reserves (V Corps); Fisher's Pennsylvania Reserves (V Corps); McIntosh's Brigade (Gregg); Irvin Gregg's Brigade (Gregg); Randol's Battery (E & G, 1st US)\nTurn 33 (5:00 AM, July 3): Michigan Cavalry Brigade; Pennington's Battery (M, 2nd US)\n\nReinforcements appear in or next to this city at the start of the listed turn. If the enemy captures the city, the remaining reinforcements on this road are lost."
-    },
-    {
-        "name": "Union Arrivals: Baltimore Pike",
-        "cost": 1,
-        "uniqueTo": "Union",
-        "uniques": [
-            "Gettysburg Scenario",
-            "Unbuildable",
-            "Unsellable",
-            "Destroyed when the city is captured",
-            "Free [Union General] appears <upon turn start> <after turn number [24]> <before turn number [25]> <for [Union] Civilizations>",
-            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [24]> <before turn number [25]> <for [Union] Civilizations>",
-            "Free [Ambulance Corps] appears <upon turn start> <after turn number [24]> <before turn number [25]> <for [Union] Civilizations>",
-            "[2] free [Union Infantry] units appear <upon turn start> <after turn number [25]> <before turn number [26]> <for [Union] Civilizations>",
-            "[3] free [Union Infantry] units appear <upon turn start> <after turn number [26]> <before turn number [27]> <for [Union] Civilizations>",
-            "Free [Union Napoleon Battery] appears <upon turn start> <after turn number [26]> <before turn number [27]> <for [Union] Civilizations>"
-        ],
-        "replacementTextForUniques": "Order of march for the Baltimore Pike.\nThe turnpike from Baltimore and the army's supply line. The XII Corps and the VI Corps arrived by it.\n\nTurn 24 (2:00 PM, July 2): John Sedgwick; Torbert's New Jersey Brigade (VI Corps); Bartlett's Brigade (VI Corps); Russell's Brigade (VI Corps); Ambulance Corps\nTurn 25 (3:00 PM, July 2): Grant's Vermont Brigade (VI Corps); Neill's Brigade (VI Corps)\nTurn 26 (4:00 PM, July 2): Shaler's Brigade (VI Corps); Eustis's Brigade (VI Corps); Wheaton's Brigade (VI Corps); VI Corps Artillery (Tompkins)\n\nReinforcements appear in or next to this city at the start of the listed turn. If the enemy captures the city, the remaining reinforcements on this road are lost."
     },
     {
         "name": "Confederate Arrivals: Harrisburg Road",

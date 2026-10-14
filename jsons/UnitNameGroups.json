@@ -1,5 +1,186 @@
 [
     {
+        "name": "Union General arriving on turn 2",
+        "unitNames": [
+            "Abner Doubleday"
+        ],
+        "uniques": [
+            "Union General",
+            "Only available <after turn number [2]> <before turn number [3]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "Union Infantry arriving on turn 2",
+        "unitNames": [
+            "Biddle's Brigade (I Corps)",
+            "Stone's Bucktail Brigade (I Corps)"
+        ],
+        "uniques": [
+            "Union Infantry",
+            "Only available <after turn number [2]> <before turn number [3]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "Union Napoleon Battery arriving on turn 2",
+        "unitNames": [
+            "I Corps Artillery (Wainwright)"
+        ],
+        "uniques": [
+            "Union Napoleon Battery",
+            "Only available <after turn number [2]> <before turn number [3]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "Union Infantry arriving on turn 3",
+        "unitNames": [
+            "Paul's Brigade (I Corps)",
+            "Baxter's Brigade (I Corps)"
+        ],
+        "uniques": [
+            "Union Infantry",
+            "Only available <after turn number [3]> <before turn number [4]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "Union General arriving on turn 3",
+        "unitNames": [
+            "Oliver O. Howard"
+        ],
+        "uniques": [
+            "Union General",
+            "Only available <after turn number [3]> <before turn number [4]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "Union Infantry arriving on turn 4",
+        "unitNames": [
+            "von Gilsa's Brigade (XI Corps)",
+            "Ames's Brigade (XI Corps)"
+        ],
+        "uniques": [
+            "Union Infantry",
+            "Only available <after turn number [4]> <before turn number [5]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "Union Infantry arriving on turn 5",
+        "unitNames": [
+            "Schimmelfennig's Brigade (XI Corps)",
+            "Krzyzanowski's Brigade (XI Corps)"
+        ],
+        "uniques": [
+            "Union Infantry",
+            "Only available <after turn number [5]> <before turn number [6]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "Union Napoleon Battery arriving on turn 5",
+        "unitNames": [
+            "XI Corps Artillery (Osborn)"
+        ],
+        "uniques": [
+            "Union Napoleon Battery",
+            "Only available <after turn number [5]> <before turn number [6]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "Union Infantry arriving on turn 6",
+        "unitNames": [
+            "Coster's Brigade (XI Corps)",
+            "Orland Smith's Brigade (XI Corps)"
+        ],
+        "uniques": [
+            "Union Infantry",
+            "Only available <after turn number [6]> <before turn number [7]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "Union General arriving on turn 8",
+        "unitNames": [
+            "Winfield S. Hancock"
+        ],
+        "uniques": [
+            "Union General",
+            "Only available <after turn number [8]> <before turn number [9]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "Union General arriving on turn 9",
+        "unitNames": [
+            "Henry W. Slocum"
+        ],
+        "uniques": [
+            "Union General",
+            "Only available <after turn number [9]> <before turn number [10]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "Union Infantry arriving on turn 9",
+        "unitNames": [
+            "McDougall's Brigade (XII Corps)",
+            "Lockwood's Brigade (XII Corps)",
+            "Ruger's Brigade (XII Corps)"
+        ],
+        "uniques": [
+            "Union Infantry",
+            "Only available <after turn number [9]> <before turn number [10]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "Union Ordnance Rifles arriving on turn 9",
+        "unitNames": [
+            "XII Corps Artillery (Muhlenberg)"
+        ],
+        "uniques": [
+            "Union Ordnance Rifles",
+            "Only available <after turn number [9]> <before turn number [10]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "Union Infantry arriving on turn 10",
+        "unitNames": [
+            "Candy's Brigade (XII Corps)",
+            "Kane's Brigade (XII Corps)",
+            "Greene's Brigade (XII Corps)"
+        ],
+        "uniques": [
+            "Union Infantry",
+            "Only available <after turn number [10]> <before turn number [11]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "Union General arriving on turn 10",
+        "unitNames": [
+            "Daniel E. Sickles"
+        ],
+        "uniques": [
+            "Union General",
+            "Only available <after turn number [10]> <before turn number [11]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "Union Infantry arriving on turn 11",
+        "unitNames": [
+            "Graham's Brigade (III Corps)",
+            "Ward's Brigade (III Corps)",
+            "de Trobriand's Brigade (III Corps)"
+        ],
+        "uniques": [
+            "Union Infantry",
+            "Only available <after turn number [11]> <before turn number [12]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
+        "name": "US Sharpshooters arriving on turn 11",
+        "unitNames": [
+            "Berdan's Sharpshooters (1st & 2nd USSS)"
+        ],
+        "uniques": [
+            "US Sharpshooters",
+            "Only available <after turn number [11]> <before turn number [12]> <if [Gettysburg Scenario] is constructed>"
+        ]
+    },
+    {
         "name": "Union General arriving on turn 13",
         "unitNames": [
             "George G. Meade"

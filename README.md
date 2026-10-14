@@ -4,7 +4,7 @@
 
 A Civil War ruleset for [Unciv](https://github.com/yairm210/Unciv), starting with the **Battle of Gettysburg, July 1–3, 1863**.
 
-* **Gettysburg scenario** – a big battle from the first turn. Everything that reached the field on July 1 starts on the map, in every sector: 36 Union and 47 Confederate units. The rest of both armies then arrives on its historical road at its historical hour: 93 Union and 77 Confederate units in total. Seven **key positions** (cities on Oak Hill, the Lutheran Seminary, the town, Cemetery Hill, Culp's Hill, the Angle and Little Round Top) decide who holds the field.
+* **Gettysburg scenario** – the race for the high ground. Lee's divisions that reached the field on July 1 start on the map (47 units, west, north and northeast of town), while the Union starts with only Buford's cavalry and Wadsworth's division and its corps march up the roads hour by hour. Then both armies' reinforcements arrive on their historical roads at their historical hours: 93 Union and 77 Confederate units in total. Seven **key positions** (cities on Oak Hill, the Lutheran Seminary, the town, Cemetery Hill, Culp's Hill, the Angle and Little Round Top) decide who holds the field, and four of them start **neutral** and must be taken. Tested over dozens of AI-vs-AI battles to be an even fight.
 * **Gettysburg map** – a 34 × 37 hex map of the battlefield (about 250 yards per hex). It includes Seminary, Cemetery, McPherson's and Herr Ridges, Oak Hill, Culp's Hill and the Round Tops, Devil's Den, the Wheatfield and Peach Orchard, the town, the stone wall at the Angle, the unfinished railroad cut, Willoughby Run, Plum Run, Rock Creek and the ten roads that met at Gettysburg.
 * **30 units** with original pixel art (map sprites, full-color portraits and icons), for the Union, the Confederacy and a neutral base set. Each is modeled on its real weapons and tactics, from the Springfield rifle-musket and the 12-pounder Napoleon to Berdan's Sharps rifles, Custer's Spencers and Hurt's Whitworths.
 * **30 named generals** with personal abilities (Hancock the Superb, Buford's eye for ground, Hunt's artillery, Lee, Longstreet, Stuart…), plus sepia portraits of Meade and Lee.
@@ -47,6 +47,7 @@ A scenario is a battle that is already set up, so Unciv locks the other New Game
 * **The terrain is revealed and units are hidden.** Both commanders have maps, so you see the whole battlefield, but enemy troops only appear where your own units can see them.
 * **No barbarians.**
 * **Cities cannot be razed.** A captured city stays on the map and can be taken back.
+* **Neutral key positions.** The town, Cemetery Hill, Culp's Hill and Little Round Top belong to *Adams County*, a neutral city-state that both armies are at war with for the whole battle. It has no army: a neutral position falls to a brigade or two, but it must be attacked and taken before it counts for anyone.
 * **No new units.** Cities cannot raise any: the armies are the historical ones.
 
 **Scale.** One hex is about 250 yards. One turn is about one hour of daylight, and each night is compressed into two turns.
@@ -59,19 +60,19 @@ A scenario is a battle that is already set up, so Unciv locks the other New Game
 | 31 – 32 | Night of July 2–3 |
 | 33 – 47 | July 3, 5 AM – 7 PM |
 
-**On the field at the start.** To make the battle big from the first turn, the marches of July 1 are compressed. Every force that reached Gettysburg that day starts on the map, in or near the ground it fought over:
+**On the field at the start.** July 1 was a race: Lee's divisions converged on Gettysburg faster than Meade's corps could come up. The scenario plays that race.
 
-* **Union:** Buford's cavalry west of town, Wadsworth's division behind him at the Seminary, the rest of the I Corps and the XI Corps around the Angle and the Taneytown Road, the XII Corps on the Baltimore Pike, and the III Corps coming up the Emmitsburg Road.
-* **Confederacy:** Heth's, Pender's and Anderson's divisions to the west, Rodes's division north of Oak Hill, and Early's and Johnson's divisions on the Harrisburg Road to the northeast.
+* **Confederacy (47 units):** the marches of July 1 are compressed, so every Confederate division that reached the field that day starts on the map: Heth's, Pender's and Anderson's divisions to the west, Rodes's division north of Oak Hill, and Early's and Johnson's divisions on the Harrisburg Road to the northeast.
+* **Union (8 units):** only Buford's cavalry west of town and Wadsworth's division behind him at the Seminary. The rest of the Union army marches up its roads on the historical timetable: the rest of the I Corps on the Emmitsburg Road (turns 2–3), the XI Corps on the Taneytown Road (turns 3–6), the XII Corps on the Baltimore Pike (turns 9–10) and the III Corps on the Emmitsburg Road (turns 10–11), then the rest of the army overnight and on July 2.
 
-**Key positions.** Seven cities stand on Oak Hill, the Lutheran Seminary, the town of Gettysburg, Cemetery Hill, Culp's Hill, the Angle and Little Round Top. All of them start in Union hands, so the Confederates must take them and the Union must hold them. They are stronger than ordinary towns, and they are never burned: whoever captures one keeps it until the enemy takes it back.
+**Key positions.** Seven cities stand on Oak Hill, the Lutheran Seminary, the town of Gettysburg, Cemetery Hill, Culp's Hill, the Angle and Little Round Top. Oak Hill and the Seminary (Buford's screen) and the Angle (on Cemetery Ridge, beside the Union's line of march) start in Union hands. The town, Cemetery Hill, Culp's Hill and Little Round Top start **neutral**: whoever gets there first and takes them holds them. Key positions are never burned: whoever captures one keeps it until the enemy takes it back.
 
-**Reinforcements** from the night of July 1–2 onward appear at the start of their turn in or next to their entry city: Taneytown Road (Meade's HQ), Emmitsburg Road, Baltimore Pike and Hanover Road for the Union; Chambersburg Pike (Lee's HQ) and Harrisburg Road for the Confederacy. The full order of battle is in [docs/ORDER_OF_BATTLE.md](docs/ORDER_OF_BATTLE.md), and in-game in the Civilopedia under each "Arrivals" building. If the enemy captures an entry city, the reinforcements still due on that road are lost.
+**Reinforcements** appear at the start of their turn in or next to their entry city: Taneytown Road (Meade's HQ), Emmitsburg Road, Baltimore Pike and Hanover Road for the Union; Chambersburg Pike (Lee's HQ) and Harrisburg Road for the Confederacy. The full order of battle is in [docs/ORDER_OF_BATTLE.md](docs/ORDER_OF_BATTLE.md), and in-game in the Civilopedia under each "Arrivals" building. If the enemy captures an entry city, the reinforcements still due on that road are lost.
 
 **Victory**
 
-* **Hold the Field** – from the end of turn 47 (nightfall, July 3), the army holding more of the seven **key positions** wins. In 1863 the Confederates took Oak Hill, the seminary and the town, but the Union kept the other four, and Lee retreated.
-* **Decisive Victory** – capture the enemy army's headquarters at any time.
+* **Hold the Field** – from the end of turn 47 (nightfall, July 3), the army holding more of the seven **key positions** wins. Neutral positions count for neither side. In 1863 the Confederates took Oak Hill, the seminary and the town, but the Union kept the other four, and Lee retreated.
+* **Decisive Victory** – capture the enemy army's headquarters at any time. Each headquarters is far stronger than any other city (strength 40, 300 extra hit points): it takes a deliberate assault.
 
 **Tactics of 1863**
 
@@ -90,7 +91,7 @@ A scenario is a battle that is already set up, so Unciv locks the other New Game
 
 **The game starts with a Supply Train, a handful of units, no cities and a dark map.**
 
-That is free play, not the battle: the game was started with **Map Type: Custom** (map *Gettysburg (free play)*) or **Generated**. Its opening message says so. For the battle, start a New Game and set **Map Type: Scenario**, then pick **Battle of Gettysburg**. The player list must show **Union** and **Confederacy** with Human/AI buttons. The battle opens with 36 Union units on the field, the cities already built, the whole map revealed and the armies at war.
+That is free play, not the battle: the game was started with **Map Type: Custom** (map *Gettysburg (free play)*) or **Generated**. Its opening message says so. For the battle, start a New Game and set **Map Type: Scenario**, then pick **Battle of Gettysburg**. The player list must show **Union** and **Confederacy** with Human/AI buttons. The battle opens with both armies on the field (8 Union and 47 Confederate units, with more arriving every turn), the cities already built, the whole map revealed and the armies at war.
 
 **Picking a Gettysburg scenario resets the Base Ruleset to a Civ V ruleset, the players turn into "Random", nothing can be changed, and Start says "It looks like we can't make a map with the parameters you requested!"**
 
@@ -165,7 +166,7 @@ Most JSON files and **all images** are generated by the scripts in `tools/`. Edi
 |---|---|
 | Unit stats and abilities | `tools/gen_units.py` |
 | Promotions and generals' abilities | `tools/gen_promotions.py` |
-| The order of battle, key positions, opening deployment, arrival times and entry roads | `tools/gettysburg_oob.py` |
+| The order of battle, key positions (and which start neutral), opening deployment, arrival times and entry roads | `tools/gettysburg_oob.py` |
 | The map's geography | `tools/gettysburg_geo.py` |
 | Graphics | `tools/art/*.py` |
 | Nations, terrain, eras, victories, difficulties, global rules | the hand-written files in `jsons/` (`Nations.json`, `Terrains.json`, `Eras.json`, `VictoryTypes.json`, `Difficulties.json`, `GlobalUniques.json`, `ModOptions.json`, …) |
@@ -178,6 +179,8 @@ tools/build_all.sh --simulate   # ...and let the AI play the whole battle as a s
 ```
 
 This needs Python 3 with Pillow, Java 21 and internet access. The first run downloads the official `Unciv.jar` (4.22.9) and Gradle. The build uses the real Unciv engine to pack the texture atlas (`game.atlas`/`game.png`), write the free-play map in `maps/` and the scenario saves in `scenarios/`, and run Unciv's own ruleset validator.
+
+To check the balance after a change, let the computer fight the battle several times. From `tools/cwtool/work` (created by the build), run `../build/install/cwtool/bin/cwtool balance "<repo>/scenarios/Battle of Gettysburg" AI <seed>` once per seed. Build it first with `./gradlew installDist` in `tools/cwtool`. Each run prints one `RESULT` line: the winner, how and when, and who held the key positions at turns 6, 12, 20, 30, 40 and 47. Use `Union` or `Confederacy` instead of `AI` to have that side played by Unciv's automation as the human seat.
 
 You can also simply start the desktop version of Unciv with this folder in its `mods` directory: it re-packs the atlas itself whenever images change.
 
@@ -199,7 +202,10 @@ tools/          generators and the Unciv-engine build tool (tools/cwtool)
 * Unciv 4.22.9's own ruleset validator (the in-game "Locate mod errors" check) reports **no problems**.
 * The map and the scenario were written and read back by the real Unciv 4.22.9 engine.
 * Unciv's own *Download mod from URL* code was run on this repository's GitHub archives. It installs the mod as **Civil War Battle Situation** when the default branch is `main`, and the scenario then starts.
-* The scenario was loaded the same way the New Game screen loads it, and the computer played the whole battle from each seat. The armies started at war, with the terrain revealed and enemy units hidden, and with no barbarians. Every arrival appeared on its turn with its historical name, and no city was razed. In one test game the Confederates took Oak Hill, the seminary and Cemetery Hill, and the Union won Hold the Field by four key positions to three. In the other, the Union counterattacked and captured Lee's headquarters for a Decisive Victory. Expect a hard fight; if it is too hard, pick an *Easier* or *Easiest* scenario.
+* The scenario was started from the New Game screen of the real Unciv 4.22.9 desktop game: only the Union and Confederacy seats are offered, the neutral key positions show as Adams County cities, and Adams County's *Negotiate Peace* button is locked for the whole battle.
+* The scenario was loaded the same way the New Game screen loads it, and the computer played the whole battle from each seat. The armies started at war, with the terrain revealed and enemy units hidden, and with no barbarians. Every arrival appeared on its turn with its historical name, and no city was razed.
+* **Balance.** The computer played the battle against itself over and over (`cwtool balance`: each game gets fresh random ids and unit order, so each one plays out differently). With the final setup the Union won 18 and the Confederacy 14 of 32 AI-vs-AI battles, almost always on Hold the Field. A typical battle follows history: by nightfall on July 1 the Confederates hold about five of the seven key positions, and July 2–3 decide whether the Union's reinforcements can win them back. The tests also chose the setup: with every key position in Union hands the Confederacy won 92% of the battles, and with all five southern positions neutral it won only 33%.
+* That balance assumes two equal commanders. The default scenario (Veterans) gives the AI army no bonus. Most players outplay Unciv's AI, so if the battle feels easy, pick *Harder* or *Hardest* (AI army +10% / +20%); if it is too hard, *Easier* or *Easiest*.
 
 ## Notes
 

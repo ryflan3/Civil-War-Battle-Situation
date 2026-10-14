@@ -5,31 +5,30 @@ Each daylight turn is about one hour; each night is two turns.
 
 ## Key positions
 
-Seven cities founded on landmarks at the start. All begin in Union hands and cannot be razed. The army holding more of them at the end of turn 47 (nightfall, July 3) wins **Hold the Field**.
+Seven cities founded on landmarks at the start. They cannot be razed. The ones marked *neutral* belong to the city-state of Adams County, which is at war with both armies for the whole battle and cannot make peace: they must be taken by force, and until then they count for neither side. The army holding more key positions at the end of turn 47 (nightfall, July 3) wins **Hold the Field**.
 
 | Key position | Held at the start by | Why it mattered |
 |---|---|---|
 | Oak Hill | Union | The high ground north of town. Rodes's guns on Oak Hill raked the Union I Corps line on the afternoon of July 1. |
 | Lutheran Seminary | Union | Buford watched Heth's approach from the seminary cupola, and the I Corps made its last stand on Seminary Ridge on July 1. |
-| Gettysburg | Union | Ten roads met in the town square. Whoever held the town held the roads both armies needed. |
-| Cemetery Hill | Union | The key to the whole field, where the beaten Union corps rallied on the evening of July 1. |
-| Culp's Hill | Union | The barb of the Union fishhook, guarding the Baltimore Pike - the army's line of supply and retreat. |
+| Gettysburg | Adams County (neutral) | Ten roads met in the town square. Whoever held the town held the roads both armies needed. |
+| Cemetery Hill | Adams County (neutral) | The key to the whole field, where the beaten Union corps rallied on the evening of July 1. |
+| Culp's Hill | Adams County (neutral) | The barb of the Union fishhook, guarding the Baltimore Pike - the army's line of supply and retreat. |
 | The Angle | Union | The bend in the stone wall on Cemetery Ridge, where Pickett's Charge struck the Union centre on July 3. |
-| Little Round Top | Union | The rocky hill anchoring the Union left. Had it fallen on July 2, Confederate guns could have swept the whole line. |
+| Little Round Top | Adams County (neutral) | The rocky hill anchoring the Union left. Had it fallen on July 2, Confederate guns could have swept the whole line. |
 
 ## On the field at the start (turn 0)
 
-To make the battle big from the first turn, every force that reached the field on July 1 starts on the map, in or near the place it fought: the day's marches are compressed.
+* **Confederacy**: everything due by turn 12 (7:00 PM, July 1) starts on the map, in or near the ground it fought over; later forces arrive on the timetable below.
+* **Union**: everything due by turn 1 (8:00 AM, July 1) starts on the map, in or near the ground it fought over; later forces arrive on the timetable below.
+
+So the Confederate marches of July 1 are compressed, while the Union corps race up their roads on the historical timetable - the race for the high ground that the Confederacy won on July 1.
 
 | Side | Group | Units |
 |---|---|---|
 | Union | Buford's cavalry division (7:00 AM positions) | Gamble's Brigade (Buford); Devin's Brigade (Buford); Calef's Battery (A, 2nd US); John Buford |
 | Confederacy | Heth's division (7:00 AM positions) | Archer's Brigade (Heth); Davis's Brigade (Heth); Pettigrew's Brigade (Heth); Brockenbrough's Brigade (Heth); Pegram's Battalion; Henry Heth |
 | Union | Wadsworth's division of the I Corps, coming up behind Buford | John F. Reynolds; Cutler's Brigade (I Corps); Iron Brigade; Hall's 2nd Maine Battery |
-| Union | The rest of the I Corps on the Emmitsburg Road | Abner Doubleday; Biddle's Brigade (I Corps); Stone's Bucktail Brigade (I Corps); I Corps Artillery (Wainwright); Paul's Brigade (I Corps); Baxter's Brigade (I Corps) |
-| Union | Sickles's III Corps marching up from Emmitsburg | Daniel E. Sickles; Graham's Brigade (III Corps); Ward's Brigade (III Corps); de Trobriand's Brigade (III Corps); Berdan's Sharpshooters (1st & 2nd USSS) |
-| Union | Howard's XI Corps on the Taneytown Road | Oliver O. Howard; von Gilsa's Brigade (XI Corps); Ames's Brigade (XI Corps); Schimmelfennig's Brigade (XI Corps); Krzyzanowski's Brigade (XI Corps); XI Corps Artillery (Osborn); Coster's Brigade (XI Corps); Orland Smith's Brigade (XI Corps); Winfield S. Hancock |
-| Union | Slocum's XII Corps on the Baltimore Pike | Henry W. Slocum; McDougall's Brigade (XII Corps); Lockwood's Brigade (XII Corps); Ruger's Brigade (XII Corps); XII Corps Artillery (Muhlenberg); Candy's Brigade (XII Corps); Kane's Brigade (XII Corps); Greene's Brigade (XII Corps) |
 | Confederacy | Hill, Pender's division and Lee, behind Heth on Herr Ridge | A. P. Hill; William D. Pender; Perrin's Brigade (Pender); Lane's Brigade (Pender); Thomas's Brigade (Pender); Scales's Brigade (Pender); McIntosh's Battalion; Whitworth Battery; Robert E. Lee |
 | Confederacy | Anderson's division along the Fairfield Road | Richard H. Anderson; Wilcox's Brigade (Anderson); Wright's Brigade (Anderson); Mahone's Brigade (Anderson); Lane's Battalion (Sumter Artillery); Field Hospital; Perry's Florida Brigade (Anderson); Posey's Brigade (Anderson); Poague's Battalion; Garnett's Battalion |
 | Confederacy | Ewell and Rodes's division north of Oak Hill | Robert E. Rodes; Richard S. Ewell; Daniel's Brigade (Rodes); Iverson's Brigade (Rodes); O'Neal's Brigade (Rodes); Carter's Battalion; Doles's Brigade (Rodes); Ramseur's Brigade (Rodes); Blackford's Sharpshooters (Rodes) |
@@ -54,6 +53,17 @@ They appear at the start of the turn, in or next to the entry city on their road
 
 | Turn | Time | Side | Road | Arrives |
 |---|---|---|---|---|
+| 2 | 9:00 AM, July 1 | Union | Emmitsburg Road | Abner Doubleday; Biddle's Brigade (I Corps); Stone's Bucktail Brigade (I Corps); I Corps Artillery (Wainwright) |
+| 3 | 10:00 AM, July 1 | Union | Emmitsburg Road | Paul's Brigade (I Corps); Baxter's Brigade (I Corps) |
+| 3 | 10:00 AM, July 1 | Union | Taneytown Road | Oliver O. Howard |
+| 4 | 11:00 AM, July 1 | Union | Taneytown Road | von Gilsa's Brigade (XI Corps); Ames's Brigade (XI Corps) |
+| 5 | 12:00 PM, July 1 | Union | Taneytown Road | Schimmelfennig's Brigade (XI Corps); Krzyzanowski's Brigade (XI Corps); XI Corps Artillery (Osborn) |
+| 6 | 1:00 PM, July 1 | Union | Taneytown Road | Coster's Brigade (XI Corps); Orland Smith's Brigade (XI Corps) |
+| 8 | 3:00 PM, July 1 | Union | Taneytown Road | Winfield S. Hancock |
+| 9 | 4:00 PM, July 1 | Union | Baltimore Pike | Henry W. Slocum; McDougall's Brigade (XII Corps); Lockwood's Brigade (XII Corps); Ruger's Brigade (XII Corps); XII Corps Artillery (Muhlenberg) |
+| 10 | 5:00 PM, July 1 | Union | Baltimore Pike | Candy's Brigade (XII Corps); Kane's Brigade (XII Corps); Greene's Brigade (XII Corps) |
+| 10 | 5:00 PM, July 1 | Union | Emmitsburg Road | Daniel E. Sickles |
+| 11 | 6:00 PM, July 1 | Union | Emmitsburg Road | Graham's Brigade (III Corps); Ward's Brigade (III Corps); de Trobriand's Brigade (III Corps); Berdan's Sharpshooters (1st & 2nd USSS) |
 | 13 | Night of July 1-2 | Union | Taneytown Road | George G. Meade |
 | 13 | Night of July 1-2 | Union | Emmitsburg Road | Carr's Brigade (III Corps); Brewster's Excelsior Brigade (III Corps); Stannard's Vermont Brigade (I Corps); III Corps Artillery (Randolph) |
 | 13 | Night of July 1-2 | Confederacy | Harrisburg Road | Dance's Battalion; Nelson's Battalion |

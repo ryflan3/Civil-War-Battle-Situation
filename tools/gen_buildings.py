@@ -17,6 +17,14 @@ import gettysburg_oob as oob
 SCENARIO_TAG = "Gettysburg Scenario"
 
 
+# The capital building of the neutral city-state that holds some key positions at the start
+NEUTRAL_CAPITAL = "Home Guard Command"
+
+
+def _names(names):
+    return names[0] if len(names) == 1 else ", ".join(names[:-1]) + " and " + names[-1] if names else ""
+
+
 def arrival_building_name(side, entry):
     return "%s Arrivals: %s" % ("Union" if side == "Union" else "Confederate", entry)
 
@@ -30,11 +38,26 @@ def build():
             "cost": 0,
             "production": 3,
             "gold": 3,
-            "cityStrength": 8,
-            "cityHealth": 50,
+            # Strong enough that only a real assault takes it: the other cities get no "tech" strength in this mod
+            # (cityStrengthFromTechsFullMultiplier 0), so their defence is base + buildings + garrison.
+            "cityStrength": 40,
+            "cityHealth": 300,
             "uniques": ["Indicates the capital city", "[+25]% Production when constructing [Military] units [in this city]"],
             "civilopediaText": [
-                {"text": "The army commander's headquarters, with its staff, couriers and signal officers. Losing it means losing the army: capturing the enemy headquarters wins a Decisive Victory."}
+                {"text": "The army commander's headquarters, with its staff, couriers, signal officers and the guard. Losing it means losing the army: capturing the enemy headquarters wins a Decisive Victory."},
+                {"text": "It is far stronger than any other city: taking it needs a deliberate assault, with artillery and several brigades."}
+            ]
+        },
+        # Must come after Army Headquarters: an army takes the first capital building in this list that is not
+        # reserved for someone else, and this one is reserved for the neutral city-state.
+        {
+            "name": NEUTRAL_CAPITAL,
+            "cost": 0,
+            "uniqueTo": "City-States",
+            "uniques": ["Indicates the capital city", "Unbuildable", "Unsellable"],
+            "civilopediaText": [
+                {"text": "Marks the neutral key positions of the Gettysburg scenario, held by %s - the town and the farms that neither army has occupied yet." % oob.NEUTRAL},
+                {"text": "Both armies are at war with %s for the whole battle, and no peace can be made: a neutral key position must be taken by force. Nobody defends it but a few home-guard companies, so a brigade or two takes it quickly - but until then it counts for neither side." % oob.NEUTRAL},
             ]
         },
         {
@@ -58,7 +81,8 @@ def build():
             "uniques": [SCENARIO_TAG, "Unbuildable", "Unsellable", "Never destroyed when the city is captured"],
             "civilopediaText": [
                 {"text": "One of the seven key positions of the Gettysburg scenario: %s." % ", ".join(o[0] for o in oob.OBJECTIVES)},
-                {"text": "Each is a city that starts in Union hands and cannot be razed. At nightfall on July 3 (the end of turn %d) the army holding more key positions wins the Hold the Field victory." % oob.LAST_TURN},
+                {"text": "Each is a city that cannot be razed. %s start in Union hands; %s start neutral (held by %s) and must be taken by force. At nightfall on July 3 (the end of turn %d) the army holding more key positions wins the Hold the Field victory." % (
+                    _names([o[0] for o in oob.OBJECTIVES if o[1] == "Union"]) or "None", _names([o[0] for o in oob.OBJECTIVES if o[1] == oob.NEUTRAL]) or "none", oob.NEUTRAL, oob.LAST_TURN)},
                 {"text": "Rifle pits, gun emplacements and stone walls make the position stronger to defend than an ordinary town."},
             ]
         },
