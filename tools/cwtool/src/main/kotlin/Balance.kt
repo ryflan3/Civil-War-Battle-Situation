@@ -22,9 +22,12 @@ import kotlin.random.Random
  *
  * [mode] "AI": both armies are run by Unciv's AI (a Spectator watches).
  *        "Union" / "Confederacy": that side is the human seat, played by Unciv's unit automation, as in [simulateScenario].
+ *        Its units choose their promotions like the AI's do, as a player would: by default Unciv's automation never
+ *        promotes a human player's units, and over a whole battle that alone makes the automated side lose most games.
  */
 fun balanceRun(scenarioFile: File, mode: String, seed: Int, lastTurn: Int = 49) {
     initUnciv()
+    UncivGame.Current.settings.automatedUnitsChoosePromotions = true
     val rng = Random(seed)
     // Fresh random ids (cities, game) for every seed, replaced in the saved text so all references stay consistent:
     // Unciv uses them in some combat rolls and AI tie-breaks, so each build of a scenario otherwise plays its own way.
